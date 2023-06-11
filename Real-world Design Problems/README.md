@@ -56,3 +56,4 @@ It’s mainly used in structural programming.                                   
 
 It allows for a high amount of data redundancy.                                                     It allows for a minimum data redundancy.
 ```
+Since most of the problems in this course follow an object-oriented design, it is more suitable to follow the bottom-up design approach to develop them.
