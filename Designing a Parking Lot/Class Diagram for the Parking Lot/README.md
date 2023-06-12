@@ -92,13 +92,97 @@ R11: The payment should be calculated at an hourly rate.
 
 
 ### Parking lot
+Now, we will discuss the design of the whole ParkingLot system class. This parking lot system is composed of smaller objects we have already designed, like entrance/exit, parking spots, parking rates, etc.
+
+[The class diagram for the ParkingLot class]
+
 ### The enumerations and custom data types
+The following provides an overview of the enumerations and custom data types used in this problem:
+
+- PaymentStatus: We need to create an enumeration to keep track of the payment status of the parking ticket, whether it is paid, unpaid, canceled, refunded, and so on.
+
+- AccountStatus: We need to create an enumeration to keep track of the status of the account, whether it is active, canceled, closed, and so on.
+
+[Enums in the parking lot system]
+
 #### Address
+We also need to create a custom data type, Address, that will store the location of the parking lot.
+
+[The class diagram of the Address custom datatype]
 ### Person
+The Person class is used to store information related to a person like a name, street address, country, etc.
+
+[The class diagram of the Person class custom datatype]
+
 ## Relationship between the classes
+Now, we’ll discuss the relationships between the classes we have defined above in our parking lot system.
+
 ### Association
+The class diagram has the following association relationships:
+
+- The ParkingSpot has a one-way association with Vehicle.
+
+- The Vehicle, Entrance, and Exit classes have a one-way association with ParkingTicket.
+
+- The Payment has a two-way association with ParkingTicket.
+
+[The association relationship between classes]
+
 ### Composition
+The class diagram has the following composition relationships.
+
+- The ParkingLot class includes Entrance, Exit, ParkingRate, DisplayBoard, ParkingTicket, and ParkingSpot.
+
+[The composition relationship between classes]
 ### Inheritance
+The following classes show an inheritance relationship:
+
+- The Vehicle class includes Car, Truck, Van, and MotorCycle subclasses.
+
+- The ParkingSpot class includes handicapped, compact, large, and motorcycle subclasses.
+
+- The Payment class includes the Cash and CreditCard subclasses.
+```
+Note: We have already discussed the inheritance relationship between classes in the component section above.
+```
+
 ## Class diagram of the parking lot system
+[The class diagram of the parking lot system]
+
 ## Design pattern
+The system itself will have a ParkingLot class. It will use the Singleton design pattern, because there will only be a single instance of the parking lot system.
+
+This parking lot system is also composed of smaller objects that we have already designed, like entrance, exit, parking spots, parking rates, etc. Therefore, it will be a good practice to use the Abstract Factory and Factory design pattern to instantiate all those objects.
+
+
 ## Additional requirements
+The interviewer can introduce some additional requirements in the parking lot system, or they can ask some follow-up questions. Let’s see some examples of additional requirements:
+
+Parking floor: The parking lot should have multiple floors where customers can park their cars. The class diagram provided below shows the relationship of ParkingFloor with other classes:
+
+[Relationship of the ParkingFloor class with other classes]
+
+Electric: The parking lot should have some parking spots specified for electric cars. These spots should have an electric panel through which customers can pay and charge their vehicles. The class diagram provided below shows the relationship of Electric and ElectricPanel with other classes:
+
+[Relationship of the Electric and ElectricPanel class with other classes]
+
+```
+Let’s say that the interviewer asks you that the parking lot should assign a parking spot closest to the entrance. How do you go about solving this requirement?
+
+Hide Answer
+This requirement is more about how you implement this parking assignment strategy rather than designing it. The interviewer is really looking at your data structures and algorithms skills in this requirement.
+
+In this scenario, let’s say we have four entrances and would like to return to the parking spot which is nearest to the entrance from where the customer is entering the parking lot. The best approach is to implement it using a min-heap.
+
+- We will declare four min-heaps. We will add all parking spots to these min-heaps, so there will be a min-heap for each entrance. These min-heaps will store the parking spots in the order of the shortest distance from the entrance.
+
+- We will also declare the following two sets of parking spots:
+
+    - A set of available parking spots
+    - A set of reserved parking spots
+- We have a map of min-heaps where the key is the entrance ID, and the value is a min-heap. When the user calls the getParkingSpot method, we get the entrance ID which gives us the min-heap for that entrance and allows us to pop the top element to get the parking spot.
+
+- We mark the parking spot as reserved and remove it from the available set. We also remove it from the min-heaps of other entrances.
+```
+
+We have completed the class diagram of the parking lot system according to the requirements. Now, let’s design the sequence diagram of the parking lot system in the next lesson.
