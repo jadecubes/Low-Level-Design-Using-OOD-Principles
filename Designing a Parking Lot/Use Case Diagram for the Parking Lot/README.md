@@ -102,7 +102,7 @@ Add entry/exit panel    Cash                       Take ticket               Sho
 
 Update account          Credit card                Scan ticket               
 
-Login/Logout            Park vehicle              Pay ticket              
+Login/Logout            Park vehicle               Pay ticket              
 
 View account                                       Cash
 
