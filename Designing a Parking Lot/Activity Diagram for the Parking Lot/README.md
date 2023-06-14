@@ -38,3 +38,6 @@ Based on the description above, can you fill in the missing slots with the corre
 ```
 Note: If you get stuck, just click the “Show Solution” button for the correct answer.
 ```
+[sequence](./seq.png)
+
+[diagram](./seqdiagram.png)
