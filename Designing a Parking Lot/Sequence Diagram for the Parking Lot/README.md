@@ -49,6 +49,6 @@ Notice that the arrows in the diagram above are numbered from 1 to 6. The messag
 ```
 Note: If you get stuck, just click the “Show Solution” button for the correct answer.
 ```
-[sequence rearrangement]
+[sequence rearrangement](./seqarrange.png)
 
-[verification]
+[verification](./paymentverification.png)
