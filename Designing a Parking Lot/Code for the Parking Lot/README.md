@@ -1607,3 +1607,4 @@ class ParkingLot {
 ```
 
 ## Wrapping up
+We've explored the complete design of a parking lot system in this chapter. We've looked at how a basic parking lot system can be visualized using various UML diagrams and designed using object-oriented principles and design patterns.
