@@ -695,7 +695,7 @@ public class ParkingAttendant extends Account {
             Account and its child classes
 ```
 
-```c$
+```c#
 public abstract class Account {
   // Data members
   private string userName;
