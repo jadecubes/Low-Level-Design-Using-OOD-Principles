@@ -445,8 +445,578 @@ class Motorcycle extends ParkingSpot {
 ```
 
 ### Vehicle
+Vehicle will be another abstract class, which serves as a parent for four different types of vehicles: car, truck, van, and motor cycle. The definition of the Vehicle and its child classes are given below:
+
+```java
+// Vehicle is an abstract class
+public abstract class Vehicle {
+  private int licenseNo;
+  public abstract void assignTicket(ParkingTicket ticket);
+}
+
+public class Car extends Vehicle {
+  public void assignTicket(ParkingTicket ticket) {
+    // definition
+  }
+}
+
+public class Van extends Vehicle {
+  public void assignTicket(ParkingTicket ticket) {
+    // definition
+  }
+}
+
+public class Truck extends Vehicle {
+  public void assignTicket(ParkingTicket ticket) {
+    // definition
+  }
+}
+
+public class MotorCycle extends Vehicle {
+  public void assignTicket(ParkingTicket ticket) {
+    // definition
+  }
+}
+            Vehicle and its child classes
+```
+
+```c#
+// Vehicle is an abstract class
+public abstract class Vehicle {
+    private string licenseNo;
+    public abstract void AssignTicket(ParkingTicket ticket); 
+}
+
+class Car : Vehicle {
+    public override void AssignTicket(ParkingTicket ticket) {
+        // definition
+    }
+}
+
+class Van : Vehicle {
+    public override void AssignTicket(ParkingTicket ticket) {
+        // definition
+    }
+}
+
+class Truck : Vehicle {
+    public override void AssignTicket(ParkingTicket ticket) {
+        // definition
+    }
+}
+
+class MotorCycle : Vehicle {
+    public override void AssignTicket(ParkingTicket ticket) {
+        // definition
+    }
+}
+       Vehicle and its child classes
+```
+
+```python
+# Vehicle is an abstract class
+from abc import ABC, abstractmethod
+
+class Vehicle(ABC):
+  def __init__(self, license_no):
+    self.__license_no = license_no
+
+  # ticket here refers to an instance of the ParkingTicket class
+  @abstractmethod
+  def assign_ticket(self, ticket):
+    pass
+
+class Car(Vehicle):
+  # ticket here refers to an instance of the ParkingTicket class
+  def __init__(self, license_no):
+    super().__init__(license_no)
+  
+  # ticket here refers to an instance of the ParkingTicket class
+  def assign_ticket(self, ticket):
+    pass
+
+class Van(Vehicle):
+  # ticket here refers to an instance of the ParkingTicket class
+  def __init__(self, license_no):
+    super().__init__(license_no)
+
+  # ticket here refers to an instance of the ParkingTicket class
+  def assign_ticket(self, ticket):
+    pass
+
+class Truck(Vehicle):
+  # ticket here refers to an instance of the ParkingTicket class
+  def __init__(self, license_no, ticket):
+    super().__init__(license_no, ticket)
+
+  # ticket here refers to an instance of the ParkingTicket class
+  def assign_ticket(self, ticket):
+    pass
+
+class MotorCycle(Vehicle):
+  # ticket here refers to an instance of the ParkingTicket class
+  def __init__(self, license_no, ticket):
+    super().__init__(license_no, ticket)
+
+  # ticket here refers to an instance of the ParkingTicket class
+  def assign_ticket(self, ticket):
+    pass
+    
+                  Vehicle and its child classes
+```
+
+```c++
+// Vehicle is an abstract class
+class Vehicle {
+  private:
+    string licenseNo;
+
+  public:
+    void virtual assignTicket(ParkingTicket ticket) = 0; 
+};
+
+class Car : public Vehicle {
+  public:
+    void assignTicket(ParkingTicket ticket) {
+        // definition
+    } 
+};
+
+class Van : public Vehicle {
+  public:
+    void assignTicket(ParkingTicket ticket) {
+        // definition
+    } 
+};
+
+class Truck : public Vehicle {
+  public:
+    void assignTicket(ParkingTicket ticket) {
+        // definition
+    } 
+};
+
+class MotorCycle : public Vehicle {
+  public:
+    void assignTicket(ParkingTicket ticket) {
+        // definition
+    } 
+};
+             Vehicle and its child classes
+```
+
+```javascript
+// Vehicle is an abstract class
+class Vehicle {
+  #licenseNo;
+
+  constructor(licenseNo) {
+    if (this.constructor == Vehicle) {
+      throw new Error("Abstract classes can't be instantiated.");
+    }
+    else {
+      this.#licenseNo = licenseNo;
+    }
+  }
+
+  // ticket here refers to an instance of the ParkingTicket class
+  assignTicket(ticket) { }
+}
+
+class Car extends Vehicle {
+  // ticket here refers to an instance of the ParkingTicket class
+  assignTicket(ticket) {
+        // definition
+    }
+}
+
+class Van extends Vehicle {
+  // ticket here refers to an instance of the ParkingTicket class
+  assignTicket(ticket) {
+        // definition
+    }
+}
+
+class Truck extends Vehicle {
+  // ticket here refers to an instance of the ParkingTicket class
+  assignTicket(ticket) {
+        // definition
+    }
+}
+
+class MotorCycle extends Vehicle {
+  // ticket here refers to an instance of the ParkingTicket class
+  assignTicket(ticket) {
+        // definition
+    }
+}
+              Vehicle and its child classes
+```
+
+
 ### Account
+The Account class will be an abstract class, which will have the actors, Admin and ParkingAttendant, as child classes. The definition of these classes is given below:
+
+```java
+public abstract class Account {
+  // Data members
+  private String userName;
+  private String password;
+  private Person person; // Refers to an instance of the Person class
+  private AccountStatus status; // Refers to the AccountStatus enum
+
+  public abstract boolean resetPassword();
+}
+
+public class Admin extends Account {
+  // spot here refers to an instance of the ParkingSpot class
+  public boolean addParkingSpot(ParkingSpot spot);
+  // displayBoard here refers to an instance of the DisplayBoard class
+  public boolean addDisplayBoard(DisplayBoard displayBoard);
+  // entrance here refers to an instance of the Entrance class
+  public boolean addEntrance(Entrance entrance);
+  // exit here refers to an instance of the Exit class
+  public boolean addExit(Exit exit;
+
+  // Will implement the functionality in this class
+  public boolean resetPassword() {
+    // definition
+  }
+}
+
+public class ParkingAttendant extends Account {
+  public boolean processTicket(String ticketNumber);
+
+  // Will implement the functionality in this class
+  public boolean resetPassword() {
+    // definition
+  }
+}
+            Account and its child classes
+```
+
+```c$
+public abstract class Account {
+  // Data members
+  private string userName;
+  private string password;
+  private Person person; // Refers to an instance of the Person class
+  private AccountStatus status; // Refers to the AccountStatus enum
+
+  public abstract bool ResetPassword();
+}
+
+class Admin : Account {
+  // spot here refers to an instance of the ParkingSpot class
+  public bool AddParkingSpot(ParkingSpot spot);
+  // displayBoard here refers to an instance of the DisplayBoard class
+  public bool AddDisplayBoard(DisplayBoard displayBoard);
+  // entrance here refers to an instance of the Entrance class
+  public bool AddEntrance(Entrance entrance);
+  // exit here refers to an instance of the Exit class
+  public bool AddExit(Exit exit;
+
+  // Will implement the functionality in this class
+  public override bool ResetPassword() {
+    // definition
+  }
+}
+
+class ParkingAttendant : Account {
+  public bool ProcessTicket(string ticketNumber);
+
+  // Will implement the functionality in this class
+  public override bool ResetPassword() {
+    // definition
+  }
+}
+      Account and its child classes
+```
+
+```python
+from abc import ABC, abstractmethod
+
+class Account(ABC):
+  # Data members
+  def __init__(self, user_name, password, person, status):
+    self.__user_name = user_name
+    self.__password = password
+    self.__person = person # Refers to an instance of the Person class
+    self.__status = status # Refers to the AccountStatus enum
+
+  @abstractmethod
+  def reset_password(self):
+    pass
+
+class Admin(Account):
+  def __init__(self, user_name, password, person, status):
+    super().__init__(user_name, password, person, status)
+
+  # spot here refers to an instance of the ParkingSpot class
+  def add_parking_spot(self, spot):
+    pass
+
+  # display_board here refers to an instance of the DisplayBoard class
+  def add_display_board(self, display_board):
+    pass
+
+  # entrance here refers to an instance of the Entrance class
+  def add_entrance(self, entrance):
+    pass
+
+  # exit here refers to an instance of the Exit class
+  def add_exit(self, exit):
+    pass
+
+  def reset_password(self):
+    # Will implement the functionality in this class
+    pass
+
+class ParkingAttendant(Account):
+  def __init__(self, user_name, password, person, status):
+    super().__init__(user_name, password, person, status)
+
+  def process_ticket(self, ticket_number):
+    pass
+
+  def reset_password(self):
+    # Will implement the functionality in this class
+    pass
+              Account and its child classes
+```
+
+```c++
+class Account {
+  // Data members
+  private: 
+    string userName;
+    string password;
+    Person person; // Refers to an instance of the Person class
+    AccountStatus status; // Refers to the AccountStatus enum
+
+  public:
+    virtual bool resetPassword() = 0;
+}
+
+class Admin : public Account {
+  public: 
+    // spot here refers to an instance of the ParkingSpot class
+    bool addParkingSpot(ParkingSpot spot);
+    // displayBoard here refers to an instance of the DisplayBoard class
+    bool addDisplayBoard(DisplayBoard displayBoard);
+    // entrance here refers to an instance of the Entrance class
+    bool addEntrance(Entrance entrance);
+    // exit here refers to an instance of the Exit class
+    bool addExit(Exit exit;
+  
+    // Will implement the functionality in this class
+    bool resetPassword() {
+      // definition
+    }
+}
+
+class ParkingAttendant : public Account {
+  public: 
+    bool processTicket(string ticketNumber);
+
+    // Will implement the functionality in this class
+    bool resetPassword() {
+      // definition
+    }
+}
+           Account and its child classes
+```
+
+```javascript
+class Account {
+  #userName;
+  #password;
+  #person;
+  #status;
+
+  // Data members
+  constructor(userName, password, person, status) {
+    if (this.constructor == Account) {
+      throw new Error("Abstract classes can't be instantiated.");
+    }
+    else {
+      this.#userName = userName
+      this.#password = password
+      this.#person = person // Refers to an instance of the Person class
+      this.#status = status // Refers to the AccountStatus enum
+    }
+  }
+
+  resetPassword() {}
+}
+
+class Admin extends Account {
+  // spot here refers to an instance of the ParkingSpot class
+  addParkingSpot(spot) {}
+  // displayBoard here refers to an instance of the DisplayBoard class
+  addDisplayBoard(displayBoard) {}
+  // entrance here refers to an instance of the Entrance class
+  addEntrance(entrance) {}
+  // exit here refers to an instance of the Exit class
+  addExit(exit) {}
+  
+  // Will implement the functionality in this class
+  resetPassword() {
+    // definition
+  }
+}
+
+class ParkingAttendant extends Account {
+  processTicket(ticketNumber) {}
+  
+  // Will implement the functionality in this class
+  resetPassword() {
+    // definition
+  }
+}
+          Account and its child classes
+```
+
 ### Display board and parking rate
+This section contains the DisplayBoard and ParkingRate classes that only have the composition class with the ParkingLot class. This relationship is highlighted in the ParkingLot class. The definition of these classes is given below:
+```java
+public class DisplayBoard {
+  // Data members
+  private int id;
+  private <List>Handicapped handicappedSpot;
+  private <List>Compact compactSpot;
+  private <List>Large largeSpot;
+  private <List>MotorCycle motorCycleSpot;
+  
+  // Member function
+  public void showFreeSlot();
+}
+
+public class ParkingRate {
+  // Data members
+  private double hours;
+  private double rate;
+
+  // Member function
+  public void calculate();
+}
+   The DisplayBoard and ParkingRate classes
+```
+
+```c$
+class DisplayBoard {
+  // Data members
+  private int id;
+  private <List>Handicapped handicappedSpot;
+  private <List>Compact compactSpot;
+  private <List>Large largeSpot;
+  private <List>MotorCycle motorCycleSpot;
+
+  // Member functions
+  public void ShowFreeSlot();
+}
+
+class ParkingRate {
+  // Data members
+  private double hours;
+  private double rate;
+
+  // Member function
+  public void Calculate();
+}
+         The DisplayBoard and ParkingRate classes
+```
+
+```python
+class DisplayBoard:
+  def __init__(self, id, handicapped_spot, compact_spot, large_spot, motor_cycle_spot):
+    self.__id = id
+    self.__handicapped_spot = handicapped_spot # Refers to an instance of the Handicapped class 
+    self.__compact_spot = compact_spot # Refers to an instance of the Compact class
+    self.__large_spot = large_spot # Refers to an instance of the Large class
+    self.__motor_cycle_spot = motor_cycle_spot # Refers to an instance of the Motorcycle class 
+
+  # Member functions
+  def show_free_slot(self):
+    pass
+
+class ParkinRate:
+  def __init__(self, hours, rate):
+    self.__hours = hours
+    self.__rate = rate
+
+  # Member function
+  def calculate(self):
+    pass
+```
+
+```c++
+class DisplayBoard {
+// Data members
+  private:
+    int id;
+    vector<Handicapped> handicappedSpot;
+    vector<Compact> compactSpot;
+    vector<Large> largeSpot;
+    vector<MotorCycle> motorCycleSpot;
+
+  // Member functions
+  public:
+    void showFreeSlot();
+};
+
+class ParkingRate {
+  // Data members
+  private:
+    double hours;
+    double rate;
+
+// Member function
+  public: 
+    void calculate();
+};
+              The DisplayBoard and ParkingRate classes
+```
+
+```javascript
+class DisplayBoard {
+    // Data members
+    #id;
+    #handicapped;
+    #compact;
+    #large;
+    #motorCycle;
+
+    constructor(id, handicappedSpot, compactSpot, largeSpot, motorCycleSpot) {
+        this.#id = id;
+        this.#handicapped = new Array(); 
+        this.#compact = new Array(); 
+        this.#large = new Array();  
+        this.#motorCycle = new Array();  
+    }
+
+    // Member functions
+    showFreeSlot() {}
+}
+
+class ParkinRate {
+    // Data members
+    #id;
+    #hours;
+    #rate;
+    constructor(id, hours, rate) {
+        this.#id = id;
+        this.#hours = hours;
+        this.#rate = rate;
+    }
+
+    // Member function
+    calculate() {}
+}
+           The DisplayBoard and ParkingRate classes
+```
+
+
 ### Entrance and exit
 ### Parking ticket
 ### Payment
