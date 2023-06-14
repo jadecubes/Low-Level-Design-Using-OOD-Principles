@@ -1018,7 +1018,592 @@ class ParkinRate {
 
 
 ### Entrance and exit
+This section contains the Entrance and Exit classes, both of which are associated with the ParkingTicket class. The definition of the Entrance and Exit classes is given below:
+```java
+public class Entrance {
+  // Data members 
+  private int id;
+  private ParkingTicket ticket;
+
+  // Member function
+  public ParkingTicket getTicket(ParkingTicket ticket);
+}
+
+public class Exit {
+  // Data members 
+  private int id;
+  private ParkingTicket ticket;
+
+  // Member function
+  public void validateTicket(ParkingTicket ticket);
+}
+       The Entrance and Exit classes
+```
+
+```c#
+class Entrance {
+    // Data members 
+    private int id;
+    private ParkingTicket ticket; 
+
+    // Member function
+    public ParkingTicket GetTicket(ParkingTicket ticket); 
+}
+
+class Exit {
+    // Data members 
+    private int id;
+    private ParkingTicket ticket; 
+
+    // Member function
+    public void ValidateTicket(ParkingTicket ticket); 
+}
+           The Entrance and Exit classes
+```
+
+```python
+class Entrance:
+  def __init__(self, id, ticket):
+    self.__id = id
+    self.__ticket = ticket # Refers to an instance of the ParkingTicket class
+
+  # ticket here refers to an instance of the ParkingTicket class
+  def get_ticket(self, ticket):
+    pass
+
+class Exit:
+  def __init__(self, id, ticket):
+    self.__id = id
+    self.__ticket = ticket # Refers to an instance of the ParkingTicket class
+
+  # ticket here refers to an instance of the ParkingTicket class
+  def validate_ticket(self, ticket):
+    pass
+                 The Entrance and Exit classes
+```
+
+```c++
+class Entrance {
+  // Data members 
+  private:
+    int id;
+    ParkingTicket ticket; 
+
+  // Member function
+  public:
+    ParkingTicket getTicket(ParkingTicket ticket); 
+};
+
+class Exit {
+  // Data members 
+  private:
+    int id;
+    ParkingTicket ticket; 
+
+  // Member function
+  public:
+    void validateTicket(ParkingTicket ticket); 
+};
+             The Entrance and Exit classes
+```
+
+```javascript
+class Entrance {
+    // Data members 
+    #id;
+    #ticket;
+    constructor(id, ticket) {
+        this.#id = id;
+        this.#ticket = ticket; // Refers to an instance of the ParktingTicket class
+    }
+
+    // ticket here refers to an instance of the ParktingTicket class
+    getTicket(ticket) { }
+}
+
+class Exit {
+    // Data members 
+    #id;
+    #ticket;
+    constructor(id, ticket) {
+        this.#id = id;
+        this.#ticket = ticket; // Refers to an instance of the ParktingTicket class
+    }
+
+    // ticket here refers to an instance of the ParktingTicket class
+    validateTicket(ticket){ }
+}
+               The Entrance and Exit classes
+```
+
 ### Parking ticket
+The definition of the ParkingTicket class can be found below. This contains instancesof the Vehicle, Payment, Entrance and Exit classes:
+```java
+public class ParkingTicket {
+    private int ticketNo;
+    private Date timestamp;
+    private Date exit;
+    private double amount;
+    private boolean status;
+
+    // Following are the instances of their respective classes
+    private Vehicle vehicle;
+    private Payment payment;
+    private Entrance entrance;
+    private Exit exitIns;    
+}
+        The ParkingTicket class
+```
+
+```c#
+public class ParkingTicket {
+    private int ticketNo;
+    private DateTime timestamp;
+    private DateTime exit;
+    private double amount;
+    private bool status;
+    
+    // Following are the instances of their respective classes
+    private Vehicle vehicle;
+    private Payment payment;
+    private Entrance entrance;
+    private Exit exitIns;    
+}
+          The ParkingTicket class
+```
+
+```python
+class ParkingTicket:
+  def __init__(self, ticket_no, timestamp, exit, amount, status, vehicle, payment, entrance, exit_ins):
+    self.__ticket_no = ticket_no
+    self.__timestamp = timestamp
+    self.__exit = exit
+    self.__amount = amount
+    self.__status = status
+    
+    # Following are the instances of their respective classes
+    self__vehicle = vehicle
+    self__payment = payment
+    self__entrance = entrance
+    self__exit_ins = exit_ins
+     
+     The ParkingTicket class
+```
+
+```c++
+class ParkingTicket {
+  private: 
+    int ticketNo;
+    time_t timestamp;
+    time_t exit;
+    double amount;
+    bool status;
+  
+    // Following are the instances of their respective classes
+    Vehicle vehicle;
+    Payment payment;
+    Entrance entrance;
+    Exit exitIns;    
+};
+
+              The ParkingTicket class
+```
+
+```javascript
+class ParkingTicket{
+    #ticketNo;
+    #timestamp;
+    #exit;
+    #amount;
+    #status;
+    #vehicle;
+    #payment;
+    #entrance;
+    #exitIns;
+
+    constructor(ticketNo, timestamp, exit,amount, status, vehicle, payment, entrance, exitIns) {
+        this.#ticketNo = ticketNo;
+        this.#timestamp = timestamp;
+        this.#exit = exit;
+        this.#amount = amount;
+        this.#status = status;
+
+        // Following are the instances of their respective classes
+        this.#vehicle = vehicle;
+        this.#payment = payment;
+        this.#entrance = entrance;
+        this.#exitIns = exitIns;
+    }
+}
+                 The ParkingTicket class
+```
+
 ### Payment
+The Payment class is another abstract class, with the Cash and CreditCard classes as its child. This takes the PaymentStatus enumeration and the dateTime data type to keep track of the payment status and time. The definition of this class is given below
+
+```java
+// Payment is an abstract class
+public abstract class Payment {
+    private double amount;
+    private PaymentStatus status;
+    private Date timestamp;
+
+    public abstract boolean initiateTransaction();
+}
+
+public class Cash extends Payment {
+    public boolean initiateTransaction() {
+        // definition
+    }
+}
+
+public class CreditCard extends Payment {
+    public boolean initiateTransaction() {
+        // definition
+    }
+}
+        Payment and its derived classes
+```
+
+```c#
+// Payment is an abstract class
+public abstract class Payment {
+    private double amount;
+    private PaymentStatus status;
+    private DateTime timestamp;
+    public abstract bool InitiateTransaction();
+}
+
+class Cash : Payment {
+    public override bool InitiateTransaction() {
+        // definition
+    }
+}
+
+class CreditCard : Payment {
+    public override bool InitiateTransaction() {
+        // definition
+    }
+}
+            Payment and its derived classes
+```
+
+```python
+# Payment is an abstract class
+from abc import ABC, abstractmethod
+
+class Payment(ABC):
+  def __init__(self, amount, status, timestamp):
+    self.__amount = amount
+    self.__status = status # Refers to the PaymentStatus enum
+    self.__timestamp = timestamp
+
+  @abstractmethod
+  def initiate_transaction(self):
+    pass
+
+class Cash(Payment):
+  def __init__(self, amount, status, timestamp):
+    super().__init__(amount, status, timestamp)
+
+  def initiate_transaction(self):
+    pass
+
+class CreditCard(Payment):
+  def __init__(self, amount, status, timestamp):
+    super().__init__(amount, status, timestamp)
+
+  def initiate_transaction(self):
+    pass
+          Payment and its derived classes
+```
+
+```c++
+// Payment is an abstract class
+class Payment {
+    private:
+        double amount;
+        PaymentStatus status;
+        time_t timestamp;
+
+    public virtual bool initiateTransaction() = 0;
+};
+
+class Cash : public Payment {
+    public bool initiateTransaction() {
+        // definition
+    }
+};
+
+class CreditCard : public Payment {
+    public bool initiateTransaction() {
+        // definition
+    }
+};
+      Payment and its derived classes
+```
+
+```javascript
+// Payment is an abstract class
+class Payment {
+    #amount;
+    #status;
+    #timestamp;
+
+    constructor(amount, status, timestamp) {
+        if (this.constructor == Payment) {
+            throw new Error("Abstract classes can't be instantiated.");
+        }
+        else {
+            this.#amount = amount;
+            this.#status = status; // Refers to the PaymentStatus enum
+            this.#timestamp = timestamp;
+        }
+    }
+    initiateTransaction() { }
+}
+class Cash extends Payment{
+    initiateTransaction(){
+        // definition
+    }
+}
+class CreditCard extends Payment{
+    initiateTransaction(){
+        // definition
+    }
+}
+
+           Payment and its derived classes
+```
 ### Parking lot
+The final class of the parking lot system is the ParkingLot class which will be a Singleton class, meaning the entire system will only have one instance of this class. The definition of this class is given below:
+
+```java
+public class ParkingLot {
+    private int id;
+    private String name;
+    private String address;
+    private ParkingRate parkingRate;
+
+    private HashMap<String, Entrance> entrance;
+    private HashMap<String, Exit> exit;
+
+    // Create a hashmap that identifies all currently generated tickets using their ticket number
+    private HashMap<String, ParkingTicket> tickets;
+
+    // The ParkingLot is a singleton class that ensures it will have only one active instance at a time
+    // Both the Entrance and Exit classes use this class to create and close parking tickets
+    private static ParkingLot parkingLot = null;
+
+    // Created a private constructor to add a restriction (due to Singleton)
+    private ParkingLot() {
+        // Call the name, address, parking_rate elements of the customer in the parking lot from the database
+        // Create initial entrance and exit hashmaps respectively
+    }
+
+    // Created a static method to access the singleton instance of ParkingLot
+    public static ParkingLot getInstance() {
+        if (parkingLot == null) {
+            parkingLot = new ParkingLot();
+        }
+        return parkingLot;
+    }
+
+    public boolean addEntrance(Entrance entrance){}
+    public boolean addExit(Exit exit){}
+
+    // This function allows parking tickets to be available at multiple entrances
+    public ParkingTicket getParkingTicket(Vehicle vehicle) {}
+
+    public boolean isFull(ParkingSpot type){}
+}
+          The ParkingLot class
+```
+
+```c#
+class ParkingLot {
+    private int id;
+    private string name;
+    private string address;
+    private ParkingRate parkingRate;
+
+    private Dictionary<string, Entrance> entrance;
+    private Dictionary<string, Exit> exit;
+
+    // Create a hashmap that identifies all currently generated tickets using their ticket number
+    private Dictionary<string, ParkingTicket> tickets;
+
+    // The ParkingLot is a singleton class that ensures it will have only one active instance at a time
+    // Both the Entrance and Exit classes use this class to create and close parking tickets
+    private static ParkingLot parkingLot = null;
+
+    // Created a private constructor to add a restriction (due to Singleton)
+    ParkingLot() {
+        // Call the name, address, parking_rate elements of the customer in the parking lot from the database
+        // Create initial entrance and exit hashmaps respectively
+    }
+
+    // Created a static method to access the singleton instance of ParkingLot
+    public static ParkingLot GetInstance() {
+        get {
+            if (parkingLot == null) {
+                parkingLot = new ParkingLot();
+            }
+            return parkingLot;
+        }
+    }
+
+    public bool AddEntrance(Entrance entrance) {}
+    public bool AddExit(Exit exit) {}
+
+    // This function allows parking tickets to be available at multiple entrances
+    public ParkingTicket GetParkingTicket(Vehicle vehicle) {}
+
+    public bool IsFull(ParkingSpot type) {}
+}
+                 The ParkingLot class
+```
+
+```python
+# The __ParkingLot is a singleton class that ensures it will have only one active instance at a time
+# Both the Entrance and Exit classes use this class to create and close parking tickets
+class __ParkingLot(object):
+  __instances = None
+  
+  def __new__(cls):
+    if cls.__instances is None:
+        cls.__instances = super(__ParkingLot, cls).__new__(cls)
+    return cls.__instances
+
+class ParkingLot(metaclass=__ParkingLot):
+  def __init__(self, id, name, address, parking_rate):
+    # Call the name, address, parking_rate elements of the customer in the parking lot from the database
+    self.__id = id
+    self.__name = name
+    self.__address = address
+    self.__parking_rate = parking_rate
+
+    # Create initial entrance and exit hashmaps respectively
+    self.__entrance = {}
+    self.__exit = {}
+
+    # Create a hashmap that identifies all currently generated tickets using their ticket number
+    self.__tickets = {}
+
+  # entrance here refers to an instance of the Entrance class
+  def add_entrance(self, entrance):
+    pass
+
+  # exit here refers to an instance of the Exit class
+  def add_exit(self, exit):
+    pass
+
+  # This function allows parking tickets to be available at multiple entrances
+  # vehicle here refers to an Vehicle of the Exit class
+  # Returns a ParkingTicket instance
+  def get_parking_ticket(self, vehicle):
+    pass
+
+   # type here refers to an instance of the ParkingSpot class
+  def is_full(self, type):
+    pass
+                 The ParkingLot class
+```
+
+```c++
+class ParkingLot {
+    private:
+        int id;
+        string name;
+        string address;
+        ParkingRate parkingRate;
+
+        map<string, Entrance> entrance;
+        map<string, Exit> exit;
+
+        // Create a hashmap that identifies all currently generated tickets using their ticket number
+        map<string, ParkingTicket> tickets;
+
+        // The ParkingLot is a singleton class that ensures it will have only one active instance at a time
+        // Both the Entrance and Exit classes use this class to create and close parking tickets
+        static ParkingLot parkingLot = NULL;
+
+        // Created a private constructor to add a restriction (due to Singleton)
+        ParkingLot() {
+            // Call the name, address, parking_rate elements of the customer in the parking lot from the database
+            // Create initial entrance and exit hashmaps respectively
+        }
+
+    // Created a static method to access the singleton instance of ParkingLot
+    public:
+        static ParkingLot getInstance() {
+            if (parkingLot == NULL) {
+                parkingLot = new ParkingLot();
+            }
+            return parkingLot;
+        }
+
+        bool addEntrance(Entrance entrance) {}
+        bool addExit(Exit exit) {}
+
+        // This function allows parking tickets to be available at multiple entrances
+        ParkingTicket getParkingTicket(Vehicle vehicle) {}
+
+        bool isFull(ParkingSpot type) {}
+};
+                    The ParkingLot class
+```
+
+```javascript
+class ParkingLot {
+    #id;
+    #name;
+    #address;
+    #parkingRate;
+
+    constructor(id, name, address, parkingRate) {
+        if (ParkingLot._instance){
+            throw new Error("Singleton classes can't be instantiated more than once.")
+        }
+        // The ParkingLot is a singleton class that ensures it will have only one active instance at a time
+        // Both the Entrance and Exit classes use this class to create and close parking tickets
+        ParkingLot._instance = this;
+
+        // Call the name, address, parking_rate elements of the customer in the parking lot from the database
+        this.#id = id;
+        this.#name = name;
+        this.#address = address;
+        this.#parkingRate = parkingRate;
+
+        // Create initial entrance and exit hashmaps respectively
+        this.entrance = new Map();
+        this.exit = new Map();
+
+        // Create a hashmap that identifies all currently generated tickets using their ticket number
+        this.tickets = new Map();
+    }
+    // Created a static method to access the singleton instance of ParkingLot
+    static getInstance() {
+        if(!ParkingLot._instance){
+            return new ParkingLot();
+        }
+        return ParkingLot._instance;
+    }
+    
+    // entrance here refers to an instance of the Entrance class
+    addEntrance(entrance) {}
+    // exit here refers to an instance of the Exit class
+    addExit(exit) {}
+
+    // This function allows parking tickets to be available at multiple entrances
+    // vehicle here refers to an instance of the Vehicle class
+    // Returns a ParkingTicket instance
+    getParkingTicket(vehicle) {}
+
+    // type here refers to an instance of the ParkingSpot class
+    isFull(type) {}
+}
+                    The ParkingLot class
+```
+
 ## Wrapping up
