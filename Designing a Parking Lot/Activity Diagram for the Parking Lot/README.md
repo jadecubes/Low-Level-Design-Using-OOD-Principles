@@ -24,13 +24,13 @@ Based on the order above, the activity diagram of a vehicle entering a parking l
 ```
 Note: Here we assume that only a car can be parked in the handicap spot. Access is only available if the car has a disabled person card present.
 ```
-[The activity diagram for the vehicle entering a parking lot]
+[The activity diagram for the vehicle entering a parking lot](./activity.png)
 
 ## Activity challenge: The customer pays the parking ticket
 You will help us create an activity diagram of a customer paying a parking ticket at the exit panel.
 
 The skeleton of the activity diagram below represents that the customer has a valid parking ticket available.
-[The activity diagram for the vehicle entering a parking lot]
+[The activity diagram for the vehicle entering a parking lot](./challenge.png)
 
 Notice that the actions in the diagram above are numbered from 1 to 11. The slots shown below represent the activities and the arrows represent the flow from one activity to the other. Can you rearrange the slots below in the correct order they should appear in the activity diagram above?
 
