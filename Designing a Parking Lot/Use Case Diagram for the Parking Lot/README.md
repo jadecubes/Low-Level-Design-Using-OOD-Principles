@@ -115,5 +115,6 @@ The “Scan ticket” has an include relationship with the “Pay ticket” sinc
 
 ## Use case diagram
 
-[The use case diagram of parking lot system]
+[The use case diagram of parking lot system](./usecasediagram.png)
+
 In the next lesson, we will discuss the class diagram with a detailed explanation of all classes and their relationship with each other.
