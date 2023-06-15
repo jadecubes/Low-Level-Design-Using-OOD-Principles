@@ -20,7 +20,7 @@ Note: Using enums isn’t prohibited, but just not recommended. Later, we will u
 ```
 An abstract class cannot instantiate the object and can only be used as a base class. The abstract class for Vehicle is the best approach. It allows us to create derived child classes for the Vehicle class. It can be extended easily in case the vehicle type changes in the future.
 
-[The class diagram of Vehicle and its derived classes]
+[The class diagram of Vehicle and its derived classes](./carinheritance.png)
 
 ```
 R4: Four types of vehicles should be allowed to park in the parking lot, which are as follows:
@@ -34,7 +34,7 @@ R4: Four types of vehicles should be allowed to park in the parking lot, which a
 ### Parking spot
 Similar to the Vehicle class, the ParkingSpot should also be an abstract class. There are four types of parking spots: handicapped, compact, large, and motorcycle. These classes can be derived from the parking spot abstract class.
 
-[The class diagram of the ParkingSpot and its derived classes]
+[The class diagram of the ParkingSpot and its derived classes](./parkingspotinheritance.png)
 
 ```
 R2: There are four different types of parking spots: handicapped, compact, large, and motorcycle.
@@ -42,11 +42,11 @@ R2: There are four different types of parking spots: handicapped, compact, large
 
 ### Account
 Similar to the Vehicle and ParkingSpot classes, Account should also be an abstract class. There are two child classes: Admin and ParkingAgent. These classes can be derived from the account abstract class.
-[The class diagram of Account and its derived classes]
+[The class diagram of Account and its derived classes](./accountinheritance.png)
 
 ### Display board
 This class represents the free parking spot types and the number of empty slots.
-[The class diagram of the DisplayBoard class]
+[The class diagram of the DisplayBoard class](./displayboard.png)
 
 ```
 R5: The parking lot should have a display board that shows free parking spots for each parking spot type.
@@ -59,7 +59,7 @@ The Entrance class is responsible for returning the parking ticket whenever a ve
 
 The Exit class is responsible for validating the parking ticket’s payment status before allowing the vehicle to exit the parking lot. It contains the ID attribute, since there are multiple exits to the parking lot. It also has the validateTicket() method.
 
-[The class diagram of the Entrance and Exit classes]
+[The class diagram of the Entrance and Exit classes](./entranceexit.png)
 
 ```
 R8: Customers should be able to collect a parking ticket from the entrance and pay at the exit.
@@ -67,14 +67,14 @@ R8: Customers should be able to collect a parking ticket from the entrance and p
 
 ### Parking ticket
 The ParkingTicket class is one of the central classes of the system. It keeps track of the entrance and exit times of the vehicles, the amount, and the payment status.
-[The class diagram of the ParkingTicket class]
+[The class diagram of the ParkingTicket class](./parkingticket.png)
 ```
 R8: Customers should be able to collect a parking ticket from the entrance and pay at the exit.
 ```
 
 ### Payment
 The Payment class will be an abstract class and will have two child classes, card and cash, since these are two payment methods of the parking lot system.
-[The class diagram of the Payment class]
+[The class diagram of the Payment class](./payment.png)
 
 ```
 R9: The customer can pay for the ticket either with an automated exit panel or pay the parking agent at the exit.
@@ -84,7 +84,7 @@ R10: The payment can be made using either a credit/debit card or cash.
 
 ### Parking rate
 The ParkingRate class is responsible for calculating the final payment based on the time spent in the parking lot.
-[The class diagram of the ParkingRate class]
+[The class diagram of the ParkingRate class](./parkingrate.png)
 
 ```
 R11: The payment should be calculated at an hourly rate.
@@ -94,7 +94,7 @@ R11: The payment should be calculated at an hourly rate.
 ### Parking lot
 Now, we will discuss the design of the whole ParkingLot system class. This parking lot system is composed of smaller objects we have already designed, like entrance/exit, parking spots, parking rates, etc.
 
-[The class diagram for the ParkingLot class]
+[The class diagram for the ParkingLot class](./parkinglot.png)
 
 ### The enumerations and custom data types
 The following provides an overview of the enumerations and custom data types used in this problem:
@@ -103,16 +103,16 @@ The following provides an overview of the enumerations and custom data types use
 
 - AccountStatus: We need to create an enumeration to keep track of the status of the account, whether it is active, canceled, closed, and so on.
 
-[Enums in the parking lot system]
+[Enums in the parking lot system](./enum.png)
 
 #### Address
 We also need to create a custom data type, Address, that will store the location of the parking lot.
 
-[The class diagram of the Address custom datatype]
+[The class diagram of the Address custom datatype](./address.png)
 ### Person
 The Person class is used to store information related to a person like a name, street address, country, etc.
 
-[The class diagram of the Person class custom datatype]
+[The class diagram of the Person class custom datatype](./person.png)
 
 ## Relationship between the classes
 Now, we’ll discuss the relationships between the classes we have defined above in our parking lot system.
