@@ -126,14 +126,14 @@ The class diagram has the following association relationships:
 
 - The Payment has a two-way association with ParkingTicket.
 
-[The association relationship between classes]
+[The association relationship between classes](./overviewdep.png)
 
 ### Composition
 The class diagram has the following composition relationships.
 
 - The ParkingLot class includes Entrance, Exit, ParkingRate, DisplayBoard, ParkingTicket, and ParkingSpot.
 
-[The composition relationship between classes]
+[The composition relationship between classes](./parkinglotcomposition.png)
 ### Inheritance
 The following classes show an inheritance relationship:
 
@@ -147,7 +147,7 @@ Note: We have already discussed the inheritance relationship between classes in 
 ```
 
 ## Class diagram of the parking lot system
-[The class diagram of the parking lot system]
+[The class diagram of the parking lot system](./sysoverview.png)
 
 ## Design pattern
 The system itself will have a ParkingLot class. It will use the Singleton design pattern, because there will only be a single instance of the parking lot system.
@@ -160,11 +160,11 @@ The interviewer can introduce some additional requirements in the parking lot sy
 
 Parking floor: The parking lot should have multiple floors where customers can park their cars. The class diagram provided below shows the relationship of ParkingFloor with other classes:
 
-[Relationship of the ParkingFloor class with other classes]
+[Relationship of the ParkingFloor class with other classes](./additional1.png)
 
 Electric: The parking lot should have some parking spots specified for electric cars. These spots should have an electric panel through which customers can pay and charge their vehicles. The class diagram provided below shows the relationship of Electric and ElectricPanel with other classes:
 
-[Relationship of the Electric and ElectricPanel class with other classes]
+[Relationship of the Electric and ElectricPanel class with other classes](./additional2.png)
 
 ```
 Let’s say that the interviewer asks you that the parking lot should assign a parking spot closest to the entrance. How do you go about solving this requirement?
