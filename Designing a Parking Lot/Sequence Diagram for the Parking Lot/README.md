@@ -36,14 +36,14 @@ Note: The Payment object is created when a vehicle enters the parking lot.
 ```
 Based on the order above, the sequence diagram of the card payment in a parking lot system is given below.
 
-[The sequence diagram for the card payment]
+[The sequence diagram for the card payment](./payment.png)
 
 ## Sequence challenge: Payment verification
 In this section, you will help us in completing a sequence diagram for the payment verification of a customer at the exit panel.
 
 The skeleton below represents the payment verification sequence diagram. Here the payment status of the ticket is currently unpaid and the parking fee has to be calculated.
 
-[The sequence diagram for payment verification]
+[The sequence diagram for payment verification](./verification.png)
 
 Notice that the arrows in the diagram above are numbered from 1 to 6. The message boxes shown below are the messages to be exchanged between the actor(s) and object(s). Can you rearrange the messages below in the correct sequence of the order they should appear in the skeleton of the sequence diagram given above?
 ```
