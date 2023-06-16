@@ -70,7 +70,7 @@ R10: Each floor has a separate panel and display for each elevator car on every 
 
 ### Building
 The Building class represents an actual building that consists of the number of floors and elevators. This class is represented below:
-[The class diagram of the Building class]
+[The class diagram of the Building class](./building.png)
 
 ```
 R1: There exist multiple elevator cars and floors in the building.
@@ -78,7 +78,7 @@ R1: There exist multiple elevator cars and floors in the building.
 ### Elevator system
 ElevatorSystem is the main functional class of the whole elevator control system. The elevator system has a display of each elevator and monitors the elevator cars. The elevator system has a dispatcher to select the best elevator car. Moreover, the system takes control of the elevator doors. The UML representation of a class is given below:
 
-[The class diagram of the ElevatorSystem class]
+[The class diagram of the ElevatorSystem class](./elevatorsys.png)
 
 ```
 R12: The elevator system should be able to control elevator car movement and the door functioning, and it should also be able to monitor the elevator car.
@@ -94,7 +94,7 @@ Direction: When the elevator is not in an idle state, it describes the direction
 
 DoorState: When the elevator is in an idle state, it describes the status of a door of an elevator that could be open or close.
 
-[Enums in the elevator system]
+[Enums in the elevator system](./enum.png)
 ```
 R3: The elevator car can move up or down or be in an Idle state.
 ```
@@ -106,7 +106,7 @@ The class diagram has the following aggregation relationships:
 
 - The ElevatorSystem has an aggregation relationship with Building.
 
-[The association relationship between classes]
+[The association relationship between classes](./elevatorbuilding.png)
 ### Composition
 The class diagram has the following composition relationships.
 
@@ -120,7 +120,7 @@ The class diagram has the following composition relationships.
 
 - The ElevatorPanel is composed of the ElevatorButton.
 
-[The composition relationships between classes]
+[The composition relationships between classes](./composition.png)
 
 ### Inheritance
 The following classes show an inheritance relationship:
