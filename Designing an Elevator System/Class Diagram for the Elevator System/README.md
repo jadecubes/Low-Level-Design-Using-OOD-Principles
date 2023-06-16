@@ -13,7 +13,7 @@ Similar to ElevatorButton, HallButton is also a subclass of the Button class. Th
 
 The UML representation of these classes is shown below:
 
-[The class diagram of Button and its derived classes]
+[The class diagram of Button and its derived classes](./buttonclass.png)
 
 ### Elevator panel and hall panel
 ElevatorPanel is a class which is used to represent the complete grid of buttons inside the elevator. In the elevator panel, we will have a list of buttons for selecting the destination floor of the elevator and two buttons for closing and opening the elevator.
@@ -22,7 +22,7 @@ While the HallPanel class represents the buttons that are outside the elevators.
 
 Both the elevator panel and the hall panel are used to take input from the passenger. The representation of both classes is given below:
 
-[The class diagram of the HallPanel and ElevatorPanel classes]
+[The class diagram of the HallPanel and ElevatorPanel classes](./panel.png)
 
 ```
 R#06: The panel outside the elevator should have buttons to call an elevator car and to specify whether the passenger wants to go up or down.
@@ -39,7 +39,7 @@ Number of buttons in the hall panel = 2
 ### Display
 Every elevator has a display to represent the current floor number and direction (up or down) of an elevator. It also gives information about the capacity of the elevator. So we will use the Display class which represents this information. The Display class consists of floor number, capacity, and direction. It has separate methods for both elevator display and hall display. The showHallDisplay() will present only the current floor the lift is in and the direction of the lift while the showElevatorDisplay() will display all of the class attributes. The class representation is provided below:
 
-[The class diagram of the Display class]
+[The class diagram of the Display class](./display.png)
 
 ```
 R8: There should be a display inside and outside of the elevator car to show the current floor number and direction of the elevator car.
@@ -50,19 +50,19 @@ R9: The display inside the elevator should also show the capacity of the elevato
 ### Door
 The Door class symbolizes the door of an elevator. This class has a reference to enum DoorState which depicts that the status of the door can be either open or closed. A simple representation of the Door class is provided below:
 
-[The class diagram of the Door class]
+[The class diagram of the Door class](./door.png)
 
 ### Elevator car
 ElevatorCar is the class that expresses the elevators of the building. Each elevator has a unique ID. This class consists of an enumeration named state that tells the present state of the elevator. Moreover, in every elevator car, there is a door, an elevator panel, and a display. The elevator car can start moving or stop on any floor. The UML expression of the class is as follows:
 
-[The class diagram of the ElevatorCar class]
+[The class diagram of the ElevatorCar class](./elevatorcar.png)
 
 ```
 R1: There exist multiple elevator cars and floors in the building.
 ```
 ### Floor
 The Floor class represents the floors of a building. Each floor consists of a number/list of hall panels to call the lift and has displays to indicate the current floor and direction of the lift since there is a separate panel and display for each elevator. Moreover, we will have isBottomMost() and isTopMost() functions to check if the floor is at the bottom or top, respectively. The down button will be disabled if the floor is at the lowest of the building and the up button will be disabled if the floor is topmost. The model of the Floor class is shown below:
-[The class diagram of the Floor class]
+[The class diagram of the Floor class](./floor.png)
 
 ```
 R10: Each floor has a separate panel and display for each elevator car on every floor.
@@ -132,7 +132,7 @@ Note: We have already discussed the inheritance relationship between classes in 
 ## Class diagram of the elevator system
 Here’s the complete class diagram for our elevator system:
 
-[The class diagram of elevator system]
+[The class diagram of elevator system](./classdiagram.png)
 ## Design pattern
 The Strategy design pattern can be applied here since the system could have multiple dispatch request strategy classes. Therefore, depending on the particular layout of the building and its scenarios, we choose a set of dispatch request strategy classes.
 
