@@ -61,5 +61,6 @@ Press hall panel button             Open/close door
 ## Use case diagram
 Here’s the use case diagram of the elevator system:
 
-[The use case diagram of elevator system]
+[The use case diagram of elevator system](./usecases.png)
+
 In the next lesson, we will discuss the class diagram with a detailed explanation of all classes and their relationship.
