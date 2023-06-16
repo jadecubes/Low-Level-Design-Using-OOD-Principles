@@ -45,10 +45,8 @@ The skeleton below represents the payment verification sequence diagram. Here th
 
 [The sequence diagram for payment verification](./verification.png)
 
-Notice that the arrows in the diagram above are numbered from 1 to 6. The message boxes shown below are the messages to be exchanged between the actor(s) and object(s). Can you rearrange the messages below in the correct sequence of the order they should appear in the skeleton of the sequence diagram given above?
-```
-Note: If you get stuck, just click the “Show Solution” button for the correct answer.
-```
+Notice that the arrows in the diagram above are numbered from 1 to 6. The message boxes shown below are the messages to be exchanged between the actor(s) and object(s). 
+
 [sequence rearrangement](./seqarrange.png)
 
 [verification](./paymentverification.png)
