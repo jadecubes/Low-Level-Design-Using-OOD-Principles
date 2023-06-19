@@ -24,14 +24,14 @@ Based on the order above, the activity diagram of a passenger arriving at their 
 ```
 Note: Here, the passenger is just entering the elevator, so either the up or the down button can be pressed.
 ```
-[The activity diagram for a passenger arriving at their desired floor]
+[The activity diagram for a passenger arriving at their desired floor](./activity.png)
 ## Activity challenge: The passenger calls for the elevator
 You will create an activity diagram of a passenger calling for the elevator.
 
 A skeleton of the activity diagram is given below.
 
-[The activity diagram for a passenger calling for the elevator]
+[The activity diagram for a passenger calling for the elevator](./challenge.png)
 
-[rearrange]
+[rearrange](./blockseq.png)
 
-[answer]
+[answer](./answer.png)
