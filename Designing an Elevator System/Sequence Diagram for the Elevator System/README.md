@@ -36,14 +36,16 @@ Here are the steps in the elevator call interaction:
 
 11. Based on the order above, the sequence diagram for an elevator call in the elevator system is given below.
 
-[The sequence diagram for an elevator call]
+[The sequence diagram for an elevator call](./seq.png)
 
 ## Sequence challenge: Elevator ride
 You will complete a sequence diagram for an elevator ride from one floor to another. A skeleton of the sequence diagram for an elevator ride is given below:
 
-[The sequence diagram for an elevator ride]
+[The sequence diagram for an elevator ride](./challenge.png)
 
 Notice that the arrows in the diagram above are numbered from 1 to 9. The message boxes shown below are the messages to be exchanged between the actor(s) and object(s). Can you rearrange the messages below in the correct sequence of order they should appear in the skeleton of the sequence diagram above?
+[reorder](./seqblock.png)
+[answer](./seqanswer.png)
 
 Next, let’s look at the activity diagrams for the elevator system to understand the control flow of the system.
 
