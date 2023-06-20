@@ -49,7 +49,7 @@ Notice that the arrows in the above diagram are numbered from 1 to 13. The messa
 Note: If you get stuck, just click the “Show Solution” button to check out the correct answer.
 ```
 
-[rearrange](./process.png)
+[rearrange](./flow.png)
 
 [answer](./answer.png)
 
