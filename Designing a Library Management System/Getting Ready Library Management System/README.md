@@ -7,7 +7,7 @@ A librarian can use this software to track the number of books in the library. T
 
 LMS also supports maintaining the physical library. The user can keep track of the position of the book in the library and can search for whether or not the specific book is currently available in the library. Therefore, LMS helps organize and retrieve library data in an efficient manner. .
 
-[An example of the library management system]
+[An example of the library management system](./lib.png)
 
 ## Expectations from the interviewee
 There are multiple components of the LMS, each with its own specific requirements and constraints. Let’s look at some of the main expectations that the interviewer will want to hear you discuss in more detail during the interview.
