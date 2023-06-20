@@ -37,21 +37,21 @@ Here are the steps in the sequence to issue a book:
 
 Based on the order above, the sequence diagram below demonstrates the issuance of a book in the library management system.
 
-[The sequence diagram for issuing a book]
+[The sequence diagram for issuing a book](./issuebook.png)
 
 ## Sequence challenge: Return a book
 You will complete a sequence diagram for the return of a book to the library. The sequence diagram below demonstrates a skeleton for the return of a book to the library.
 
-[The sequence diagram for returning a book]
+[The sequence diagram for returning a book](./returnbook.png)
 
 Notice that the arrows in the above diagram are numbered from 1 to 13. The message boxes shown below are the messages to be exchanged between the actor(s) and object(s). Can you rearrange the below messages in the correct sequence of order they should appear in the sequence diagram’s skeleton above?
 ```
 Note: If you get stuck, just click the “Show Solution” button to check out the correct answer.
 ```
 
-[rearrange]
+[rearrange](./process.png)
 
-[answer]
+[answer](./answer.png)
 
 In the next lesson, we will create activity diagrams for our library management system.
 
