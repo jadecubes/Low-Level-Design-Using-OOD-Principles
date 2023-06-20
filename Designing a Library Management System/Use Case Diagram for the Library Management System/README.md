@@ -150,4 +150,4 @@ Whenever we go through the checkout process, our book reservation will be remove
 - Whenever a member returns a book, the librarian will check if the submission is late or not and will ask the member to pay for a fine if it exists, so the "Return book" use case has an extend relationship with "Pay fine" use case.
 
 ## Use case diagram
-[Use case diagram of the library management system]
+[Use case diagram of the library management system](./usecase.png)
