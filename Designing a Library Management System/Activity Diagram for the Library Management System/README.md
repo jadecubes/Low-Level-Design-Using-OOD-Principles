@@ -24,7 +24,7 @@ The member selects a book and enters the ID. The system will perform a few check
 
 Based on the order shown above, the activity diagram of a checkout book from the library is given below.
 
-[The activity diagram to check out a book from the library]
+[The activity diagram to check out a book from the library](./checkout.png)
 
 # Return a book to the library
 The following are the states and actions involved in this activity diagram.
@@ -43,13 +43,13 @@ The member enters the book ID. The system will check if the book is returned wit
 
 Based on the order above, the activity diagram below demonstrates returning a book to the library.
 
-[The activity diagram to return a book to the library]
+[The activity diagram to return a book to the library](./return.png)
 # Activity challenge: Renew a book from the library
 You will create an activity diagram of a member renewing a book from the library.
 
 The skeleton of the activity diagram given below demonstrates a customer looking for book renewal from the library.
 
-[The activity diagram to renew a book to the library]
+[The activity diagram to renew a book to the library](./challenge.png)
 
 Notice that the actions in the above diagram are numbered from 1 to 7. The slots shown below represent the activities, and the arrows represent the flow from one activity to the other. Can you rearrange the slots provided below in the correct order they should appear in the activity diagram given above?
 
@@ -58,8 +58,8 @@ Based on the description above, can you fill in the missing slots with the corre
 Note: If you get stuck, just click the “Show Solution” button to check the correct answer.
 ```
 
-[rearrange]
+[rearrange](./flow.png)
 
-[answer]
+[answer](./answer.png)
 
 We've looked at some of the activity diagrams of our library management system. The next lesson will present the code for our designed classes in some of the most popular languages.
