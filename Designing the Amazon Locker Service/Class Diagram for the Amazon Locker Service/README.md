@@ -7,12 +7,12 @@ In this section, we’ll define the classes for an Amazon Locker service. As men
 ### Item
 The Item class represents each item of the order. Every item contains an Id and the order’s quantity. The class representation is shown below:
 
-[The class diagram of the Item class]
+[The class diagram of the Item class](./Item.png)
 
 ### Order
 The order placed by a customer is represented by the Order class. Every order has a unique Id, contains a list of items, and the delivery location of the order. The UML representation of a class is shown below:
 
-[The class diagram of the Order class]
+[The class diagram of the Order class](./Order.png)
 
 ```
 R2: One or more items can be contained in one order. An order will be placed in a package before the delivery.
@@ -21,7 +21,7 @@ R2: One or more items can be contained in one order. An order will be placed in 
 ### Notification
 The notification is sent to the customer when an order is shipped. A Notification class has a customerId, orderId, and lockerId that specify the customer to whom the notification has to be sent, against the order the notification has to be sent, and the locker where the order has arrived, respectively. Moreover, this class contains a 6-digit code to open the locker. The class definition is given below:
 
-[The class diagram of the Notification class]
+[The class diagram of the Notification class](./Notification.png)
 ```
 R5: When the order package is delivered to the locker location specified by the customer, a 6-digit code will be sent to the customer to open the locker.
 ```
@@ -34,14 +34,14 @@ The package that is kept inside the locker is represented by the LockerPackage c
 
 The representation of the Package and LockerPackage classes is shown below:
 
-[The class diagram of the Package and LockerPackage classes]
+[The class diagram of the Package and LockerPackage classes](./Pakage.png)
 ```
 R2: One or more items can be contained in one order. An order will be placed in a package before the delivery. R6: The package will be kept or placed inside the locker for three days only. R7: If the customer does not pick up the package from their locker within three days, the refund process will be initiated, and the customer won’t be allowed to pick up the package any longer.
 ```
 
 ### Locker
 Since we are designing a locker service problem, we should have a Locker class. Every locker has its ID, size, and reference to the location ID. Moreover, the Locker class has a member, lockerState, to specify the present state of the locker. We can add a package to the locker and remove a package from the locker. The UML representation of a class is shown below:
-[The class diagram of the Locker class]
+[The class diagram of the Locker class](./Locker.png)
 
 ```
 R4: The locker is assigned to the customer based on the size of the locker.
@@ -50,15 +50,14 @@ R4: The locker is assigned to the customer based on the size of the locker.
 ### Locker location
 A locker is kept at the location. Since a location may contain more than one locker, we have a list of lockers in the LockerLocation class. The longitude and latitude are used to store the location. According to the requirements, the specific locker is opened only for a particular period of time and the customer can only get a package from the locker if they visit the locker during the location timing. The openTime and closeTime variables store information about the timings applicable to the particular locker location.The representation of this class is given below:
 
-[The class diagram of the LockerLocation class]
-
+[The class diagram of the LockerLocation class](./LockerLocation.png)
 ```
 R9: Amazon Locker Service
 ```
 
 ### Locker service
 The LockerService class is the main class of the Amazon Locker service system and contains a reference to the list of locker locations. The UML representation of the class is given below:
-[The class diagram of the LockerService class]
+[The class diagram of the LockerService class](LockerService.png)
 
 ### Enumerations
 The list of enumerations required in the Amazon Locker service is provided below:
@@ -67,7 +66,7 @@ LockerStatus: The locker status describes the current status of the locker, whet
 
 LockerSize: The locker size expresses the size of the locker, whether it is extra small, small, medium, large, extra large, or double extra large.
 
-[Enums in the Amazon Locker service]
+[Enums in the Amazon Locker service](enum.png)
 ```
 R3: There can be different sizes of lockers like extra small, small, medium, large, extra large, and double extra large.
 
@@ -89,7 +88,7 @@ The class diagram has the following composition relationships:
 
 - The Package class is composed of the Order class which is composed of the Item class.
 
-[The composition relationship between classes]
+[The composition relationship between classes](./composition.png)
 
 ### Inheritance
 The following classes show an inheritance relationship:
@@ -101,7 +100,7 @@ Note: We have already discussed the inheritance relationship between classes in 
 ## Class diagram of the Amazon Locker service
 Here’s the complete class diagram for our Amazon Locker service:
 
-[The class diagram of the Amazon Locker service]
+[The class diagram of the Amazon Locker service](./classdiagram.png)
 
 ## Design pattern
 In the Amazon Locker service, there are multiple lockers at the given locker location. There are also different locker locations which are specified by the customer. Therefore, the system assigns the most appropriate locker to the customer by considering the customer’s location, and locker size. Therefore, the Strategy design pattern can be applied here. Other than that, our system can also have the following strategies:
