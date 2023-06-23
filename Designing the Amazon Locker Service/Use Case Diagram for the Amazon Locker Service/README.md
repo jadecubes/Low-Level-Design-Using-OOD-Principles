@@ -108,6 +108,6 @@ Overdue notification                                      Issue locker
 ## Use case diagram
 Here’s the use case diagram for the Amazon Locker system:
 
-[The use case diagram for the Amazon Locker system]
+[The use case diagram for the Amazon Locker system](./case.png)
 
 In the next lesson, we will discuss the class diagram with a detailed explanation of all classes and their relationship with each other.
