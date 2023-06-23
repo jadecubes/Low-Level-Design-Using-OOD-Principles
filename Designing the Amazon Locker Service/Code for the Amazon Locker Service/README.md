@@ -215,7 +215,146 @@ The Item and Order classes
 ### Package and LockerPackage
 When an order is packed, it is represented by the Package , and the package which is contained in the locker is represented by the LockerPackage class. The code to implement these classes is shown below:
 
+```java
+public class Package {
+  private String packageId;
+  private double packageSize;
+  private Order order;
 
+  public void pack();
+}
+
+public class LockerPackage extends Package {
+  private int codeValidDays;
+  private String lockerId;
+  private String packageId;
+  private String code;
+  private Date packageDeliveryTime;
+
+  public boolean isValidCode();
+  public boolean verifyCode(String code);
+}
+
+The Package and LockerPackage classes
+
+```
+
+```c#
+class Package {
+  private string packageId;
+  private double packageSize;
+  private Order order;
+
+  public void Pack();
+}
+
+class LockerPackage : Package {
+  private int codeValidDays;
+  private string lockerId;
+  private string packageId;
+  private string code;
+  private DateTime PackageDeliveryTime;
+
+  public bool IsValidCode();
+  public bool VerifyCode(String code);
+}
+
+The Package and LockerPackage classes
+
+```
+
+```python
+class Package:
+    def __init__(self, package_id, package_size, order):
+        self.__package_id = package_id
+        self.__package_size = package_size
+        self.__order = order
+  
+    def pack():
+        None
+
+class LockerPackage(Package):
+    def __init__(self, code_valid_days, locker_id, package_id, code, package_delivery_time, package_id, package_size, order):
+        self.__code_valid_days = code_valid_days
+        self.__locker_id = locker_id
+        self.__package_id = package_id
+        self.__code = code
+        self.__package_delivery_time = package_delivery_time
+        super().__init__(package_id, package_size, order)
+  
+    def is_valid_code():
+        None
+    
+    def verify_code(code):
+        None
+
+        The Package and LockerPackage classes
+
+```
+
+```c++
+class Package {
+  private:
+    string packageId;
+    double packageSize;
+    Order order;
+
+  public:
+    void pack();
+};
+
+class LockerPackage : public Package {
+  private: 
+    int codeValidDays;
+    string lockerId;
+    string packageId;
+    string code;
+    time_t packageDeliveryTime;
+
+  public: 
+    bool isValidCode();
+    bool verifyCode(string code);
+};
+
+The Package and LockerPackage classes
+
+```
+
+```javascript
+class Package {
+  #packageId;
+  #packageSize;
+  #order;
+
+    constructor(packageId, packageSize, order) {
+        this.#packageId = packageId;
+        this.#packageSize = packageSize;
+        this.#order = order;
+    }
+  pack();
+}
+
+class LockerPackage extends Package {
+  #codeValidDays;
+  #lockerId;
+  #packageId;
+  #code;
+  #packageDeliveryTime;
+    constructor(codeValidDays, lockerId, packageId, code, packageDeliveryTime, packageId, packageSize, order) {
+        this.#codeValidDays = codeValidDays;
+        this.#lockerId = lockerId; 
+        this.#packageId = packageId;
+        this.#code = code; 
+        this.#packageDeliveryTime = packageDeliveryTime;
+        super(packageId, packageSize, order);
+    }
+  isValidCode();
+  verifyCode(code);
+}
+
+The Package and LockerPackage classes
+
+```
 
 ### Locker and LockerLocation
 The Locker is the most important class of the system and a LockerLocation can contain multiple Locker instances. The implementation of these classes is given below:
@@ -359,4 +498,157 @@ The Locker and LockerLocation classes
 
 ```
 ### LockerService and Notification
+The final class of an Amazon Locker service is the LockerService class which will be singleton class, which means that the entire system will have only one instance of this class. The following code provides the definition of the LockerService and Notification classes used in the Amazon Locker service:
+
+```java
+public class LockerService {
+    private List<LockerLocation> locations;
+
+    // The LockerService is a Singleton class that ensures it will have only one active instance at a time
+    private static LockerService lockerService = null;
+    
+    // Created a static method to access the Singleton instance of LockerService class
+    public static LockerService getInstance() {
+        if (lockerService == null) {
+            lockerService = new LockerService();
+        }
+        return lockerService;
+    }
+}
+
+public class Notification {
+    private String customerId;
+    private String orderId;
+    private String lockerId;
+    private String code;
+
+    public void send();
+}
+
+The LockerService and Notification classes
+
+```
+
+```c#
+class LockerService {
+    private List<LockerLocation> locations;
+
+    // The LockerService is a singleton class that ensures it will have only one active instance at a time
+    private static LockerService lockerService = null;
+    
+    // Created a static method to access the singleton instance of LockerService class
+    public static LockerService GetInstance() {
+        if (lockerService == null) {
+            lockerService = new LockerService();
+        }
+        return lockerService;
+    }
+}
+
+class Notification {
+    private String customerId;
+    private String orderId;
+    private String lockerId;
+    private String code;
+
+    public void Send();
+}
+
+The LockerService and Notification classes
+
+```
+
+```python
+class __LockerService(object):
+  __instances = None
+  
+  def __new__(cls):
+    if cls.__instances is None:
+        cls.__instances = super(__LockerService, cls).__new__(cls)
+    return cls.__instances
+
+class LockerService(metaclass=__LockerService):
+    def __init__(self):
+      self.__locations = {}
+
+class Notification:
+    def __init__(self, customer_id, order_id, locker_id, code):
+        self.__customer_id = customer_id
+        self.__order_id = order_id
+        self.__locker_id = locker_id
+        self.__code = code
+    
+    def send():
+      pass
+
+      The LockerService and Notification classes
+
+```
+
+```c++
+class LockerService {
+    private:
+        vector<LockerLocation> locations;
+        static LockerService lockerService = NULL;
+    public: 
+        static LockerService getInstance() {
+            if (lockerService == NULL) {
+            lockerService = new LockerService();
+            }
+            return lockerService;
+        }
+};
+
+class Notification {
+    private: 
+        string customerId;
+        string orderId;
+        string lockerId;
+        string code;
+
+    public:
+        void send();
+};
+
+The LockerService and Notification classes
+
+```
+
+```javascript
+class LockerService {
+    #locations;
+    constructor(){
+        this.#locations = new Array();
+    }
+
+    // The LockerService is a singleton class that ensures it will have only one active instance at a time
+    #lockerService = null;
+    
+    // Created a static method to access the singleton instance of LockerService class
+    getInstance() {
+        if (lockerService == null) {
+            lockerService = new LockerService();
+        }
+        return lockerService;
+    }
+}
+
+class Notification {
+    #customerId;
+    #orderId;
+    #lockerId;
+    #code;
+    constructor(customerId, orderId, lockerId, code) {
+        this.#customerId = customerId;
+        this.#orderId = orderId;
+        this.#lockerId = lockerId;
+        this.#code = code;
+    }
+    send();
+}
+
+The LockerService and Notification classes
+
+```
 ## Wrapping up
+We've explored the complete design of an Amazon Locker service in this chapter. We've looked at how an Amazon Locker service design can be visualized using various UML diagrams.
