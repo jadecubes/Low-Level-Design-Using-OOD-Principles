@@ -34,7 +34,7 @@ The package that is kept inside the locker is represented by the LockerPackage c
 
 The representation of the Package and LockerPackage classes is shown below:
 
-[The class diagram of the Package and LockerPackage classes](./Pakage.png)
+[The class diagram of the Package and LockerPackage classes](./Package.png)
 ```
 R2: One or more items can be contained in one order. An order will be placed in a package before the delivery. R6: The package will be kept or placed inside the locker for three days only. R7: If the customer does not pick up the package from their locker within three days, the refund process will be initiated, and the customer won’t be allowed to pick up the package any longer.
 ```
