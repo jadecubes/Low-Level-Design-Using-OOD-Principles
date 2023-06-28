@@ -6,7 +6,7 @@ Modern vending machines were first developed in England in the early 1880s and d
 
 The diagram below elaborates on the process of product purchasing using the vending machine:
 
-[Vending]
+[Vending](./process)
 
 ## Expectations from the interviewee
 Although the vending machine problem is a simpler design problem asked in interviews, the interviewer still has some expectations. The following provides an overview of what the interviewer wants to hear you discuss in more detail during the interview.
