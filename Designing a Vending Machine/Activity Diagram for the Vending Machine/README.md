@@ -14,6 +14,6 @@ The customer interacts with the vending machine and inserts money. The customer 
 
 Based on the order above, the activity diagram of a product purchase from the vending machine is shown below:
 
-[The activity diagram for the product purchase from the vending machine]
+[The activity diagram for the product purchase from the vending machine](./activity.png)
 
 We've looked at some of the activity diagrams of our vending machine. In the next lesson, we will present the code for our designed classes in some of the most popular languages.
