@@ -87,28 +87,30 @@ Hit                    Collect or payout
 
 Stand                   Block member
 
-Create account
+Create account          Create account
 
-Create account
+Update account          Update account
 
-Update account
+Reset password          Reset password
 
-Update account
+Cancel membership       Cancel membership
 
-Reset password
-
-Reset password
-
-Cancel membership
-
-Cancel membership
-
-Login/Logout
-
-Login/Logout
+Login/Logout            Login/Logout
 
 ```
 
 ### Include
+- The "Create hand" use case and the "Hit" use case has an include relationship with the "Draw card" use case because, at the start of the game, we draw cards to create hands, and in the middle, we draw cards when the player chooses to "Hit."
+
+- Whenever a player chooses to "Stand," their turn is skipped. Then, if the dealer card total is more than 16, the dealer and player's card total is compared with each other. According to the result of the game, the dealer either collects or pays the money. So the "Stand" use case has an include relationship with the "Collect or payout" use case.
+
 ### Extend
+- The "Cancel membership" use case and "Block member" use case have an extend relationship with the "Modify member" use case, because whenever we cancel someone's membership or block someone, we modify the member status.
+
+- Whenever the account password is changed, the account is updated. Hence, the "Reset password" use case has an extend relationship with the "Update account" use case.
+
 ## Use case diagram
+
+[The use case diagram for the Blackjack game]
+
+In the next lesson, we will discuss the class diagram with a detailed explanation of all classes and their relationship with each other.
