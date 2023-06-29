@@ -61,13 +61,105 @@ R4: There can be two types of users that can play the Blackjack game, i.e., deal
 ```
 
 ### Blackjack controller
+The BlackjackController class validates the action(hit, stand) and responds accordingly.
+
+[The class diagram of the BlackjackController class]
+
 ### Blackjack game view
+The BlackjackGameView class represents the game view. The BlackjackGame class updates the BlackjackGameView class.
+
+[The class diagram of the BlackjackGameView class]
+
 ### Blackjack game
+The BlackjackGame class represents how we can play this game or its basic sequence of play. It controls the game, accepts wagers from players, and distributes cards from the Shoe to hands, updates the game's status, gathers lost wagers, pays winning wagers, divides hands, and responds to player decisions to hit or stand.
+
+[The class diagram of BlackjackGame class]
+
+```
+R1: The Blackjack game contains the shoe of cards which contains one or more decks of cards in it.
+```
+
 ### Enumerations and custom data types
+The following provides an overview of the enumerations and custom data types used in this problem:
+
+- Suit: We need to create an enumeration to keep track of the suit of the card, whether it is diamond, spade, heart, or club.
+
+- AccountStatus: We need to create an enumeration to keep track of the account status, whether it is active, canceled, closed, blocked, or none.
+
+
+[Enums in the Blackjack game]
+
+
+- Person: Used to store information related to a person like a name, street address, country, etc.
+  
+
+[The class diagram of the Person class]
+
+
 ## Relationship between the classes
+Now, we’ll discuss the relationships between the classes we have defined above in our Blackjack game.
+
+
 ### Association
+The class diagram has the following association relationships:
+
+- The Shoe class has a one-way association with Deck.
+
+- The BlackjackGame class has a one-way association with BlackjackGameView.
+
+- The BlackjackController class has a one-way association with BlackjackGame.
+
+- The Player class has a one-way association with BlackjackGame and BlackjackController.
+
+[The association relationship between classes]
+
 ### Aggregation
+The class diagram has the following aggregation relationships.
+
+- The BlackjackGame class contains the Dealer and BlackjackPlayer.
+
+- Both the Deck and Hand classes contain the Card class.
+
+[The aggregation relationship between classes]
+
+
 ### Composition
+The class diagram has the following composition relationships.
+
+- The BlackjackGame class is composed of Shoe.
+
+- The Player class is composed of Hand.
+
+[The composition relationship between classes]
+
 ### Inheritance
+The following classes show an inheritance relationship:
+
+- Both the BlackjackPlayer and Dealer classes extend the Player class.
+```
+Note: We have already discussed the inheritance relationship between classes in the component section above one by one.
+```
 ## Class diagram for the Blackjack game
+Here’s the complete class diagram for our Blackjack game:
+
+[The class diagram of the Blackjack game]
+
 ## Design pattern
+The Iterator design pattern can be applied, since cards are assigned to the players from the deck of cards by just iterating through the list of cards.
+
+We can also use the State design pattern for our online Blackjack game because this game has a finite number of states. Some of these states are as follows:
+
+- Shuffle the deck
+
+- Draw a card and give it to the dealer
+
+- Draw a card and give it to the player
+
+- Deal cards
+
+- Player hit 
+
+- Player stand
+
+We have completed the class diagram of the Blackjack game according to the requirements. Now, let's design the activity diagram of the Blackjack game in the next lesson.
+
