@@ -702,5 +702,123 @@ Player and its derived classes
 ```
 
 ### Blackjack controller and game view
+The BlackjackController class validates the actions (hit or stand) and responds accordingly. The BlackjackGameView class represents the game view.
+
+```java
+public class BlackjackController {
+  public boolean validateAction();
+}
+
+public class BlackjackGameView {
+  public void playAction(String action, Hand hand);
+}
+```
+
+```c#
+class BlackjackController {
+  public bool ValidateAction();
+}
+
+class BlackjackGameView {
+  public void PlayAction(String action, Hand hand);
+}
+```
+
+```python
+class BlackjackController:
+  def validate_action():
+    None
+
+class BlackjackGameView:
+  def play_action(self, action, hand):
+    None
+```
+
+```javascript
+class BlackjackController {
+  validateAction();
+}
+
+class BlackjackGameView {
+  playAction(action, hand);
+}
+```
+
 ### Blackjack game
+The BlackjackGame class represents how we can play this game or its basic sequence of play.
+
+```java
+public class BlackjackGame {
+  private Player player;
+  private Dealer dealer;
+  private Shoe shoe;
+  private final int MAX_NUM_OF_DECKS = 4;
+
+  public BlackjackGame(BlackjackPlayer player, Dealer dealer);
+  public void playAction(String action, Hand hand);
+  public void hit(Hand hand);
+  public void stand();
+  public void start();
+}
+```
+
+```c#
+class BlackjackGame {
+  private Player player;
+  private Dealer dealer;
+  private Shoe shoe;
+  private const int MAX_NUM_OF_DECKS = 4;
+
+  public BlackjackGame(BlackjackPlayer player, Dealer dealer);
+  public void PlayAction(String action, Hand hand);
+  public void Hit(Hand hand);
+  public void Stand();
+  public void Start();
+}
+```
+
+```python
+class BlackjackGame:
+  def __init__(self, player, dealer, shoe):
+    self.__id = id
+    self.__player = player
+    self.__dealer = dealer
+    self.__shoe = shoe
+    self.__MAX_NUM_OF_DECKS = 4
+
+  def play_action(action, hand):
+    pass
+
+  def hit(hand):
+    pass
+
+  def stand():
+    pass
+
+  def start():
+    pass
+```
+
+```javascript
+class BlackjackGame {
+  #player;
+  #dealer;
+  #shoe;
+  #MAX_NUM_OF_DECKS
+
+  constructor(player, dealer, shoe) {
+    this.#player = player;
+    this.#dealer = dealer;
+    this.#shoe = shoe;
+    this.#MAX_NUM_OF_DECKS = 4;
+  }
+
+  playAction(action, hand);
+  hit(hand);
+  stand();
+  start();
+}
+```
+
 ## Wrapping up
+We've explored the complete design of the Blackjack game in this chapter. We've looked at how a basic Blacljack game can be visualized using various UML diagrams and designed using object-oriented principles and design patterns.
