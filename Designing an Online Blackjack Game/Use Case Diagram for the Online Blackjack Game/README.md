@@ -111,6 +111,6 @@ Login/Logout            Login/Logout
 
 ## Use case diagram
 
-[The use case diagram for the Blackjack game]
+[The use case diagram for the Blackjack game](./usecasediagram.png)
 
 In the next lesson, we will discuss the class diagram with a detailed explanation of all classes and their relationship with each other.
