@@ -6,7 +6,7 @@ At the start of the game, a bet is placed by a player, and then the dealer will 
 
 The following slide represents how to play Blackjack:
 
-[Problem]
+[Game](./game)
 
 ## Expectations from the interviewee
 There are several components in a Blackjack game, each with specific constraints and requirements placed on them. The following provides an overview of some of the main expectations that the interviewer will want to hear you discuss in more detail during the interview.
