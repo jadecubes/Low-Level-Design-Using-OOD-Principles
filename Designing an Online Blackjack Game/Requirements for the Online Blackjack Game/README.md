@@ -31,7 +31,7 @@ R6: The dealer will deal two cards to themselves and two to each player at the s
 
 R7: The player will have both cards exposed, while the dealer has one card facing up and the other card down.
 
-[Game]
+[Game](./layout.png)
 
 R8: The player can hit (Draw an additional card.)  if their hand has less than 21 points.
 
