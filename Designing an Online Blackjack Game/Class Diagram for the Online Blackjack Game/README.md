@@ -7,7 +7,7 @@ In this section, we’ll define the classes for the Blackjack game. As mentioned
 ### Card
 Card belongs to a suit and has a face value. The face value of the card is according to the card number. For example, if we have a number card 5, its face value is also 5. The face value for the King, Queen, and Jack is 10, and 1 or 11 for the Ace, depending on the situation.
 
-[The class diagram of the Card class]
+[The class diagram of the Card class](./card.png)
 
 ```
 R3: Every card has points associated with it. The criteria to calculate the face value of the card is as follows:
@@ -20,7 +20,7 @@ Face cards (King, Queen, Jack)     	10
 ### Deck
 Deck has 52 cards of four suits, and one suit contains nine number cards (2–10) and four face cards (King, Queen, Jack, and Ace). The Deck class contains a list of cards where the top card is in the first index.
 
-[The class diagram of the Deck class]
+[The class diagram of the Deck class](./deck.png)
 
 ```
 R2: The deck will consist of 52 cards in four suits, where each suit contains 13 cards: Ace, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, Jack, Queen, and King.
@@ -29,7 +29,7 @@ R2: The deck will consist of 52 cards in four suits, where each suit contains 13
 ### Shoe
 Shoe is a device to hold multiple Deck, and it has a shuffle operation.
 
-[The class diagram of the Shoe class]
+[The class diagram of the Shoe class](./shoe.png)
 
 ```
 R1: The Blackjack game contains the shoe of cards which contains one or more decks of cards in it.
@@ -38,7 +38,7 @@ R1: The Blackjack game contains the shoe of cards which contains one or more dec
 ### Hand
 The Hand class represents a Blackjack hand used in this game which can contain multiple cards.
 
-[The class diagram of the Hand class]
+[The class diagram of the Hand class](./hand.png)
 
 ```
 R8: The player can draw the additional card if their hand has less than 21 points.
@@ -55,7 +55,7 @@ BlackjackPlayer: They place the first wager and update the stake with winning an
 
 Dealer: They are primarily in charge of dealing cards and following the Blackjack rules.
 
-[The class diagram of Player and its derived classes]
+[The class diagram of Player and its derived classes](./player.png)
 ```
 R4: There can be two types of users that can play the Blackjack game, i.e., dealer and the player.
 ```
@@ -63,17 +63,17 @@ R4: There can be two types of users that can play the Blackjack game, i.e., deal
 ### Blackjack controller
 The BlackjackController class validates the action(hit, stand) and responds accordingly.
 
-[The class diagram of the BlackjackController class]
+[The class diagram of the BlackjackController class](./controller.png)
 
 ### Blackjack game view
 The BlackjackGameView class represents the game view. The BlackjackGame class updates the BlackjackGameView class.
 
-[The class diagram of the BlackjackGameView class]
+[The class diagram of the BlackjackGameView class](./view.png)
 
 ### Blackjack game
 The BlackjackGame class represents how we can play this game or its basic sequence of play. It controls the game, accepts wagers from players, and distributes cards from the Shoe to hands, updates the game's status, gathers lost wagers, pays winning wagers, divides hands, and responds to player decisions to hit or stand.
 
-[The class diagram of BlackjackGame class]
+[The class diagram of BlackjackGame class](./bjgame.png)
 
 ```
 R1: The Blackjack game contains the shoe of cards which contains one or more decks of cards in it.
@@ -87,13 +87,13 @@ The following provides an overview of the enumerations and custom data types use
 - AccountStatus: We need to create an enumeration to keep track of the account status, whether it is active, canceled, closed, blocked, or none.
 
 
-[Enums in the Blackjack game]
+[Enums in the Blackjack game](./enum.png)
 
 
 - Person: Used to store information related to a person like a name, street address, country, etc.
   
 
-[The class diagram of the Person class]
+[The class diagram of the Person class](./person.png)
 
 
 ## Relationship between the classes
@@ -111,7 +111,7 @@ The class diagram has the following association relationships:
 
 - The Player class has a one-way association with BlackjackGame and BlackjackController.
 
-[The association relationship between classes]
+[The association relationship between classes](./association.png)
 
 ### Aggregation
 The class diagram has the following aggregation relationships.
@@ -120,7 +120,7 @@ The class diagram has the following aggregation relationships.
 
 - Both the Deck and Hand classes contain the Card class.
 
-[The aggregation relationship between classes]
+[The aggregation relationship between classes](./agg.png)
 
 
 ### Composition
@@ -130,7 +130,7 @@ The class diagram has the following composition relationships.
 
 - The Player class is composed of Hand.
 
-[The composition relationship between classes]
+[The composition relationship between classes](./composition.png)
 
 ### Inheritance
 The following classes show an inheritance relationship:
@@ -142,7 +142,7 @@ Note: We have already discussed the inheritance relationship between classes in 
 ## Class diagram for the Blackjack game
 Here’s the complete class diagram for our Blackjack game:
 
-[The class diagram of the Blackjack game]
+[The class diagram of the Blackjack game](./classdiagram.png)
 
 ## Design pattern
 The Iterator design pattern can be applied, since cards are assigned to the players from the deck of cards by just iterating through the list of cards.
