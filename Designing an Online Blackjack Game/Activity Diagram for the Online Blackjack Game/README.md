@@ -52,6 +52,6 @@ Final state: There are four final states present in this activity diagram, shown
 
 Based on the order above, the activity diagram of a Blackjack game is given below:
 
-[The activity diagram for the Blackjack game play]
+[The activity diagram for the Blackjack game play](./activity.png)
 
 We've looked at the activity diagrams of the Blackjack game. In the next lesson, we will present the code for our designed classes in some of the most popular languages.
