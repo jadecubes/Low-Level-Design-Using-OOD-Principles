@@ -2,7 +2,7 @@
 ## Problem definition
 A meeting scheduler software allows organizations to schedule and book meetings for a group of participants. The scheduler determines a meeting time and location depending on the availability of the participants. It ensures that most of the intended participants can effectively meet on the specified date and interval. The system allows users to book and cancel meetings. The invited participants promptly receive these notifications. The organizer can also add new participants to a meeting after the meeting is scheduled.
 
-[Schedule a meeting using a meeting scheduler]
+[Schedule a meeting using a meeting scheduler](./scheduler.png)
 
 ## Expectations from the interviewee
 It is important to narrow down the components you will include in your design of a meeting scheduler. The following section provides an overview of some of the main expectations that the interviewer will want to hear you discuss in more detail during the interview.
