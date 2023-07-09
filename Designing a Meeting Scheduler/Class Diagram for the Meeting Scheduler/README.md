@@ -107,6 +107,8 @@ The class diagram has the following aggregation relationships:
 
 - The MeetingRoom class is aggregated from the Interval class.
 
+[The aggregation relationship between classes](./agg.png)
+
 ## Class diagram of the meeting scheduler
 Here's the complete class diagram for the meeting scheduler:
 
