@@ -15,17 +15,17 @@ Initial state: The user opens the calendar.
 Final state: The notification and meeting details are sent to all the invited participants.
 ### Actions
 The user opens the calendar and selects an available slot. The user books a meeting room and the meeting details are sent to all invited users.
-[The activity diagram for a user scheduling a meeting]
+[The activity diagram for a user scheduling a meeting](./activity1.png)
 
 ## Activity challenge: Respond to an invite
 You'll help us to create an activity diagram of a person responding to an invite.
 
 A skeleton of the activity diagram is given below:
 
-[The activity diagram for a user responding to an invite]
+[The activity diagram for a user responding to an invite](./activity2.png)
 
 Notice that the actions in the diagram above are numbered from 1 to 6. The slots below represent the activities, and the arrows represent the flow from one activity to the other.
 
-[challenge]
+[challenge](./challenge.png)
 
-[answer]
+[answer](./answer.png)
