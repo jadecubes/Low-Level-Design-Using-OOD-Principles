@@ -64,6 +64,6 @@ Book/Release room            Accept/Reject meeting       Send cancelation notifi
 ## Use case diagram
 Here's the use case diagram of the meeting scheduler:
 
-[The use case diagram of the meeting scheduler]
+[The use case diagram of the meeting scheduler](./usecasediagram.png)
 
 In the next lesson, we'll discuss the class diagram with a detailed explanation of all classes and their relationship with each other.
