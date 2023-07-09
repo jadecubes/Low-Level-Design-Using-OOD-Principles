@@ -9,7 +9,7 @@ The User class is responsible for representing the personal information of a use
 
 The class definition is shown below:
 
-[The class diagram of the User class]
+[The class diagram of the User class](./user.png)
 
 ```
 R5: Users will receive an invite regardless of whether or not they are available at the interval. Users can respond to the invitation by either accepting or rejecting the invite.
@@ -18,7 +18,7 @@ R5: Users will receive an invite regardless of whether or not they are available
 ### Interval
 The Interval class contains the start time and end time of a meeting. The visual representation of the Interval class is as follows:
 
-[The class diagram of the Interval class]
+[The class diagram of the Interval class](./interval.png)
 
 ```
 R3: If not reserved already, each meeting room should have the ability to be booked, along with setting an interval, a start time, and an end time for the meeting.
@@ -28,7 +28,7 @@ The MeetingRoom class contains the details of any particular room, such as its c
 
 The class diagram of the MeetingRoom class is provided below:
 
-[The class diagram of the MeetingRoom class]
+[The class diagram of the MeetingRoom class](./meetingroom.png)
 
 ```
 R2: Each meeting room should have a specific capacity to accommodate the desired number of people.
@@ -40,7 +40,7 @@ The Meeting class displays the meeting details, such as the participants, the me
 
 The class diagram of the Meeting class is provided below:
 
-[The class diagram of the Meeting class]
+[The class diagram of the Meeting class](./meeting.png)
 
 ```
 R3: If not reserved already, each meeting room should have the ability to be booked, along with setting an interval, a start time, and an end time for the meeting.
@@ -50,7 +50,7 @@ The Calendar class keeps track of all the meetings that are scheduled or being h
 
 The class definition is provided below:
 
-[The class diagram of the Calendar class]
+[The class diagram of the Calendar class](./calenar.png)
 
 ```
 R6: Each user should have access to a calendar that can be used to track the date and time, as well as to schedule or cancel meetings.
@@ -61,7 +61,7 @@ The MeetingScheduler class contains an organizer that is responsible for schedul
 
 The visual representation of the MeetingScheduler class is provided below:
 
-[Class diagram of the MeetingScheduler class]
+[Class diagram of the MeetingScheduler class](./meetingscheduler.png)
 
 ```
 R6: Each user should have access to a calendar that can be used to track the date and time, as well as to schedule or cancel meetings.
@@ -72,7 +72,7 @@ The Notification class will send a notification for an invitation to a user rega
 
 The UML representation of the class is shown below:
 
-[The class diagram of the Notification class]
+[The class diagram of the Notification class](./notification.png)
 
 ```
 R4: A notification should be sent to all the people invited to the meeting.
@@ -88,7 +88,7 @@ The class diagram has the following association relationships:
 
 - The MeetingScheduler class has a one-way association with the Notification and Meeting classes.
 
-[The association relationship between classes]
+[The association relationship between classes](./relationship.png)
 
 ### Composition
 The class diagram has the following composition relationships:
@@ -97,7 +97,7 @@ The class diagram has the following composition relationships:
 
 - The Calendar class is composed of the Meeting class.
 
-[The composition relationship between classes]
+[The composition relationship between classes](./composition.png)
 
 
 ### Aggregation
@@ -110,7 +110,7 @@ The class diagram has the following aggregation relationships:
 ## Class diagram of the meeting scheduler
 Here's the complete class diagram for the meeting scheduler:
 
-[The class diagram of the meeting scheduler]
+[The class diagram of the meeting scheduler](./classdiagram.png)
 
 ## Design pattern
 In the meeting scheduler design, the entire system revolves around the scheduler which is responsible for scheduling meetings. To create a robust design, it is not possible that there can be more than one instance for the scheduler. Therefore, we use the Singleton design pattern to ensure that only one instance of the scheduler is created and that this instance has a global point of access.
