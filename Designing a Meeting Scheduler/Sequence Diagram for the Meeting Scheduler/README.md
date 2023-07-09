@@ -36,12 +36,15 @@ I. The scheduler informs the organizer to select another meeting time.
 
 Based on the order above, the sequence diagram for scheduling a meeting in the meeting scheduler system is given below:
 
-[The sequence diagram for scheduling a meeting]
+[The sequence diagram for scheduling a meeting](./seq1.png)
 
 ## Sequence challenge: Cancel meeting
 You'll help us to complete a sequence diagram for the cancel meeting interaction. A skeleton of the cancel meeting sequence diagram is provided below:
 
-[The sequence diagram for canceling a meeting]
+[The sequence diagram for canceling a meeting](./seq2.png)
 
 Notice that the arrows in the diagram above are numbered from 1 to 7. The message boxes shown below are the messages to be exchanged between the actor(s) and object(s). Can you rearrange the messages below in the correct sequence of order they should appear in the skeleton of the sequence diagram given above?
 
+[Sequence](./challenge.png)
+
+[Answer](./answer.png)
