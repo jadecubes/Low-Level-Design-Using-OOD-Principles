@@ -40,6 +40,6 @@ Here are the steps in the return package interaction:
 
 Based on the order above, the sequence diagram of package return in the Amazon Locker system is given below:
 
-[The sequence diagram for returning a package]
+[The sequence diagram for returning a package](./seq.png)
 
 Next, let's look at the activity diagrams for the Amazon Locker system to understand the control flow of the system.
