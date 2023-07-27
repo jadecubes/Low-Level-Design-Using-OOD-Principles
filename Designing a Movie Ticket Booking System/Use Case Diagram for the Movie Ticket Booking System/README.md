@@ -65,5 +65,34 @@ We describe the relationships between and among actors and their use cases in th
 We can search for a movie with the title, language, genre, or release date. This shows that the “Search movie” use case has a generalization relationship with the “By movie title,” “By movie language,” “By movie genre,” and “By movie release date” use cases.
 
 ## Associations
+The table below shows the association relationship between actors and their use cases.
+```
+Admin               Customer                       Ticket Agent                     System
+
+Add show            Search movie                   Search movie                    Send new movie notification
+
+Modify show         Create/view/modify/cancel      Create/view booking             Send booking notification
+                    booking
+
+Delete show         Reserve a seat                 Reserve a seat                  Send cancellation notification
+
+Add movie           Pay using credit card/cash
+
+Search movie
+
+Delete movie
+```
 ## Include
+- The “Create booking” use case has an include relationship with the “Reserve seat” use case, since the booking creation process includes reserving a seat on a seating map.
+
+- The “Pay using cash” and “Pay using credit card” use cases have an include relationship with the “Send booking notification” use case, since once the payment has been made and verified, only then will the system generate a notification.
+
+- The “Cancel booking” use case has an include relationship with the “Refund payment” use case, since this is part of the process.
+
+- The “Add movie” use case has an include relationship with the “Send new movie notification” use case, since a notification will only be sent when an admin adds a new movie.
+
+- The “Cancel booking,” “Delete movie,” and “Delete show” use cases have an include relationship with the “Send cancellation notification” use case, since a notification will only be sent when an admin cancels the show or the movie or a customer cancels their booking.
+
 # Use case diagram
+
+[Use case diagram of movie ticket booking system.]
