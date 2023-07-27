@@ -308,3 +308,15 @@ The entire process has been summarized in the illustration given below:
 In the movie ticket booking system, there can be multiple seat types for a cinema hall, and each seat type will have its own formula to calculate the ticket fare. Therefore, the Strategy design pattern can be applied here, which will design a separate strategy or algorithm to calculate the price of each seat type. It is applied through the definition of a function that provides the implementation of the rates for each seat type using different strategies. This strategy can also differ based on a movie’s popularity or taxes
 
 # Additional requirements
+The interviewer can introduce some additional requirements in the movie ticket booking system, or they can ask some follow-up questions. Let’s see some examples of additional requirements:
+
+Discount: Customers can use a coupon to add a discount to their payment. The class diagram provided below shows the relationship of Discount with the Payment class:
+
+[The relationship between the Discount class and the Payment class]
+
+Customer and the guest users: There should be two types of users in our system. The guest user can search for movies and choose to register. The customer should be an authenticated user and is able to search movies and book shows. The class diagram below shows how we can implement separate functionality for different users:
+
+[The class diagram of different users of our system]
+
+We have completed the class diagram of the movie ticket booking system according to the requirements. Let’s now design the sequence diagram of the movie ticket booking system in the next lesson.
+
