@@ -9,7 +9,7 @@ Our movie ticket booking system should have a Seat object that will be an abstra
 
 The visual representation of these classes is as follows:
 
-[The class diagram of Seat and its derived classes]
+[The class diagram of Seat and its derived classes](./seat.png)
 
 ```
 R9: Each seat type has a fixed cost. There are three types of seats:
@@ -25,7 +25,7 @@ The ShowTime class represents a particular show of a movie and contains informat
 
 Here is what the class definition looks like:
 
-[The class diagram of the ShowTime class]
+[The class diagram of the ShowTime class](./showtime.png)
 
 ```
 R5: Users can make a booking at any cinema at the available showtime.
@@ -37,7 +37,7 @@ The Hall class is responsible for finding the current show airing. It contains t
 
 The UML representation of the class is shown below:
 
-[The class diagram of the Hall class]
+[The class diagram of the Hall class](./hall.png)
 
 ```
 R2: Each movie in the cinema can have multiple shows, however, one hall will only show one show at a time.
@@ -48,7 +48,7 @@ The Cinema class consists of the number of halls present in the cinema along wit
 
 The class representation of the Cinema class is as follows:
 
-[The class diagram of the Cinema class]
+[The class diagram of the Cinema class](./cinema.png)
 
 ```
 R1: There exist multiple cinemas in the city and the cinema has multiple halls.
@@ -59,7 +59,7 @@ The City class includes the name of the city, the state it is located in, and it
 
 The UML representation of the class is shown below:
 
-[The class diagram of the City class]
+[The class diagram of the City class](./city.png)
 
 ```
 R1: There exist multiple cinemas in the city and the cinema has multiple halls.
@@ -70,7 +70,7 @@ The Movie class contains all the various details of a particular movie, such as 
 
 Here is what the class definition looks like:
 
-[The class diagram of the Movie class]
+[The class diagram of the Movie class](./movie.png)
 
 ```
 R4: Users can search movies based on the following four criteria:
@@ -86,7 +86,7 @@ The MovieTicket class refers to a customer’s ticket for a particular movie wit
 
 The class representation of the MovieTicket class is as follows:
 
-[The class diagram of the MovieTicket class]
+[The class diagram of the MovieTicket class](./ticket.png)
 
 ```
 R10: There can only be one ticket allocated per seat.
@@ -98,7 +98,7 @@ The Payment class will be an abstract class and will have two child classes: Cre
 
 The visual representation of these classes is as follows:
 
-[The class diagram of the Payment class and its child classes]
+[The class diagram of the Payment class and its child classes](./payment.png)
 
 ```
 R7: Online customers can only pay using a credit card, while walk-in customers can pay using cash or credit card through the ticket agent.
@@ -126,7 +126,7 @@ The TicketAgent class is responsible for creating bookings on behalf of walk-in 
 
 The class diagram of all these is provided below:
 
-[The class diagram of different people that interact with our system]
+[The class diagram of different people that interact with our system](./person.png)
 
 ```
 R5: Users can make a booking at any cinema hall at the available showtime.
@@ -153,7 +153,7 @@ Notification will be an abstract class since it can send a notification via emai
 
 The UML representation of the class is shown below:
 
-[The class diagram of Notification and its child classes]
+[The class diagram of Notification and its child classes](./notification.png)
 
 ```
 R14: The system should generate a notification for the following three cases:
@@ -167,7 +167,7 @@ R14: The system should generate a notification for the following three cases:
 The Catalog is the class where the search function is implemented. Each catalog will contain a list of movies sorted according to one of the given search techniques, i.e., based on the movie’s title, language, genre, or release date.
 
 The class representation of the Catalog class is as follows:
-[The class diagram of the Catalog class]
+[The class diagram of the Catalog class](./catalogue.png)
 
 ```
 R4: Users can search movies based on the following four criteria:
@@ -191,7 +191,7 @@ The Search class will be an interface that allows customers to search for any pa
 
 The UML representation of the class is shown below:
 
-[The class diagram of the Search interface]
+[The class diagram of the Search interface](./search.png)
 
 ```
 R4: Users can search movies based on the following four criteria:
@@ -206,7 +206,7 @@ The Booking class is the main class of our movie ticket booking system and conta
 
 The UML representation of the Booking class is as follows:
 
-[The class diagram of the Booking class]
+[The class diagram of the Booking class](./booking.png)
 
 ```
 R5: Users can make a booking at any cinema at the available showtime.
@@ -224,7 +224,7 @@ The following is the list of enumerations required in the movie ticket booking s
 
 These enumerations can be represented using the following class diagram:
 
-[Enums in the movie ticket booking system]
+[Enums in the movie ticket booking system](./status.png)
 
 # Relationship between the classes
 Now, we are going to discuss the relationships between the classes we have defined above in our movie ticket booking system.
