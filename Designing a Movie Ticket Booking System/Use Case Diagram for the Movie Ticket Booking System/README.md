@@ -95,4 +95,4 @@ Delete movie
 
 # Use case diagram
 
-[Use case diagram of movie ticket booking system.]
+[Use case diagram of movie ticket booking system.](./usecase.png)
