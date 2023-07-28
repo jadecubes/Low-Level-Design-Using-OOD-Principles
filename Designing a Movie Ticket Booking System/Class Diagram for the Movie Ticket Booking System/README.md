@@ -246,28 +246,28 @@ The class diagram has the following association relationships:
 
 - The Movie class has a one-way association with ShowTime and MovieTicket.
 
-[The association relationship between classes]
+[The association relationship between classes](./association.png)
 
 ## Composition
 The class diagram has the following composition relationships:
 
 - The Cinema class is composed of the Hall class, which is composed of the ShowTime class.
 
-[The composition relationship between classes]
+[The composition relationship between classes](./composition.png)
 
 ## Aggregation
 The following classes show an aggregation relationship:
 
 - The Movie class contains the Catalog class.
 
-[The aggregation relationship between classes]
+[The aggregation relationship between classes](aggregation.png)
 
 ## Generalization
 The following classes show a generalization relationship:
 
 - The Catalog class implements the Search class.
 
-[The generalization relationship between classes]
+[The generalization relationship between classes](./generalization.png)
 
 ## Inheritance
 The following classes show an inheritance relationship:
@@ -284,7 +284,7 @@ Note: We have already discussed the inheritance relationship between classes in 
 ```
 # Class diagram of the movie ticket booking system
 
-[The class diagram of the movie ticket booking system]
+[The class diagram of the movie ticket booking system](./classdiagram.png)
 
 # Handle concurrency
 One of the major requirements of the movie ticket booking system is that no two customers can book the same seat in the same show of a movie. This is to prevent the case of double booking where two people have the same seats allocated to them.
