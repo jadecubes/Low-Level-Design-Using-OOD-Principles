@@ -45,7 +45,7 @@ Here’re the steps of the interaction to create a booking interaction:
 
 Based on the order above, the sequence diagram for creating a booking in the movie ticket booking system is given below.
 
-[The sequence diagram to create a booking]
+[The sequence diagram to create a booking](./createbooking.png)
 
 ## Payment of a booking
 The sequence diagram for payment of a booking should have the following actors and objects that will interact with each other:
@@ -84,10 +84,14 @@ Here are the steps in the payment of a booking interaction:
 
 Based on the order above, the sequence diagram for payment of a booking in the movie ticket booking system is given below.
 
-[The sequence diagram for the payment of a booking interaction]
+[The sequence diagram for the payment of a booking interaction](./bookingpayment.png)
 
 ## Sequence challenge: Cancel booking
 You will complete a sequence diagram for a booking canceled by the customer. A skeleton of the cancel sequence diagram is given below:
 
-[The sequence diagram for canceling the booking]
+[The sequence diagram for canceling the booking](./cancelbooking.png)
+
+[Sequence](./seq.png)
+
+[Answer](./cancelbookinganswer.png)
 
