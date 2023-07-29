@@ -21,7 +21,7 @@ Based on the order above, the activity diagram of a customer making a booking fo
 Note: Here we assume that the customer is purchasing a single cinema seat.
 ```
 
-[The activity diagram for the customer making a booking]
+[The activity diagram for the customer making a booking](./makeabooking.png)
 
 ## Activity challenge: Admin cancels a show
 
@@ -29,4 +29,6 @@ You will create an activity diagram of an admin canceling a show for a movie.
 
 A skeleton of the activity diagram is given below.
 
-[The activity diagram for an admin cancelling a show]
+[The activity diagram for an admin cancelling a show](./cancel.png)
+
+[Answer](./answer.png)
