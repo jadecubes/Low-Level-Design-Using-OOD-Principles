@@ -938,8 +938,244 @@ class MotorCycle extends Vehicle {
 ```
 
 ### Equipment
+Equipment is an abstract class, and this section represents different equipment: Navigation, ChildSeat, and SkiRack added in the reservation. The code to implement these classes is shown below:
+
+```java
+// Equipment is an abstract class
+public abstract class Equipment {
+    private int equipmentId;
+    private int price;
+}
+
+public class Navigation extends Equipment {
+}
+
+public class ChildSeat extends Equipment {
+}
+
+public class SkiRack extends Equipment {
+}
+```
+
+```c#
+// Equipment is an abstract class
+public abstract class Equipment {
+    private int equipmentId;
+    private int price;
+}
+
+class Navigation : Equipment {
+}
+
+class ChildSeat : Equipment {
+}
+
+class SkiRack : Equipment {
+}
+```
+
+```python
+# Equipment is an abstract class
+from abc import ABC, abstractmethod
+
+class Equipment(ABC):
+  def __init__(self, equipment_id, price):
+    self.__equipment_id = equipment_id
+    self.__price = price
+
+class Navigation(Equipment):
+  def __init__(self, equipment_id, price):
+    super().__init__(equipment_d, price)
+
+class ChildSeat(Equipment):
+  def __init__(self, equipment_id, price):
+    super().__init__(equipmentId, price)
+
+class SkiRack(Equipment):
+  def __init__(self, equipment_id, price):
+    super().__init__(equipment_id, price)
+```
+
+```c++
+// Equipment is an abstract class
+class Equipment {
+    private:
+        int equipmentId;
+        int price;
+};
+
+class Navigation : public Equipment {
+    
+};
+
+class ChildSeat : public Equipment {
+   
+};
+
+class SkiRack : public Equipment {
+    
+};
+```
+
+```javascript
+// Equipment is an abstract class
+class Equipment {
+  #equipmentId;
+  #price;
+
+  constructor(equipmentId, price) {
+    if (this.constructor == Equipment) {
+      throw new Error("Abstract classes can't be instantiated.");
+    }
+    else {
+      this.#equipmentId = equipmentId;
+      this.#price = price;
+    }
+  }
+}
+
+class Navigation extends Equipment {
+  constructor(equipmentId, price) {
+    super(equipmentId, price);
+  }
+}
+
+class ChildSeat extends Equipment {
+  constructor(equipmentId, price) {
+    super(equipmentId, price);
+  }
+}
+
+class SkiRack extends Equipment {
+  constructor(equipmentId, price) {
+    super(equipmentId, price);
+  }
+}
+```
+
 ### Service
+Service is an abstract class, and this section represents different services: DriverService, RoadsideAssistance, and Wi-Fi added to the reservation. The code to implement these classes is shown below:
+
+```java
+// Service is an abstract class
+public abstract class Service {
+    private int serviceId;
+    private int price;
+}
+
+public class DriverService extends Service {
+    private int driverId;
+}
+
+public class RoadsideAssistance extends Service {
+}
+
+public class WiFi extends Service {
+}
+```
+
+```c#
+// Service is an abstract class
+public abstract class Service {
+    private int serviceId;
+    private int price;
+}
+
+class DriverService : Service {
+    private int driverId;
+}
+
+class RoadsideAssistance : Service {
+}
+
+class WiFi : Service {
+}
+```
+
+```python
+# Service is an abstract class
+from abc import ABC, abstractmethod
+
+class Service(ABC):
+  def __init__(self, service_id, price):
+    self.__service_id = service_id
+    self.__price = price
+
+class DriverService(Service):
+    def __init__(self, service_id, price, driver_id):
+        super().__init__(service_id, price)
+        self.__driver_id = driver_id
+
+class RoadsideAssistance(Service):
+    def __init__(self, service_id, price):
+        super().__init__(service_id, price)
+
+class WiFi(Service):
+    def __init__(self, service_id, price):
+        super().__init__(service_id, price)
+```
+
+```c++
+// Service is an abstract class
+class Service {
+    private:
+        int serviceId;
+        int price;
+};
+
+class DriverService : public Service {
+    private:
+        int driverId;
+};
+
+class RoadsideAssistance : public Service {
+};
+
+class WiFi : public Service {
+};
+```
+
+```javascript
+// Service is an abstract class
+class Service {
+  #serviceId;
+  #price;
+
+  constructor(serviceId, price) {
+    if (this.constructor == Service) {
+      throw new Error("Abstract classes can't be instantiated.");
+    }
+    else {
+      this.#serviceId = serviceId;
+      this.#price = price;
+    }
+  }
+}
+
+class DriverService extends Service {
+  #driverId;
+  constructor(serviceId, price, driverId) {
+    this.#driverId = driverId;
+    super(serviceId, price);
+  }
+}
+
+class RoadsideAssistance extends Service {
+  constructor(serviceId, price) {
+    super(serviceId, price);
+  }
+}
+
+class WiFi extends Service {
+  constructor(serviceId, price) {
+    super(serviceId, price);
+  }
+}
+```
+
 ### Payment
+
+
 ### Vehicle log and Vehicle reservation
 ### Notification
 ### Parking stall and fine
