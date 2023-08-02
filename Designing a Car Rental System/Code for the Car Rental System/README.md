@@ -1685,6 +1685,361 @@ class EmailNotification extends Notification {
 
 
 ### Parking stall and fine
+ParkingStall is a class used to locate vehicles in the car rental branch while the Fine class represents the fine applied on payment. The implementation of these classes is given below:
+
+```java
+public class ParkingStall {
+  private int stallId;
+  private String locationIdentifier;
+}
+
+public class Fine {
+  private double amount;
+  private String reason;
+  public double calculateFine();
+}
+```
+
+```c#
+class ParkingStall {
+  private int stallId;
+  private string locationIdentifier;
+}
+
+class Fine {
+  private double amount;
+  private string reason;
+  public double CalculateFine();
+}
+```
+
+```python
+class ParkingStall:
+  def __init__(self, stall_id, location_identifier):
+    self.__stall_id = stall_id
+    self.__location_identifier = location_identifier
+
+class Fine:
+  def __init__(self, amount, reason):
+    self.__amount = amount
+    self.__reason = reason
+
+  def calculate_fine(self):
+    None
+```
+
+```c++
+class ParkingStall {
+  private:
+    int stallId;
+    string locationIdentifier;
+};
+
+class Fine {
+  private:
+    double amount;
+    string reason;
+  public: 
+    double calculateFine();
+};
+```
+
+```javascript
+class ParkingStall {
+    #stallId;
+    #locationIdentifier;
+    constructor(stallId, locationIdentifier){
+        this.#stallId = stallId;
+        this.#locationIdentifier = locationIdentifier;
+    }
+}
+
+class Fine {
+    #amount;
+    #reason;
+    constructor(amount, reason){
+        this.#amount = amount;
+        this.#reason = reason;
+    }
+    calculateFine();   
+}
+```
+
 ### Search interface and vehicle catalog
+Search is an interface and the VehicleCatalog class is used to implement the search interface to help in vehicle searching. The code to perform this function is presented below:
+
+```java
+public interface Search {
+  public List<Vehicle> searchByType(String type);
+  public List<Vehicle> searchByModel(String model);
+}
+
+public class VehicleCatalog implements Search {
+  private HashMap<String, List<Vehicle>> vehicleTypes;
+  private HashMap<String, List<Vehicle>> vehicleModels;
+
+  // to return all vehicles of the given type.
+  public List<Vehicle> searchByType(String type) {
+    // functionality
+  }
+
+  // to return all vehicles of the given model.
+  public List<Vehicle> searchByModel(String model) {
+    // functionality
+  }
+}
+```
+
+```c#
+interface Search {
+  public List<Vehicle> SearchByType(string type);
+  public List<Vehicle> SearchByModel(string model);
+}
+
+class VehicleCatalog : Search {
+  private Dictionary<string, List<Vehicle>> vehicleTypes;
+  private Dictionary<string, List<Vehicle>> vehicleModels;
+
+  // to return all vehicles of the given type.
+  public List<Vehicle> SearchByType(string type) {
+    // functionality
+  }
+
+  // to return all vehicles of the given model.
+  public List<Vehicle> SearchByModel(string model) {
+    /// functionality
+  }
+
+}
+```
+
+```python
+from abc import ABC, abstractmethod
+
+class Search(ABC):
+  def search_by_type(self, type):
+    None
+
+  def search_by_model(self, model):
+    None
+
+class VehicleCatalog(Search):
+  def __init__(self):
+    self.__vehicle_types = {}
+    self.__vehicle_models = {}
+
+  # to return all vehicles of the given type.
+  def search_by_type(self, type):
+    pass
+
+  # to return all vehicles of the given model.
+  def search_by_model(self, model):
+    pass
+```
+
+```c++
+class Search {
+    public: 
+        virtual vector<Vehicle> searchByType(string type) = 0;
+        virtual vector<Vehicle> searchByModel(string model) = 0;
+};
+
+class VehicleCatalog : public Search {
+    private:
+        map<string, map<Vehicle>> vehicleTypes;
+        map<string, map<Vehicle>> vehicleModels;
+    public:
+        // to return all vehicles of the given type.
+        vector<Vehicle> searchByType(string type) {
+            // functionality
+        }
+
+        // to return all vehicles of the given model.
+        vector<Vehicle> searchByModel(string model) {
+            // functionality
+        }
+
+};
+```
+
+```javascript
+class Search {
+    searchByType(type);          
+    searchByModel(model);        
+}
+
+class VehicleCatalog extends Search {
+    #vehicleTypes;
+    #vehicleModel;
+
+    constructor(){
+        this.#vehicleTypes = new Map();
+        this.#vehicleModel = new Map();
+    }
+
+    // to return all vehicles of the given type.
+    searchByType(type) {
+        // functionality
+    }
+
+    // to return all vehicles of the given model.
+    searchByModel(model) {
+        // functionality
+    }
+
+}
+```
+
 ### Car rental system and car rental branch
+The CarRentalSystem class is the base class of the system that is used to represent the whole car rental system (or the top-level classes of the system). CarRentalBranch represents the single branch of the system. The implementation of these classes is given below:
+
+```java
+public class CarRentalBranch {
+  private String name;
+  private Address address;
+  private List<ParkingStall> stalls;
+
+  public Address getLocation();
+}
+
+public class CarRentalSystem {
+  private String name;
+  private List<CarRentalBranch> branches;
+
+  public void addNewBranch(CarRentalBranch branch);
+  
+  // The CarRentalSystem is a singleton class that ensures it will have only one active instance at a time
+    private static CarRentalSystem system = null;
+    
+    // Created a static method to access the singleton instance of CarRentalSystem class
+    public static CarRentalSystem getInstance() {
+        if (system == null) {
+            system = new CarRentalSystem();
+        }
+        return system;
+    }
+}
+```
+
+```c#
+class CarRentalBranch {
+  private string name;
+  private Address address;
+  private List<ParkingStall> stalls;
+
+  public Address GetLocation();
+}
+
+class CarRentalSystem {
+  private string name;
+  private List<CarRentalBranch> branchs;
+
+  public void AddNewBranch(CarRentalBranch branch);
+
+  // The CarRentalSystem is a singleton class that ensures it will have only one active instance at a time
+    private static CarRentalSystem system = null;
+    
+    // Created a static method to access the singleton instance of CarRentalSystem class
+    public static CarRentalSystem GetInstance() {
+        if (system == null) {
+            system = new CarRentalSystem();
+        }
+        return system;
+    }
+}
+```
+
+```python
+class CarRentalBranch:
+  def __init__(self, name, address):
+    self.__name = name
+    self.__address = address
+    self.__stalls = []
+
+  def get_location(self):
+    return self.__location
+
+class __CarRentalSystem(object):
+  __instances = None
+  
+  def __new__(cls):
+    if cls.__instances is None:
+        cls.__instances = super(__CarRentalSystem, cls).__new__(cls)
+    return cls.__instances
+
+class CarRentalSystem(metaclass=__CarRentalSystem):
+  def __init__(self, name):
+    self.__name = name
+    self.__locations = []
+
+  def add_new_branch(self, branch):
+    None
+```
+
+```c++
+class CarRentalBranch {
+  private: 
+    string name;
+    Address address;
+    vector<ParkingStall> stalls;
+    
+  public:
+    Address getLocation();
+};
+
+class CarRentalSystem {
+  private: 
+    string name;
+    vector<CarRentalBranch> branches;
+    
+    // The CarRentalSystem is a singleton class that ensures it will have only one active instance at a time
+    static CarRentalSystem system = NULL;
+  
+  public:
+    void addNewBranch(CarRentalBranch branch);
+    
+    // Created a static method to access the singleton instance of CarRentalSystem
+    static CarRentalSystem getInstance() {
+        if (system == NULL) {
+        system = new CarRentalSystem();
+        }
+        return system;
+    }
+};
+```
+
+```javascript
+class CarRentalBranch {
+    #name;
+    #address;
+    constructor(name){
+        this.#name = name;
+        this.#address = address;
+        this.#stalls = new Array();
+    }
+    getLocation();
+}
+
+class CarRentalSystem {
+    #name;
+    #branches;
+    constructor(name){
+        this.#name = name;
+        this.#branches = new Array();
+
+        // The CarRentalSystem is a singleton class that ensures it will have only one active instance at a time
+        var system = null;
+    }
+    addNewBranch(branch);
+
+    // Created a static method to access the singleton instance of CarRentalSystem
+    getInstance() {
+        if (system == null) {
+            system = new CarRentalSystem;
+        }
+        return system;
+    }
+}
+```
 ## Wrapping up
+We've explored the complete design of a car rental system in this chapter. We've looked at how a basic car rental system can be visualized using various UML diagrams and designed using object-oriented principles and design patterns.
