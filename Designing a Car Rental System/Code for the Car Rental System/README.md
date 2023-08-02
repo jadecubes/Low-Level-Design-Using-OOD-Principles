@@ -1174,10 +1174,516 @@ class WiFi extends Service {
 ```
 
 ### Payment
+The Payment class is another abstract class, with the Cash and CreditCard classes as its child. This takes in the PaymentStatus enum to keep track of the payment status. The definition of this class is provided below:
 
+```java
+// Payment is an abstract class
+public abstract class Payment {
+  // Data members
+  private double amount;
+
+  // The Date datatype represents and deals with both date and time.
+  private Date timestamp;
+  private PaymentStatus status;
+
+  public abstract boolean makePayment();
+}
+
+public class Cash extends Payment {
+    public boolean makePayment() {
+        // functionality
+    }
+}
+
+public class CreditCard extends Payment {
+    // Data members
+    private String nameOnCard;
+    private String cardNumber;
+    private String billingAddress;
+    private int code;
+
+    public boolean makePayment() {
+        // functionality
+    }
+}
+```
+
+```c#
+// Payment is an abstract class
+public abstract class Payment {
+  // Data members
+  private double amount;
+  
+  // The DateTime datatype represents and deals with both date and time.
+  private DateTime timestamp;
+  private PaymentStatus status;
+  
+  public abstract bool MakePayment();
+}
+
+class Cash : Payment {
+    public override bool MakePayment() {
+        // functionality
+    }
+}
+
+class CreditCard : Payment {
+    // Data members
+    private string nameOnCard;
+    private string cardNumber;
+    private string billingAddress;
+    private int code;
+    
+    public override bool MakePayment() {
+        // functionality
+    }
+}
+```
+
+```python
+# Payment is an abstract class
+from abc import ABC, abstractmethod
+
+class Payment(ABC):
+  # Data members
+  def __init__(self, amount, timestamp, status):
+    self.__amount = amount
+    self.__timestamp = timestamp
+    self.__status = status # Refers to the PaymentStatus enum
+
+  @abstractmethod
+  def make_payment(self):
+    pass
+
+class Cash(Payment):
+  def __init__(self, amount, timestamp, status):
+    super().__init__(amount, timestamp, status)
+
+  def make_payment(self):
+    # functionality
+    pass
+
+class CreditCard(Payment):
+  # Data members
+  def __init__(self, amount, timestamp, status, name_on_card, card_number, billing_address, code):
+    self.__name_on_card = name_on_card
+    self.__card_number = card_number
+    self.__billing_address = billing_address
+    self.__code = code
+    super().__init__(amount, timestamp, status)
+
+  def make_payment(self):
+    # functionality
+    pass
+```
+
+```c++
+// Payment is an abstract class
+class Payment {
+  // Data members
+  private:
+    double amount;
+    // The time_t datatype represents and deals with both date and time.
+    time_t timestamp;
+    PaymentStatus status;
+
+  public virtual bool makePayment() = 0;
+}
+
+class Cash : public Payment {
+  public bool makePayment() {
+      // functionality
+  }
+}
+
+class CreditCard : public Payment {
+  // Data members
+  private:  
+    string nameOnCard;
+    string cardNumber;
+    string billingAddress;
+    int code;
+
+  public bool makePayment() {
+      // functionality
+  }
+}
+```
+
+```javascript
+// Payment is an abstract class
+class Payment {
+    #amount;
+    #timestamp;
+    #status;
+
+    // Data members
+    constructor(amount, timestamp, status) {
+        if (this.constructor === Payment) {
+            throw new Error("Abstract classes can't be instantiated.");
+        }
+        else {
+            this.#amount = amount;
+            this.#timestamp = timestamp;
+            this.#status = status; // Refers to the PaymentStatus enum
+        }
+    }
+
+    makePayment() { }
+}
+class Cash extends Payment{
+    makePayment(){
+        // functionality
+    }
+}
+class CreditCard extends Payment{
+    #nameOnCard;
+    #cardNumber;
+    #billingAddress;
+    #code;
+
+    // Data members
+    constructor(amount, timestamp, status, nameOnCard, cardNumber, billingAddress, code) {
+        this.#nameOnCard = nameOnCard;
+        this.#cardNumber = cardNumber;
+        this.#billingAddress = billingAddress;
+        this.#code = code;
+        super(amount, timestamp, status)
+    }
+
+    makePayment(){
+        // functionality
+    }
+}
+```
 
 ### Vehicle log and Vehicle reservation
+VehicleLog is a class responsible for keeping track of all the events related to a vehicle. VehicleReservation is a class responsible for managing the reservation of vehicles. The implementation of this class is given below:
+
+```java
+public class VehicleLog {
+  private int logId;
+  private VehicleLogType logType;
+  private String description;
+  private Date creationDate;
+}
+
+public class VehicleReservation {
+  private int reservationId;
+  private String customerId;
+  private String vehicleId;
+  private Date creationDate;
+  private ReservationStatus status;
+  private Date dueDate;
+  private Date returnDate;
+  private String pickupLocation;
+  private String returnLocation;
+  
+  private List<Equipment> equipments;
+  private List<Service> services;
+
+  public static VehicleReservation getReservationDetails();
+  public boolean addEquipment();
+  public boolean addService();
+}
+```
+
+```c#
+class VehicleLog {
+  private int logId;
+  private VehicleLogType logType;
+  private string description;
+  private DateTime creationDate;
+}
+
+class VehicleReservation {
+  private int reservationId;
+  private string customerId;
+  private string vehicleId;
+  private DateTime creationDate;
+  private ReservationStatus status;
+  private DateTime dueDate;
+  private DateTime returnDate;
+  private string pickupLocation;
+  private string returnLocation;
+
+  private List<Equipment> equipments;
+  private List<Service> services;
+
+  public static VehicleReservation GetReservationDetails();
+  public bool AddEquipment();
+  public bool AddService();
+}
+```
+
+```python
+class VehicleLog:
+  def __init__(self, log_id, log_type, description, creation_date):
+    self.__log_id = log_id
+    self.__log_type = log_type
+    self.__description = description
+    self.__creation_date = creation_date
+
+
+class VehicleReservation:
+  def __init__(self, reservation_id, customer_id, vehicle_id, due_date, return_date, pickup_location, return_location):
+    self.__reservation_id = reservation_id
+    self.__customer_id = customer_id
+    self.__vehicle_id = vehicle_id
+    self.__creation_date = datetime.date.today()
+    self.__status = ReservationStatus.ACTIVE
+    self.__due_date = due_date
+    self.__return_date = return_date
+    self.__pickup_location = pickup_location
+    self.__return_location = return_location
+
+    self.__equipments = []
+    self.__services = []
+
+  def add_equipment(self):
+    None
+
+  def add_service(self):
+    None
+```
+
+```c++
+class VehicleLog {
+    private:
+        int logId;
+        VehicleLogType type;
+        string description;
+        time_t creationDate;
+};
+
+class VehicleReservation {
+    private:
+        int reservationId;
+        string customerId;
+        string vehicleId;
+        time_t creationDate;
+        ReservationStatus status;
+        time_t dueDate;
+        time_t returnDate;
+        string pickupLocation;
+        string returnLocation;
+
+        vector<Equipment> equipments;
+        vector<Service> services;
+
+    public: 
+        static VehicleReservation getReservationDetails();
+        bool addEquipment();
+        bool addService();
+};
+```
+
+```javascript
+class VehicleLog {
+    #logId; 
+    #type;
+    #description;
+    #creationDate;
+    constructor(logId, type, description, creationDate){
+        this.#logId = logId;
+        this.#type = type;
+        this.#description = description;
+        this.#creationDate = creationDate;
+    }
+}
+
+class VehicleReservation {
+    #reservationId;
+    #customerId;
+    #vehicleId;
+    #creationDate;
+    #status;
+    #dueDate;
+    #returnDate;
+    #pickupLocation;
+    #returnLocation;
+    #equipments;
+    #services;
+    constructor(reservationId, customerId, vehicleId, creationDate, dueDate, returnDate, pickupLocation, returnLocation){
+        this.#reservationId = reservationId;
+        this.#customerId = customerId;
+        this.#vehicleId = vehicleId;
+        this.#creationDate = creationDate;
+        this.#status = ReservationStatus.ACTIVE;
+        this.#dueDate = dueDate;
+        this.#returnDate = returnDate;
+        this.#pickupLocationName = pickupLocation;
+        this.#returnLocationName = returnLocation;
+        
+        this.#equipments = [];
+        this.#services = [];
+    }
+    getReservationDetails();
+    addEquipment();
+    addService();
+}
+```
+
 ### Notification
+The Notification class is another abstract class responsible for sending notifications, with the SMSNotification and EmailNotification classes as its child. The implementation of this class is shown below:
+
+```java
+// Notification is an abstract class
+public abstract class Notification {
+    private int notificationId;
+    // The Date data type represents and deals with both date and time.
+    private Date createdOn;      
+    private String content;
+
+    public abstract void sendNotification(Account account);
+}
+
+class SmsNotification extends Notification {
+
+    public void sendNotification(Account account) {
+        // functionality 
+    }
+}
+
+class EmailNotification extends Notification {
+
+    public void sendNotification(Account account) {
+        // functionality 
+    }
+}
+```
+
+```c#
+// Notification is an abstract class
+public abstract class Notification {
+    private int notificationId;
+    private DateTime createdOn;
+    private string content;
+
+    public abstract void SendNotification(Account account);
+}
+
+class SmsNotification : Notification {
+
+    public override void SendNotification(Account account) {
+        // functionality 
+    }
+}
+
+class EmailNotification : Notification {
+
+    public override void SendNotification(Account account) {
+        // functionality 
+    }
+}
+```
+
+```python
+# Notification is an abstract class
+from abc import ABC, abstractmethod
+class Notification(ABC):
+    def __init__(self, notification_id, created_on, content):
+        self.__notification_id = notification_id
+        self.__created_on = created_on
+        self.__content = content
+
+    # account here refers to an instance of the Account class 
+    @abstractmethod
+    def send_notification(account):
+        pass
+
+class SmsNotification(Notification):
+    def __init__(self, notification_id, created_on, content):
+        super().__init__(notification_id, created_on, content)
+
+    # account here refers to an instance of the Account class 
+    def send_notification(account):
+        # functionality 
+        pass
+
+class EmailNotification(Notification):
+    def __init__(self, notification_id, created_on, content):
+        super().__init__(notification_id, created_on, content)
+
+    # account here refers to an instance of the Account class 
+    def send_notification(account):
+        # functionality 
+        pass
+```
+
+```c++
+// Notification is an abstract class
+class Notification {
+    private: 
+        int notificationId;
+        // The time_t datatype represents and deals with both date and time.
+        time_t createdOn;
+        string content;
+
+    public: 
+        void sendNotification(Account account) = 0;
+};
+
+class SmsNotification : public Notification {
+    public: 
+        void sendNotification(Account account) {
+            // functionality 
+        }
+};
+
+class EmailNotification : public Notification {
+    public: 
+        void sendNotification(Account account) {
+            // functionality 
+        }
+};
+```
+
+```javascript
+// Notification is an abstract class
+class Notification {
+    #notificationId;
+    #createdOn;
+    #content;
+    constructor(notificationId, createdOn, content) {
+        if (this.constructor == Notification) {
+          throw new Error("Abstract classes can't be instantiated.");
+        }
+        else {
+            this.#notificationId = notificationId;
+            this.#createdOn = createdOn;
+            this.#content = content;
+        }
+    }
+    // account here refers to an instance of the Account class 
+    sendNotification(account) {};
+}
+
+class SmsNotification extends Notification {
+    constructor(){
+        super(notificationId, createdOn, content);
+    }
+
+    // account here refers to an instance of the Account class 
+    sendNotification(account) {
+        // functionality 
+    }
+}
+
+class EmailNotification extends Notification {
+    constructor() {
+        super(notificationId, createdOn, content);
+    }
+
+    // account here refers to an instance of the Account class 
+    sendNotification(account) {
+        // functionality 
+    }
+}
+```
+
+
+
 ### Parking stall and fine
 ### Search interface and vehicle catalog
 ### Car rental system and car rental branch
