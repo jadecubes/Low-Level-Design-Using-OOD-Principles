@@ -90,7 +90,7 @@ R4: The system should be able to keep a record of who reserved a particular vehi
 ### Payment
 The Payment class will be an abstract class and will have two child classes: CreditCard and Cash. These represent the two payment methods in the car rental system. The representation of these classes is given below:
 
-[The class diagram of Payment and its child classes](./paymenttype.png)
+[The class diagram of Payment and its child classes](./paymenttypes.png)
 
 ### Fine
 The system needs the Fine class to calculate the fine on the vehicle reservation in case the customer returns the vehicle after the due date, the fuel in the vehicle is less than the limit value, or there is any damage to the vehicle. The representation of this class is given below:
