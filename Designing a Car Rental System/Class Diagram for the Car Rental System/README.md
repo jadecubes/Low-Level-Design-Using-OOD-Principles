@@ -72,7 +72,7 @@ R13: Every branch of the car rental system should have parking stalls to park th
 ### Vehicle log
 VehicleLog is a class that is used to keep track of all the events related to a vehicle. Every vehicle log has its ID, log type, description, and creation date, as shown here:
 
-[The class diagram of the VehicleLog class](./vehiclecatalog.png)
+[The class diagram of the VehicleLog class](./vehiclelog.png)
 
 ```
 R7: To keep track of all events related to the vehicle, the system should maintain a vehicle log.
@@ -110,7 +110,7 @@ Search is one of the most important functionalities of the system. It is the int
 
 The VehicleCatalog is a class where the search function is implemented. In each catalog, the vehicles are sorted according to one of the given search techniques, i.e., either the vehicle type or model. The following UML diagram shows this relationship:
 
-[The class diagram of Search interface and VehicleCatalog class]
+[The class diagram of Search interface and VehicleCatalog class](./vehiclecatalog.png)
 
 ```
 R11: The system should allow the user to search vehicles by type, model, or seat capacity.
@@ -221,7 +221,7 @@ Note: We’ve already discussed the inheritance relationship between classes in 
 ## Class diagram of the car rental system
 Here’s the class diagram of the car rental system:
 
-[The class diagram of the car rental system]
+[The class diagram of the car rental system](./classdiagram.png)
 
 ## Design pattern
 We can use the Decorator design pattern for our car rental system. We can design it using the following decorators:
@@ -241,6 +241,6 @@ Similarly, we can make several other decorators according to the system needs. T
 The interviewer can introduce some additional requirements in the car rental system, or they can ask some follow-up questions. Let's see an example of additional requirements:
 Barcode Scanner: Each vehicle should have a unique barcode associated with it, and the system should be able to scan the barcode of every vehicle. To fulfill this requirement, we have the class diagram as shown below:
 
-[The class diagram of barcode scanner functionality]
+[The class diagram of barcode scanner functionality](./additional.png)
 
 We have completed the class diagram of the car rental system according to the requirements. Now let’s design the sequence diagram of the system in the next lesson.
