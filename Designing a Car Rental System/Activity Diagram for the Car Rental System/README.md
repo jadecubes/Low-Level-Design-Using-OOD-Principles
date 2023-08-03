@@ -20,11 +20,12 @@ The member with a vehicle reservation arrives at the rent-a-car reception. The r
 
 Based on the order above, the activity diagram of the vehicle pickup from the car rental facility is given below.
 
-[The activity diagram for vehicle pickup]
+[The activity diagram for vehicle pickup](./vehiclepickup.png)
 
 ## Activity challenge: Vehicle return
 You will help us create an activity diagram of a member who wants to return the vehicle.
 
 Here is the activity diagram structure:
 
-[The activity diagram for vehicle return]
+[The activity diagram for vehicle return](./vehiclereturn.png)
+[Answer](./vehiclereturnanswer.png)
