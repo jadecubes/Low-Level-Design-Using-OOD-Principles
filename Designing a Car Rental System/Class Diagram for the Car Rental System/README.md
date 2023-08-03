@@ -201,7 +201,7 @@ The following classes show an inheritance relationship:
 
 - Both the Receptionist and Customer classes extend the Account class. Whereas, Account and Driver extend the Person class.
 
-[The class diagram of different users of our system]
+[The class diagram of different users of our system](./person.png)
 
 - The Car, Truck, Van, and Motorcycle classes extend the Vehicle class.
 
