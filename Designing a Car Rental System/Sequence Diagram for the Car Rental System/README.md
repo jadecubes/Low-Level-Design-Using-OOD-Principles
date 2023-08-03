@@ -56,8 +56,9 @@ Here are the steps in the reserve vehicle interaction:
 
 Based on the order above, the sequence diagram of a vehicle reservation in a car rental system is provided below:
 
-[The sequence diagram for vehicle reservation]
+[The sequence diagram for vehicle reservation](./reserveseq.png)
 
 ## Sequence challenge: Cancel reservation
 
-[The sequence diagram for cancel reservation]
+[The sequence diagram for cancel reservation](./cancelreservationseq.png)
+[Answer](./cancelreservationanswer.png)
