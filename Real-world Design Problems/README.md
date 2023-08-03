@@ -33,7 +33,7 @@ While designing the problem, remember the different design patterns that symboli
 ### Code
 You should also be able to code the classes and relationships you identify in a programming language of your choice. The interviewer expects you to be able to code a high-level structure of the system. Additionally, they may also ask you to code one of the classes at the implementation level. It is important to understand the system's functionality before beginning to code. While coding, prioritize writing the abstract classes and interfaces, followed by the core objects and the internal structure. Ensure that you implement a code that follows the best practices in terms of maintainability.
 
-[The sequence of the design problem discussion in the interview]
+[The sequence of the design problem discussion in the interview](./flow.png)
 
 ## Design approach
 We can approach the design for the interview problems by first identifying the possible use cases. For example, for a parking lot problem, this can either be the agent collecting the parking toll of a car or the system showing how many parking spots are available in the parking lot.
