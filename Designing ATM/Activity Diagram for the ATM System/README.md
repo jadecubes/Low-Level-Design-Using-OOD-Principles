@@ -26,6 +26,6 @@ Based on the order above, the activity diagram is given below.
 
 ## Activity challenge: The cardholder performs an ATM cash withdrawal
 
-[The activity diagram of the cardholder performing an ATM cash withdrawal]()
+[The activity diagram of the cardholder performing an ATM cash withdrawal](./withdrawal.png)
 [Flow](./flow.png)
 [Answer](./answer.png)
