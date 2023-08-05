@@ -89,17 +89,17 @@ ATMState is an abstract class with six types: CheckBalanaceState, CashWithdrawal
 
 - SelectOperationState: This class represents the state that allows users to select an operation for the ATM to perform.
 
-[ATMState and its derived classes](atm)
+[ATMState and its derived classes](./atmstate.png)
 
 ### ATM
 An ATM class can either have an idle state or can be performing an operation. It has a limited number of hundred, twenty, and two dollar bills.
 
-[The ATM class]
+[The ATM class](./atmclass.png)
 
 ### ATM room
 An ATMRoom class has an ATM and may or may not have a user.
 
-[The ATMRoom class]
+[The ATMRoom class](./atmroom.png)
 
 ### Enumerations and custom data types
 The following provides an overview of the enumerations and custom data types used in this problem.
@@ -126,7 +126,7 @@ The following provides an overview of the enumerations and custom data types use
 
     - Funds/money transfer
  
-[Enums in the ATM design problem]
+[Enums in the ATM design problem](./enums.png)
 
 ## Relationship between the classes
 ### Association
@@ -140,14 +140,14 @@ The class diagram has the following association relationships:
 
 - The ATM class has a one-way association with Bank and ATMState.
 
-[The association relationship between classes]
+[The association relationship between classes](./association.png)
 
 ### Composition
 The class diagram has the following composition relationships.
 
 -The ATM class is composed of Printer, Keypad, Screen, CardReader, and CashDispenser.
 
-[The composition relationship between classes]
+[The composition relationship between classes](./composition.png)
 
 ### Inheritance
 The following classes show an inheritance relationship:
@@ -160,7 +160,7 @@ Note: We have already discussed the inheritance relationship between classes in 
 ```
 ## Class diagram for the ATM System
 
-[The class diagram of the ATM design problem]
+[The class diagram of the ATM design problem](./classdiagram.png)
 
 ## Design pattern
 The following design patterns have been used in the class diagram:
