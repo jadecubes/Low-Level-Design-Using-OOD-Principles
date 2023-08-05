@@ -35,6 +35,6 @@ R5: The user can have two types of accounts—current and savings—and can perf
 
 R6: At the end of a transaction, the user has the option to start another transaction or end their session.
 
-[ATM components]
+[ATM components](./atm.png)
 
 We've identified our requirements for the problem. Let’s define different use cases of the ATM system in the next lesson.
