@@ -38,7 +38,7 @@ II. If the PIN is not verified, and the ATM card is simply ejected.
 Based on the order above, the sequence diagram of balance inquiry from ATM is given below.
 
 
-[The sequence diagram for how to complete a balance inquiry from an ATM] (./balanceinquiry.png)
+[The sequence diagram for how to complete a balance inquiry from an ATM](./balanceinquiry.png)
 
 
 In the next lesson, we will create activity diagrams for the ATM.
