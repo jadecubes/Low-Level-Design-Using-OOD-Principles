@@ -100,4 +100,4 @@ The “Transaction” use case has an extend relationship with the “Dispense r
 
 ## Use case diagram
 
-[The use case diagram of the ATM system]
+[The use case diagram of the ATM system](./atm.png)
