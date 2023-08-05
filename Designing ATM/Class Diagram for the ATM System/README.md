@@ -193,7 +193,7 @@ Valid Amount: If the amount entered by the user has a modulus equal to zero with
 ```
 For example, a user wants to withdraw $548. The HundredDollarWithdrawProcessor class will start the cash withdrawal using the cashWithdrawal() method by taking out five bills of hundred dollars. Now that we have $48 to withdraw for the user which is less than a hundred dollars, the TwentyDollarWithdrawProcessor class will start withdrawing dollar bills. This class will take out two bills of twenty dollars with $8 remaining. Since two dollars is less than twenty, the cashWithdrawal() method of the TwoDollarWithdrawProcessor will take out four bills of $2 for the user. The withdrawal, in this case, is successful.
 
-[How to apply the Chain of Responsibility design pattern on the cashWithdrawal method]
+[How to apply the Chain of Responsibility design pattern on the cashWithdrawal method](./additional.png)
 
 
 We have completed the class diagram of the ATM system according to the requirements. Now, let's design its sequence diagram in the next lesson.
