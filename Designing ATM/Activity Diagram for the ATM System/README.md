@@ -22,10 +22,10 @@ The cardholder approaches the ATM, inserts their card, and enters their PIN. If 
 
 Based on the order above, the activity diagram is given below.
 
-[The activity diagram for the cardholder performing ATM transactions]
+[The activity diagram for the cardholder performing ATM transactions](./activity.png)
 
 ## Activity challenge: The cardholder performs an ATM cash withdrawal
 
-[The activity diagram of the cardholder performing an ATM cash withdrawal]
-[Flow]
-[Answer]
+[The activity diagram of the cardholder performing an ATM cash withdrawal]()
+[Flow](./flow.png)
+[Answer](./answer.png)
