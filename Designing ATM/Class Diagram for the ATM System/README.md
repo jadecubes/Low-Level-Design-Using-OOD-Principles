@@ -7,7 +7,7 @@ As mentioned earlier, we’ll design the class diagram for the ATM using a botto
 ### User
 The User class represents a user with an ATM card and a bank account.
 
-[The User class]
+[The User class](./user.png)
 
 ```
 Each user has a single account at the bank that they can access by inserting their card into the ATM.
@@ -16,7 +16,7 @@ Each user has a single account at the bank that they can access by inserting the
 ### ATM card
 The ATMCard class is identified by the card number, customer name, expiration date, and the user's PIN.
 
-[The ATMCard class]
+[The ATMCard class](./atmcard.png)
 
 ```
 R4: All transactions are possible after the successful authentication of the ATM card.
@@ -29,7 +29,7 @@ BankAccount is a parent class with two types: SavingAccount and CurrentAccount. 
 
 - CurrentAccount: This derived class represents a current/checking account with a withdrawal limit.
 
-[BankAccount and its derived classes]
+[BankAccount and its derived classes](./bankaccount.png)
 
 ```
 R1: Each user has a single account at the bank that they can access by inserting their card into the ATM.
@@ -44,7 +44,7 @@ R5: The user can have two types of accounts—current and savings—and can perf
 ### Bank
 The Bank class represents a bank with a name and a bank code. A bank may or may not have an ATM.
 
-[The Bank class]
+[The Bank class](./bank.png)
 
 ```
 R1: Each user has a single account at the bank that they can access by inserting their card into the ATM.
@@ -61,7 +61,7 @@ Screen: This class represents a screen that displays information upon insertion 
 
 Printer: This class represents a printer that prints the transaction/withdrawal receipts for the user.
 
-[The class diagram of the Keypad, CashDispenser, CardReader, Screen and Printer classes]
+[The class diagram of the Keypad, CashDispenser, CardReader, Screen and Printer classes](./keypad.png)
 
 ```
 R2: The main components of the ATM system that facilitate interactions between the user and the machine are listed below:
@@ -89,7 +89,7 @@ ATMState is an abstract class with six types: CheckBalanaceState, CashWithdrawal
 
 - SelectOperationState: This class represents the state that allows users to select an operation for the ATM to perform.
 
-[ATMState and its derived classes]
+[ATMState and its derived classes](atm)
 
 ### ATM
 An ATM class can either have an idle state or can be performing an operation. It has a limited number of hundred, twenty, and two dollar bills.
