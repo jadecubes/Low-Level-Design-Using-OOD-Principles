@@ -1013,4 +1013,7 @@ class ChessGame {
     */
   }
 }
+```
+
 ## Wrapping up
+We've explored the complete design of the chess game in this chapter. We've looked at how a basic chess game can be visualized using various UML diagrams and designed using object-oriented principles and design patterns.
