@@ -87,6 +87,7 @@ Resign or forfeit a game             Validate Moves
 View open games                      View open games
 
 Login/Logout                         Declare results
+```
 
 ## Use case diagram
 [The use case diagram of a chess game]
