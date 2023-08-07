@@ -92,4 +92,4 @@ Login/Logout                         Declare results
 
 ## Use case diagram
 
-[The use case diagram of a chess game]
+[The use case diagram of a chess game](./usecase.png)
