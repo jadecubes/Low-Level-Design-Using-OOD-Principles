@@ -14,4 +14,4 @@ The player initiates a new game. The board appears, and the player takes a turn.
 
 Based on the order above, the activity diagram of chess game is given below.
 
-[The activity diagram for an online chess game]
+[The activity diagram for an online chess game](./activity.png)
