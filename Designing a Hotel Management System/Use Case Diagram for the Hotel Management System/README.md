@@ -184,3 +184,5 @@ Return room key         Check out guest           Search room/booking
 - If a booking is canceled, the payment will be refunded. Hence the “Cancel booking” use case has an include relationship with “Refund payment.”
   
 ## Use case diagram
+
+[The use case diagram of the hotel management system]
