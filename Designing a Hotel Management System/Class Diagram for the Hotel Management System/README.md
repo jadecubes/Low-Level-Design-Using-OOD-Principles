@@ -10,7 +10,7 @@ The Address is a class that is required to store any address. The Address is a c
 
 Account is a class that is used to store the account information of the user. This class has three members, i.e., account ID, password, and the status of the account. The class representation of Address and Account classes is as follows:
 
-[The class diagram of the Address and Account classes]
+[The class diagram of the Address and Account classes](./accountaddress.png)
 
 ### Person
 Person is an abstract class used to store information related to a person like a name, email, phone number, etc. In this class, there is an object of the Address type to specify the person’s address. The Person class specifies the accounts in the system. There can be four types of accounts in the system,i.e., housekeeper, receptionist, guest, and server.
@@ -19,7 +19,7 @@ There are multiple functions of the Person class’s subclasses. First, the Hous
 
 The relationship diagram for these classes is shown below:
 
-[The class diagram of Person and its derived classes]
+[The class diagram of Person and its derived classes](./person.png)
 
 ```
 R1: There can be four types of accounts in the system such as housekeeper, receptionist, guest, or server.
@@ -30,7 +30,7 @@ Service is an abstract class that encapsulates the details of different types of
 
 The Amenity class is a subclass of Service having two members; name and description. Similarly, RoomService is also inherited from the Service class. This class stores information about room services whether these services are chargeable or not and what is the request time of the service. Furthermore, the last child class of the Service is the KitchenService. The relationship between these classes is shown in the illustration below.
 
-[The class diagram of Service and its derived classes]
+[The class diagram of Service and its derived classes](./service.png)
 ```
 R8: The system should allow the customer to add services of their own choice like room service, food or kitchen service, or amenity.
 ```
@@ -38,12 +38,12 @@ R8: The system should allow the customer to add services of their own choice lik
 ### Invoice
 The Invoice class represents the billing system in the hotel management system. The UML diagram for both classes is presented below:
 
-[The class diagram of the Invoice class]
+[The class diagram of the Invoice class](./invoice.png)
 
 ### Room booking
 The RoomBooking class is responsible for managing the bookings for a room. This class consists of attributes like reservation number, start date, duration, etc. Moreover, this class has a member of the BookingStatus type that is used to store the status of the room booking. The UML representation of this class is as follows:
 
-[The class diagram of the RoomBooking class]
+[The class diagram of the RoomBooking class](./roombooking.png)
 
 ```
 R4: During room booking, the user will enter the check-in date and duration of the stay. The user would also have to give some advance payment.
@@ -54,7 +54,7 @@ Notification is an abstract class. This class is responsible for sending notific
 
 The SMSNotification class requires the phone number of the member to send a notification. On the other hand, the EmailNotification needs the email address of the member to send a notification. The relationship diagram of these classes is shown here:
 
-[The class diagram of Notification and its derived classes]
+[The class diagram of Notification and its derived classes](./notification.png)
 
 ```
 R6: The system should send a notification to the customers about the booking status or other information.
@@ -65,7 +65,7 @@ The Room class is the basic building block of the system. Every room has a room 
 
 Each room has an electronic key card associated with it. The RoomKey class expresses the electronic key card. Each card has its own unique ID and barcode on it. The RoomKey class also has members to store the issue date, to check whether or not the key is active, and to check whether or not a key is a master key. Whereas, RoomHousekeeping is a class used to keep track of all housekeeping records for the rooms. The UML representation of these classes is as follows:
 
-[The class diagram of the Room, RoomKey, and RoomHousekeeping classes]
+[The class diagram of the Room, RoomKey, and RoomHousekeeping classes](./roomrelevant.png)
 
 ```
 R9: Every room should have its own specific key, and there can be a master key that opens a specific set of rooms.
@@ -78,7 +78,7 @@ Search is one of the most important components of the hotel management system. I
 
 The following UML diagram shows this relationship:
 
-[The class diagram of the Search interface and the Catalog class]
+[The class diagram of the Search interface and the Catalog class](./search.png)
 
 ```
 R3: The system should allow the guests to search for any room and book any of the available rooms.
@@ -87,14 +87,14 @@ R3: The system should allow the guests to search for any room and book any of th
 ### Bill transaction
 After generating an invoice, a customer needs to pay the bill to confirm the booking of the room. A BillTransaction class is required to store the information of bill payment. Three ways to pay the bill are check transaction, cash transaction, and credit card transaction. We can define the bill payment functionality through any payment method using the diagram below:
 
-[The class diagram of BillTransaction and its derived classes]
+[The class diagram of BillTransaction and its derived classes](./billtransaction.png)
 
 ### Hotel and hotel branch
 In this section, we’ll look at the Hotel and HotelBranch classes. According to the requirements, there can be multiple branches of the hotel. HotelBranch is a class used to represent the location of the hotel branch. This class consists of two members: name and Address. The string type name is used to store the name of the hotel branch, while the complex object Address is used to store the complete address of a branch.
 
 The Hotel class is the base class of the system which is used to represent the hotel. The visual representation of these classes is as follows:
 
-[The class diagram of the Hotel and HotelBranch classes]
+[The class diagram of the Hotel and HotelBranch classes](./hotel.png)
 
 ```
 R10: A hotel can have multiple branches of it.
@@ -115,7 +115,7 @@ AccountStatus: This status tells the status of the user account whether it is ac
 
 AccountType: The account type tells the type of the account of the user, whether it is a member, guest, manager, or receptionist.
 
-[Enums in the hotel management system]
+[Enums in the hotel management system](./enums.png)
 
 ```
 R2: The rooms can be of different styles like standard, deluxe, family suite, or business suite.
@@ -136,15 +136,17 @@ The class diagram has the following association relationships:
 
 - The RoomBooking class has a one-way association with Room.
 
-[A one-way association relationship between classes]
+[A one-way association relationship between classes](./1wayassociation.png)
 
 #### Two-way association
 The RoomBooking class has a two-way association with Notification.
 
+[A two-way association relationship between classes](./2wayassociation.png)
+
 ### Aggregation
 The RoomBooking class is an aggregate of Service.
 
-[An aggregation relationship between classes]
+[An aggregation relationship between classes](./aggregation.png)
 
 ### Composition
 - The RoomBooking class is composed of Invoice.
@@ -159,7 +161,7 @@ The RoomBooking class is an aggregate of Service.
 
 - The Hotel class is composed of HotelBranch.
 
-[A composition relationship between classes]
+[A composition relationship between classes](./composition.png)
 
 ### Inheritance
 The following classes show an inheritance relationship:
@@ -176,7 +178,7 @@ Note: We have already discussed the inheritance relationship between classes in 
 ```
 ## Class diagram of the hotel management system
 
-[The class diagram of hotel management system]
+[The class diagram of hotel management system](./classdiagram.png)
 
 ## Design pattern
 The Strategy design pattern is applied here, which will design a separate strategy or algorithm to calculate the rate of each room.
@@ -191,4 +193,4 @@ The interviewer can introduce some additional requirements in the given hotel ma
 
 Discount: A discount will be applied to the payment depending on special events such as the new year, branch opening, and so on. The class diagram provided below shows the relationship of Discount with the BillTransaction class:
 
-[The relationship of the Discount class with the BillTransaction class]
+[The relationship of the Discount class with the BillTransaction class](./additional.png)
