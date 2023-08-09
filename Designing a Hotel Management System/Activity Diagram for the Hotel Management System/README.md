@@ -19,7 +19,7 @@ The guest has a room booked and arrives at the hotel reception. The receptionist
 
 Based on the order above, the activity diagram of the hotel check-in is shown below.
 
-[The activity diagram for the hotel check-in]
+[The activity diagram for the hotel check-in](./activity1.png)
 
 ## Activity challenge: Cancel room booking
 
