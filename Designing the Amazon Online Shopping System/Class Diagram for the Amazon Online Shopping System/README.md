@@ -103,12 +103,71 @@ R4: An authenticated user should be able to add, remove, or modify product items
 ```
 
 ### Order
+The Order class refers to a particular order of a customer and will keep track of the order status along with the option of sending the order to shipment. It will also be used to make the payment and log the order details.
+
+[The class diagram of the Order class]
+
+```
+R7: An order can be canceled, only in the case that it hasn’t been shipped.
+```
+
 ### Order log
+The OrderLog class keeps a log of the order through its creation date and order status.
+
+[The class diagram of the OrderLog class]
+```
+R7: An order can be canceled, only in the case that it hasn’t been shipped.
+```
+
 ### Shipment
+The Shipment class keeps track of the date on which the order was shipped, its estimated arrival time, and the shipment method. It will also be used to log the shipment details.
+
+[The class diagram of the Shipment class]
+
+```
+R9: Shipment can be tracked to see the current status and the estimated time of arrival for the order.
+```
 ### Shipment log
+The ShipmentLog class keeps a log of the shipment through its creation date and shipment status.
+
+[The class diagram of the ShipmentLog class]
+
+```
+R9: Shipment can be tracked to see the current status and the estimated time of arrival for the order.
+```
+
 ### Payment
+The Payment class will have three child classes: CreditCard, ElectronicBankTransfer, and Cash since these are the three payment methods available to a customer on Amazon.
+
+[The class diagram of Payment and its child classes]
+```
+R6: Payment can be made through credit cards, electronic bank transfers, or through cash on delivery.
+```
+
 ### Notification
+The Notification class is responsible for sending order and shipment notifications to customers through either email or SMS, as shown below in the class diagram:
+```
+Note: Since the Notification class can be extended by adding various other options, we will implement it as an abstract class.
+```
+[The class diagram of Notification and its child classes]
+
+```
+R8: Notifications are sent whenever there is a change in the order or shipping status.
+```
+
 ### Enumerations
+The following is the list of enumerations required in Amazon:
+
+AccountStatus: The account status tells about the user account status, whether it is active, inactive, or blocked.
+
+PaymentStatus: The payment status tells about the user account status, whether it is confirmed, declined, pending, or refunded.
+
+OrderStatus: The order status describes the status of a particular order of a customer, whether it is unshipped, pending, shipped, confirmed, or canceled.hipped, confirmed, or canceled.
+
+ShipmentStatus: The shipment status tells us about the status of an order’s shipment, whether it is in a pending state, shipped state, delivered state, or on hold.
+
+[Enums in Amazon]
+
 ### Custom data type
 ## Relationship between the classes
 ### Association
