@@ -185,4 +185,4 @@ Return room key         Check out guest           Search room/booking
   
 ## Use case diagram
 
-[The use case diagram of the hotel management system]
+[The use case diagram of the hotel management system](./usecase.png)
