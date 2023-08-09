@@ -54,6 +54,12 @@ Here’re the steps in the book room interaction:
 
 Based on the order above, the sequence diagram of booking a room in a hotel management system is given below:
 
-[The sequence diagram for online room booking]
+[The sequence diagram for online room booking](./seq1.png)
 
 ## Sequence challenge: Check out
+[checkout challenge](./checkout.png)
+
+[checkout flow](./sequence.png)
+
+[answer](./checkoutanswer.png)
+
