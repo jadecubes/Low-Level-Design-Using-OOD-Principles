@@ -169,12 +169,86 @@ ShipmentStatus: The shipment status tells us about the status of an order’s sh
 [Enums in Amazon]
 
 ### Custom data type
+We need to create a custom data type, Address, that will store the location of a customer.
+
+[The class diagram of the Address custom data type]
+
 ## Relationship between the classes
+Now, we’ll discuss the relationships between the classes we have defined in our Amazon shopping system above.
+
 ### Association
+- The class diagram has the following association relationships:
+
+- The Guest class has a one-way association with Search.
+
+- The Notification class has a two-way association with ShipmentLog and OrderLog.
+
+- The Product class has a two-way association with Account and CartItem and a one-way association with ProductCategory and ProductReview.
+
+- The ShoppingCart class has a two-way association with CartItem.
+
+- The Order class has a two-way association with CartItem and Payment and a one-way association with Shipment.
+
+[The association relationship between classes]
+
 ### Composition
+- The class diagram has the following composition relationships:
+
+- The Shipment class is composed of the ShipmentLog class.
+
+- The Account class is composed of the CreditCard, ElectronicBankTranfer, Admin, and AuthenticatedUser classes.
+
+- The AuthenticatedUser class is composed of the Order class which itself is composed of the OrderLog class.
+
+- The Customer class is composed of the ShoppingCart class.
+
+[The composition relationship between classes]
+
 ### Aggregation
+The following classes show an aggregation relationship:
+
+- The Product class contains the Catalog class.
+
+[The aggregation relationship between classes]
+
 ### Generalization
+The following classes show a generalization relationship:
+
+- The Catalog class implements the Search class.
+
+[The generalization relationship between classes]
+
 ### Inheritance
+The following classes show an inheritance relationship:
+
+- Both Guest and AuthenticatedUser extend the Customer class.
+
+- Both EmailNotification and SMSNotification extend the Notification class.
+
+- Subclasses Cash, ElectronicBankTransfer, and CreditCard extend the Payment class.
+```
+Note: We have already discussed the inheritance relationship between classes in the component section above.
+```
+
 ## Class diagram of Amazon
+
+[The class diagram of Amazon]
+
 ## Design pattern
+In the Amazon online shopping system, we can use the Factory design pattern to maintain different orders and the bill generation process based on the products selected by a customer.
+
+We know that in the Amazon-online shopping system, various items are on sale, or items can be bought using special coupons that give different percentage discounts. To effectively calculate prices for different discount types, we can use the Strategy design pattern. This pattern allows us to design a separate strategy or algorithm to calculate the prices for each discount type.
+
 ## Additional requirements
+The interviewer can introduce some additional requirements in the Amazon shopping system, or they can ask some follow-up questions. Let’s see some examples of additional requirements:
+
+Wish list: Only users with an account (an authenticated user) can add a product to their wishlist. The WishList class can be used to move products to a cart and also check if it is currently available:
+
+
+[Adding WishList functionality]
+
+Discount: A discount will be applied to the payment depending on special events such as Christmas, Black Friday, and so on. The class diagram provided below shows the relationship of Discount with the Payment class:
+
+[Relationship between the Discount class with the Payment class]
+
+We’ve completed the class diagram of the Amazon shopping system according to the requirements. Now let’s design the sequence diagram of the Amazon shopping system in the next lesson.
