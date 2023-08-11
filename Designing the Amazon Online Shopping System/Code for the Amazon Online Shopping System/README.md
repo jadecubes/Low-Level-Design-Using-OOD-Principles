@@ -1172,14 +1172,525 @@ class ShipmentLog {
 
 ### Payment
 The Payment class is another abstract class with the ElectronicBankTranfer, CreditCard, and Cash classes as its child classes. This takes the PaymentStatus enum to keep track of the payment status. The definition of this class is provided below:
+```java
+// Payment is an abstract class
+public abstract class Payment {
+  private double amount;
+  private Date timestamp;
+  private PaymentStatus status;
+  public abstract PaymentStatus makePayment();
+}
+
+public class CreditCard extends Payment {
+  private String nameOnCard;
+  private String cardNumber;
+  private String billingAddress;
+  private int code;
+  public PaymentStatus makePayment() {
+      // functionality
+  }
+}
+
+public class ElectronicBankTransfer extends Payment {
+  private String bankName;
+  private String routingNumber; 
+  private String accountNumber;
+  private String billingAddress;
+  public PaymentStatus makePayment() {
+      // functionality
+  }
+}
+
+public class Cash extends Payment {
+  private String billingAddress;
+  public PaymentStatus makePayment() {
+      // functionality
+  }
+}
+```
+
+```c#
+// Payment is an abstract class
+public abstract class Payment {
+  private double amount;
+  private DateTime timestamp;
+  private PaymentStatus status;
+  public abstract PaymentStatus MakePayment();
+}
+
+class CreditCard : Payment {
+  private string nameOnCard;
+  private string cardNumber;
+  private string billingAddress;
+  private int code;
+  public override PaymentStatus MakePayment() {
+      // functionality
+  }
+}
+
+class ElectronicBankTransfer : Payment {
+  private string bankName;
+  private string routingNumber; 
+  private string accountNumber;
+  private string billingAddress;
+  public override PaymentStatus MakePayment() {
+      // functionality
+  }
+}
+
+class Cash : Payment {
+  private string billingAddress;
+  public override PaymentStatus makePayment() {
+      // functionality
+  }
+}
+```
+
+```python
+# Payment is an abstract class
+from abc import ABC, abstractmethod
+
+class Payment(ABC):
+  def __init__(self, amount, timestamp, status):
+    self.__amount = amount
+    self.__timestamp = timestamp
+    self.__status = status # Refers to the PaymentStatus enum
+
+  # Returns the PaymentStatus enum
+  @abstractmethod
+  def make_payment(self):
+    pass
+
+class CreditCard(Payment):
+  def __init__(self, amount, timestamp, status, name_on_card, card_number, billing_address, code):
+    self.__name_on_card = name_on_card
+    self.__card_number = card_number
+    self.__billing_address = billing_address
+    self.__code = code
+    super().__init__(amount, timestamp, status)
+
+  # Returns the PaymentStatus enum
+  def make_payment(self):
+    # functionality
+    pass
+
+class ElectronicBankTransfer(Payment):
+  def __init__(self, amount, timestamp, status, bank_name, routing_number, account_number, billing_address):
+    self.__bank_name = bank_name
+    self.__account_number = routing_number
+    self.__account_number = account_number
+    self.__billing_address = billing_address
+    super().__init__(amount, timestamp, status)
+  
+  # Returns the PaymentStatus enum
+  def make_payment(self):
+    # functionality
+    pass
+
+class Cash(Payment):
+  def __init__(self, amount, timestamp, status, billing_address):
+    self.__billing_address = billing_address
+    super().__init__(amount, timestamp, status)
+
+  # Returns the PaymentStatus enum
+  def make_payment(self):
+    # functionality
+    pass
+```
+
+```c++
+// Payment is an abstract class
+class Payment {
+  private:
+    double amount;
+    time_t timestamp;
+    PaymentStatus status;
+  
+  public:
+    virtual abstract PaymentStatus makePayment() = 0;
+}
+
+class CreditCard : public Payment {
+  private:  
+    string nameOnCard;
+    string cardNumber;
+    string billingAddress;
+    int code;
+
+  public:
+    PaymentStatus makePayment() {
+      // functionality
+  }
+}
+
+class ElectronicBankTransfer : public Payment {
+  private: 
+    string bankName;
+    string routingNumber; 
+    string accountNumber;
+    string billingAddress;
+  
+  public:
+    PaymentStatus makePayment() {
+      // functionality
+  }
+}
+
+class Cash extends public Payment {
+  private:
+    string billingAddress;
+  public:
+    PaymentStatus makePayment() {
+      // functionality
+  }
+}
+```
+
+```javascript
+// Payment is an abstract class
+class Payment {
+  #amount;
+  #timestamp;
+  #status;
+
+  constructor(amount, timestamp, status) {
+    if (this.constructor == Payment) {
+        throw new Error("Abstract classes can't be instantiated.");
+    }
+    else {
+      this.#amount = amount;
+      this.#timestamp = timestamp;
+      this.#status = status; // Refers to the PaymentStatus enum
+    }
+  }
+  
+  // Returns the PaymentStatus enum
+  makePayment();
+}
+
+class CreditCard extends Payment {
+  #nameOnCard;
+  #cardNumber;
+  #billingAddress;
+  #code;
+
+  constructor(amount, timestamp, status, nameOnCard, cardNumber, billingAddress, code) {
+    this.#nameOnCard = nameOnCard;
+    this.#cardNumber = cardNumber;
+    this.#billingAddress = billingAddress;
+    this.#code = code;
+    super(amount, timestamp, status);
+  }  
+
+  // Returns the PaymentStatus enum
+  makePayment() {
+      // functionality
+  }
+}
+
+class ElectronicBankTransfer extends Payment {
+  #bankName;
+  #routingNumber;
+  #accountNumber;
+  #billingAddress;
+
+  constructor(amount, timestamp, status, bankName, routingNumber, accountNumber, billingAddress) {
+    this.#bankName = bankName;
+    this.#routingNumber = routingNumber; 
+    this.#accountNumber = accountNumber;
+    this.#billingAddress = billingAddress;
+    super(amount, timestamp, status);
+  } 
+  
+  // Returns the PaymentStatus enum
+  makePayment() {
+      // functionality
+  }
+}
+
+class Cash extends Payment {
+  #billingAddress;
+
+  constructor(amount, timestamp, status, billingAddress) {
+    this.#billingAddress = billingAddress;
+    super(amount, timestamp, status);
+  }
+
+  // Returns the PaymentStatus enum
+  makePayment() {
+      // functionality
+  }
+}
+```
+
 
 ### Notification
 The Notification class is responsible for sending notifications to customers about the order and shipment status either via SMS or email. Since you can extend this by adding more options, the Notification class will be an abstract class. It is defined below:
+```java
+// Notification is an abstract class
+public abstract class Notification {
+  private int notificationId;
+  private Date createdOn;
+  private String content;
 
+  public abstract boolean sendNotification(Account account);
+}
+
+public class EmailNotification extends Notification {
+  public boolean sendNotification(Account account) {
+    // functionality 
+  }
+}
+
+public class PhoneNotification extends Notification {
+  public boolean sendNotification(Account account) {
+    // functionality 
+  }
+}
+```
+
+```c#
+// Notification is an abstract class
+public abstract class Notification {
+  private int notificationId;
+  private DateTime createdOn;
+  private string content;
+
+  public abstract bool SendNotification(Account account);
+}
+
+class EmailNotification : Notification {
+  public override bool SendNotification(Account account) {
+    // functionality 
+  }
+}
+
+class PhoneNotification : Notification {
+  public override bool SendNotification(Account account) {
+    // functionality 
+  }
+}
+```
+
+```python
+# Notification is an abstract class
+from abc import ABC, abstractmethod
+
+class Notification(ABC):
+  def __init__(self, notification_id, created_on, content):
+    self.__notification_id = notification_id
+    self.__created_on = created_on
+    self.__content = content
+
+  # account here refers to the Account class
+  @abstractmethod
+  def send_notification(self, account):
+    pass
+
+class EmailNotification(Notification):
+  def __init__(self, notification_id, created_on, content):
+    super().__init__(notification_id, created_on, content)
+
+  # account here refers to the Account class
+  def send_notification(self, account):
+    # functionality
+    pass
+
+class PhoneNotification(Notification):
+  def __init__(self, notification_id, created_on, content):
+    super().__init__(notification_id, created_on, content)
+
+  # account here refers to the Account class
+  def send_notification(self, account):
+    # functionality
+    pass
+```
+
+```c++
+// Notification is an abstract class
+class Notification {
+  private:
+    int notificationId;
+    time_t createdOn;
+    string content;
+
+  public:
+    virtual bool sendNotification(Account account) = 0;
+}
+
+class EmailNotification : public Notification {
+  public:
+    bool sendNotification(Account account) {
+    // functionality 
+  }
+}
+
+class PhoneNotification : public Notification {
+  public:
+    bool sendNotification(Account account) {
+    // functionality 
+  }
+}
+```
+
+```javascript
+// Notification is an abstract class
+class Notification {
+  #notificationId;
+  #createdOn;
+  #content;
+
+  constructor(notificationId, createdOn, content) {
+    if (this.constructor === Notification) {
+      throw new Error("Abstract classes can't be instantiated.");
+    }
+    else {
+      this.#notificationId = notificationId;
+      this.#createdOn = createdOn;
+      this.#content = content;
+    }
+  }
+
+  // account here refers to the Account class
+  sendNotification(account) {
+    // functionality
+  };
+}
+
+class EmailNotification extends Notification {
+  // account here refers to the Account class
+  sendNotification(account) {
+    // functionality 
+  }
+}
+
+class PhoneNotification extends Notification {
+  // account here refers to the Account class
+  sendNotification(account) {
+    // functionality 
+  }
+}
+```
 
 ### Search and catalog
 The Catalog class contains the product information and implements the Search interface class to enable the search functionality based on the given criteria (name and category of product). Both classes are defined below:
+```java
+public interface Search {
+  public List<Product> searchProductsByName(String name);
+  public List<Product> searchProductsByCategory(String category);
+}
 
+public class Catalog implements Search {
+  private HashMap<String, List<Product>> products;
+
+  public List<Product> searchProductsByName(String name) {
+    // functionality
+  }
+
+  public List<Product> searchProductsByCategory(String category) {
+    // functionality
+  }
+}
+
+```
+
+```c#
+interface ISearch {
+  public List<Product> SearchProductsByName(string name);
+  public List<Product> SearchProductsByCategory(string category);
+}
+
+class Catalog : ISearch {
+  private HashMap<string, List<Product>> products;
+
+  public List<Product> SearchProductsByName(string name) {
+    // functionality
+  }
+
+  public List<Product> SearchProductsByCategory(string category) {
+    // functionality
+  }
+}
+
+```
+
+```python
+from abc import ABC, abstractmethod
+
+class Search(ABC):
+  def search_products_by_name(self, name): # Returns list of product names
+    pass
+  def search_products_by_category(self, category): # Returns list of product categories
+    pass
+
+class Catalog(Search):
+  def __init__(self):
+    self.__products = {}
+
+  # Returns list of product names
+  def search_products_by_name(self, name):
+    # functionality
+    pass
+
+  # Returns list of product categories
+  def search_products_by_category(self, category):
+    # functionality
+    pass
+```
+
+```c++
+class Search {
+  public: 
+    virtual vector<Product> searchProductsByName(string name) = 0;
+    virtual vector<Product> searchProductsByCategory(string category) = 0;
+}
+
+class Catalog : public Search {
+  private:
+    map<string, vector<Product>> products;
+
+  public:
+    vector<Product> searchProductsByName(string name) {
+      // functionality
+    }
+
+    vector<Product> searchProductsByCategory(string category) {
+      // functionality
+    }
+}
+```
+
+```javascript
+class Search {
+  constructor() {
+    if (this.constructor == Search) {
+      throw new Error("Abstract classes can't be instantiated.");
+    }
+  }
+
+  searchProductsByName(name); // Returns list of product names
+  searchProductsByCategory(category); // Returns list of product categories
+}
+
+class Catalog extends Search {
+  #products;
+
+  constructor() {
+    this.#products = new Map();
+  }
+
+  // Returns list of product names
+  searchProductsByName(name) {
+    // functionality
+  }
+
+  // Returns list of product categories
+  searchProductsByCategory(category) {
+    // functionality
+  }
+}
+
+```
 
 
 ## Wrapping up
