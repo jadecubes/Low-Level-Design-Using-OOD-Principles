@@ -109,3 +109,4 @@ Modify product                          Search product
 - The “Cancel order” use case has an include relationship with the “Refund payment” use case, since this is part of the process.
 
 ## Use case diagram
+[Use case diagram](./usecasediagram.png)
