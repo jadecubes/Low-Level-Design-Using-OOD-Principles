@@ -22,7 +22,7 @@ The details of these are given below:
 
 The class diagram of all these is provided below:
 
-[The class diagram of the Customer class and its child classes]
+[The class diagram of the Customer class and its child classes](./customer.png)
 
 ```
 R1: A customer can either be an authenticated user or a guest. The authenticated user has a registered account on the Amazon online shopping system, whereas a guest does not have a registered account.
@@ -31,7 +31,7 @@ R1: A customer can either be an authenticated user or a guest. The authenticated
 ### Admin
 The Admin class refers to an individual with a registered account on Amazon that can add, modify, or delete product categories and block users.
 
-[The class diagram of the Admin class]
+[The class diagram of the Admin class](./admin.png)
 
 ```
 R10: An admin should exist that can add or modify product categories and block users.
@@ -39,7 +39,7 @@ R10: An admin should exist that can add or modify product categories and block u
 ### Account
 The Account class accesses and showcases the personal details of the authenticated user and the admin, who are the two types of registered accounts available in the system. Users with an account will have the option to add and access multiple shipping addresses as well as add and delete different products and product reviews.
 
-[The class diagram of the Account class]
+[The class diagram of the Account class](./account.png)
 
 ```
 R1: A customer can either be an authenticated user or a guest. The authenticated user is one with a registered account on the Amazon online shopping system, whereas a guest doesn’t have a registered account.
@@ -48,7 +48,7 @@ R1: A customer can either be an authenticated user or a guest. The authenticated
 ### Product
 The Product class contains the details of a particular product available on the Amazon shopping store. Each product will fall under a specific category present on Amazon and can have none, one, or more reviews.
 
-[The class diagram of the Product class]
+[The class diagram of the Product class](./product.png)
 
 ```
 R3: A product can have multiple reviews and ratings from multiple customers.
@@ -56,7 +56,7 @@ R3: A product can have multiple reviews and ratings from multiple customers.
 ### Product category
 The ProductCategory class contains the names and descriptions of the various categories of products present on Amazon. It will also contain a reference to the list of products under a particular category.
 
-[The class diagram of the ProductCategory class]
+[The class diagram of the ProductCategory class](./productcategory.png)
 
 ```
 R2: An authenticated user should be able to buy, sell, and search the products via the product name or category. A guest is only able to search for products.
@@ -65,7 +65,7 @@ R2: An authenticated user should be able to buy, sell, and search the products v
 ### Product review
 The ProductReview class contains the rating and review attributes that a registered user can use to add a review about a particular product.
 
-[The class diagram of the ProductReview class]
+[The class diagram of the ProductReview class](./productreview.png)
 
 ```
 R3: A product can have multiple reviews and ratings from multiple customers.
