@@ -45,6 +45,8 @@ Based on the order above, the sequence diagram below represents the order checko
 
 [The sequence diagram for search and add items to the cart](./seq1.png)
 
-[challenge](./seq2)
+[challenge](./seq2.png)
+
 [flow](./flow.png)
+
 [answer](./answer.png)
