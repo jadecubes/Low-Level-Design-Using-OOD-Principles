@@ -37,12 +37,12 @@ Here are the steps in the close question interaction:
 
 Based on the order above, the sequence diagram for closing a question in Stack Overflow is provided below:
 
-[The sequence diagram for closing a question]
+[The sequence diagram for closing a question](./seq1.png)
 
 ## Sequence challenge: Create question
 
-[The sequence diagram for creating a question]
+[The sequence diagram for creating a question](./seq2.png)
 
-[flow]
+[flow](./flow.png)
 
-[Answer]
+[Answer](./answer.png)
