@@ -5,7 +5,7 @@ RMS is used to manage various aspects of a restaurant efficiently and securely. 
 
 Overall, the goal of a restaurant management system is to help restaurant owners and managers to streamline and automate various tasks, allowing them to focus on providing a high-quality dining experience to their customers.
 
-[RMS]
+[RMS](./rms)
 
 ## Expectations from the interviewee
 There are several components in a restaurant management system, each with specific constraints and requirements. The following provides an overview of some of the main expectations that the interviewer will want to hear you discuss in more detail, during the interview.
