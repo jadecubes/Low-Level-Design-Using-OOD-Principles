@@ -20,12 +20,12 @@ The waiter will appear with the menu when a guest sits at the table. The guest w
 
 Based on the order above, the activity diagram of the table booking and the food order are shown below:
 
-[The activity diagram for placing the order]
+[The activity diagram for placing the order](./activity1.png)
 
 ## Activity challenge: Cancel the order
 
-[The activity diagram for order cancelation]
+[The activity diagram for order cancelation](./activity2.png)
 
-[Flow]
+[Flow](./flow.png)
 
-[Answer]
+[Answer](./answer.png)
