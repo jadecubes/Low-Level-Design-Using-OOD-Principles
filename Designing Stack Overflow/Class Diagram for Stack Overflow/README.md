@@ -9,14 +9,14 @@ The Account class is used to identify a Stack Overflow user using their username
 
 Here's what the class definition looks like:
 
-[The class diagram of the Account class]
+[The class diagram of the Account class](./account.png)
 
 ### Guest
 The Guest class is a user that can only search and view questions and their answers. The user needs to register an account to ask questions or answer them.
 
 The visual representation of the Guest class is provided below:
 
-[The class diagram of the Guest class]
+[The class diagram of the Guest class](./guest.png)
 
 ```
 R1: Any guest can view questions and search questions by tag, username, or words
@@ -27,7 +27,7 @@ The Question class is used to enter the details of the question being asked by a
 
 Here is what the class definition looks like:
 
-[The class diagram of the Question class]
+[The class diagram of the Question class](./question.png)
 
 ```
 R2: Users should be able to post new questions and add answers to an open question.
@@ -40,7 +40,7 @@ The Answer class represents a user's answer to a question asked and will contain
 
 The UML representation of the class is shown below:
 
-[The class diagram of the Answer class]
+[The class diagram of the Answer class](./answer.png)
 
 ```
 R2: Users should be able to post new questions, as well as add an answer to an open question.
@@ -53,7 +53,7 @@ The Comment class refers to an opinion or remark provided by a user on either a 
 
 The UML representation of the class is shown below:
 
-[The class diagram of the Comment class]
+[The class diagram of the Comment class](./comment.png)
 
 ```
 R4: A user can upvote, downvote, and add comments to a question or answer. However, they can only upvote a comment.
@@ -64,7 +64,7 @@ The Bounty class refers to an award of granting reputation points on a question 
 
 The class diagram of the Bounty class is shown below:
 
-[The class diagram of the Bounty class]
+[The class diagram of the Bounty class](bounty.png)
 
 ```
 R6: Any user can add a bounty to their question to attract more answers.
@@ -74,7 +74,7 @@ The Badge class refers to badges on a user's profile that show a reputation-wort
 
 The class diagram of the Badge class is shown below:
 
-[The class diagram of the Badge class]
+[The class diagram of the Badge class](./badge.png)
 
 ```
 R9: Users can earn badges for their helpful answers or comments.
@@ -85,7 +85,7 @@ The Tag and TagList classes represent the keywords or labels to categorize quest
 
 The class diagram for these two classes is provided below:
 
-[The class diagram of the Tag and TagList classes]
+[The class diagram of the Tag and TagList classes](./tag.png)
 
 ```
 R10: The system should also be able to determine the most popular tags used in questions.
@@ -127,7 +127,7 @@ The Notification class will send a notification within the Stack Overflow platfo
 
 The UML representation of the class is shown below:
 
-[The class diagram of the Notification class]
+[The class diagram of the Notification class](./notification.png)
 
 ```
 R8: The system should send the user a notification whenever there has been an interaction with them, such as the user’s question receiving an answer, earning a badge, or someone upvoting or downvoting their post.
@@ -139,7 +139,7 @@ The Search interface allows users to search for a particular question using tags
 
 The UML representation of the interfaces is shown below:
 
-[The class diagram of the Search interface]
+[The class diagram of the Search interface](./search.png)
 
 ```
 R1: Any guest can view questions and search questions by tag, username, or words.
@@ -150,7 +150,7 @@ The SearchCatalog is the class where the search functionality is implemented. Th
 
 The class representation of the SearchCatalog class is provided below:
 
-[The class diagram of the SearchCatalog class]
+[The class diagram of the SearchCatalog class](./searchcatalog.png)
 
 ```
 R1: Any guest can view questions and search questions by tag, username, or words.
@@ -164,7 +164,7 @@ The enumerations required in the Stack Overflow design are provided below:
 
 - ClosingDetails: The closing details enumeration outlines the reason that a question was closed.
 
-[Enums in Stack Overflow]
+[Enums in Stack Overflow](./enums.png)
 
 
 ## Relationship between the classes
@@ -180,7 +180,7 @@ The class diagram has the following association relationships:
 
 - The Answer, Comment, Question classes have a one-way association with the Notification class.
 
-[The association relationship between classes]
+[The association relationship between classes](./association.png)
 
 ### Composition
 The class diagram has the following composition relationships:
@@ -191,14 +191,14 @@ The class diagram has the following composition relationships:
 
 - The TagList class is composed of the Tag class.
 
-[The composition relationship between classes]
+[The composition relationship between classes](./composition.png)
 
 ### Generalization
 The following classes show a generalization relationship:
 
 - The SearchCatalog class implements the Search interface.
 
-[The generalization relationship between classes]
+[The generalization relationship between classes](./generalization.png)
 
 ### Inheritance
 The following classes show an inheritance relationship:
@@ -209,7 +209,7 @@ Note: We have already discussed the inheritance relationship between classes in 
 ```
 
 ## Class diagram of Stack Overflow
-[The class diagram of Stack Overflow]
+[The class diagram of Stack Overflow](./classdiagram.png)
 
 ## Design pattern
 We can use the Observer design pattern to implement the notification functionality. By default, users that post a question or answer are set as subscribers for that question or answer.
@@ -221,7 +221,7 @@ The interviewer can introduce some additional requirements in the Stack Overflow
 
 Save questions or answers: Users can save questions or answers and view them later from the “Saves” section in their profile:
 
-[The class diagram of save functionality in Stack Overflow]
+[The class diagram of save functionality in Stack Overflow](./additional.png)
 
 We have completed the class diagram of Stack Overflow according to the requirements. Now, let’s design the sequence diagram of Stack Overflow in the next lesson.
 
