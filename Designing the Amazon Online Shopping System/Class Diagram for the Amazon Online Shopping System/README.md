@@ -232,7 +232,7 @@ Note: We have already discussed the inheritance relationship between classes in 
 
 ## Class diagram of Amazon
 
-[The class diagram of Amazon]
+[The class diagram of Amazon](./classdiagram.png)
 
 ## Design pattern
 In the Amazon online shopping system, we can use the Factory design pattern to maintain different orders and the bill generation process based on the products selected by a customer.
@@ -245,10 +245,10 @@ The interviewer can introduce some additional requirements in the Amazon shoppin
 Wish list: Only users with an account (an authenticated user) can add a product to their wishlist. The WishList class can be used to move products to a cart and also check if it is currently available:
 
 
-[Adding WishList functionality]
+[Adding WishList functionality](./additional.png)
 
 Discount: A discount will be applied to the payment depending on special events such as Christmas, Black Friday, and so on. The class diagram provided below shows the relationship of Discount with the Payment class:
 
-[Relationship between the Discount class with the Payment class]
+[Relationship between the Discount class with the Payment class](./additional2.png)
 
 We’ve completed the class diagram of the Amazon shopping system according to the requirements. Now let’s design the sequence diagram of the Amazon shopping system in the next lesson.
