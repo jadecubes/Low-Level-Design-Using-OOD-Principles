@@ -3,7 +3,7 @@
 ## Problem definition
 Stack Overflow is a Q&A website for programmers and developers, irrespective of their expertise level in the domain. It has a wide variety of questions on topics related to computer science and programming. Registered users can post new questions and answer questions from other users. Each user can collect reputation points. These points are affected by the upvotes or downvotes received by the user on their questions or answers. More reputation points allow users to perform additional functions like voting to close or delete a question. On achieving reputation milestones, users are awarded badges to highlight their credibility.
 
-[A question page on the Stack Overflow]
+[A question page on the Stack Overflow](./stackoverflow.png)
 
 ## Expectations from the interviewee
 It is important to narrow down the components to be included in your Stack Overflow design. The following section provides an overview of some of the main expectations that the interviewer will want to hear you discuss in more detail during the interview:
