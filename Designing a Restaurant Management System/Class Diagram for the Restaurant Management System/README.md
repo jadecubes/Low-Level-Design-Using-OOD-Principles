@@ -7,7 +7,7 @@ As mentioned earlier, we’ll follow the bottom-up approach to design a class di
 ### Account
 An Account contains an ID for the user. It also stores the address, account status, and password that can be reset.
 
-[The Account class]
+[The Account class](./account.png)
 
 ### Person
 The Person class is extended by the Employee and Customer classes and stores the person's name, email, and phone number.
@@ -24,7 +24,7 @@ The Person class is extended by the Employee and Customer classes and stores the
 
 - Customer: This derived class keeps track of the last visited date of the customer.
 
-[Person and its derived classes]
+[Person and its derived classes](./person.png)
 
 ```
 R3: The waiter should be able to create an order for a table and add items for each person seated.
@@ -39,7 +39,7 @@ Table: This class is identified by an ID, a limited seating capacity, a specific
 
 TableSeat: It is identified by a seat number and has a type that can be updated.
 
-[The Table and TableSeat classes]
+[The Table and TableSeat classes](./table.png)
 
 ```
 R5: The system should be able to provide information about tables currently available for walk-in customers.
@@ -52,7 +52,7 @@ Meal: It has a unique meal ID and may or may not be present as a MealItem.
 
 MealItem: It is identified by a meal item ID and has a specific quantity that can be updated.
 
-[The Meal and MealItem classes]
+[The Meal and MealItem classes](./meal.png)
 
 ```
 R4: Each person’s order can consist of multiple items, each corresponding to a menu item.
@@ -65,7 +65,7 @@ MenuSection: This class represents a section of the menu that has an ID, a title
 
 MenuItem: It is identified by an ID and has a title, description, and price that can be updated.
 
-[The Menu, MenuSection, and MenuItem classes]
+[The Menu, MenuSection, and MenuItem classes](./menu.png)
 
 ```
 R2: Each branch will offer a menu with various sections and items.
@@ -74,7 +74,7 @@ R2: Each branch will offer a menu with various sections and items.
 ### Order
 Order is identified by an ID and has a status that can be updated regarding adding or removing meals.
 
-[The Order class]
+[The Order class](./order.png)
 
 ```
 R3: The waiter should be able to create an order for a table and add items for each person seated.
@@ -85,12 +85,12 @@ R4: Each person’s order can consist of multiple items, each corresponding to a
 ### Kitchen
 The Kitchen class has a name and an assigned chef.
 
-[The Kitchen class]
+[The Kitchen class](./kitchen.png)
 
 ### Reservation
 A Reservation is made by the receptionist for the customer and has a reservation ID, reservation time, count and information of the customers, status, notes, and check-in time.
 
-[The Reservation class]
+[The Reservation class](./reservation.png)
 
 ```
 R6: The system should allow for the reservation of tables.
@@ -108,7 +108,7 @@ Payment is an abstract class extended by CreditCardPayment, CashTransaction, and
 
 - CheckTransaction: This derived class represents a payment made through a check. The check has a check number that belongs to a specific bank.
 
-[Payment and its derived classes]
+[Payment and its derived classes](./payment.png)
 
 ```
 R10: Customers should be able to pay their bills with credit cards, checks, or cash.
@@ -117,7 +117,7 @@ R10: Customers should be able to pay their bills with credit cards, checks, or c
 ### Bill
 The Bill class represents the total amount a customer has to pay based on the items ordered from the menu. This class stores an ID, the total amount to be paid, the tip, and the tax. Moreover, it holds the record of whether or not the bill was paid.
 
-[The Bill class]
+[The Bill class](./bill.png)
 
 ```
 R10: Customers should be able to pay their bills with credit cards, checks, or cash.
@@ -129,7 +129,7 @@ A Notification is a message sent to a customer from the restaurant. Every Notifi
 
 - EmailNotification: This derived class represents a notification sent to a customer's email. Therefore, it stores the email addresses of all the customers.
 
-[The Notification and its derived classes]
+[The Notification and its derived classes](./notification.png)
 
 ```
 R9: The system should send notifications as the reservation time approaches.
@@ -143,7 +143,7 @@ Branch: This class represents the branches of a restaurant. Every Branch has a s
 
 Restaurant: This class has a name and maintains a list of branches that can be updated.
 
-[The SeatingChart, Branch, and Restaurant classes]
+[The SeatingChart, Branch, and Restaurant classes](./seatingchart.png)
 
 ```
 R1: The restaurant can have multiple branches.
@@ -165,11 +165,11 @@ ReservationStatus: This enumeration represents the reservation status of a table
 
 SeatType: This enumeration represents the type of seat for the customer and keeps track of it.
 
-[Enums in the restaurant management system]
+[Enums in the restaurant management system](./enums.png)
 
 Address: This custom datatype represents the address of the restaurant's branch or a person.
 
-[Class diagram of the Address custom data type]
+[Class diagram of the Address custom data type](./classdiagram.png)
 
 
 ## Relationship between the classes
@@ -195,7 +195,7 @@ The class diagram has the following association relationships:
 
 - The Reservation class has a one-way association with Table.
 
-[The one-way association relationship between classes]
+[The one-way association relationship between classes](./1way.png)
 
 #### Two-way Association
 - The Branch and Menu classes are associated with each other.
@@ -208,7 +208,7 @@ The class diagram has the following association relationships:
 
 - The Bill and Order classes are associated with each other.
 
-[The two-way association relationship between classes]
+[The two-way association relationship between classes](./2way.png)
 
 ### Composition
 - The class diagram has the following composition relationships.
@@ -229,7 +229,7 @@ The class diagram has the following association relationships:
 
 - The Menu class is composed of MenuSection.
 
-[The composition relationship between classes]
+[The composition relationship between classes](./composition.png)
 
 ### Inheritance
 The following classes show an inheritance relationship:
@@ -243,7 +243,7 @@ The following classes show an inheritance relationship:
 Note: We have already discussed the inheritance relationship between classes in the component section above one by one.
 ```
 ## Class diagram for the Restaurant Management System
-[The class diagram of restaurant management system]
+[The class diagram of restaurant management system](./classdiagram.png)
 
 ## Design pattern
 The following design patterns have been used in the class diagram:
@@ -262,7 +262,7 @@ The interviewer can introduce some additional requirements in the given restaura
 
 Discount: A discount will be applied to the payment depending on special events such as the New Year, an anniversary, a branch opening, and so on. The class diagram provided below shows the relationship of Discount with the Payment class:
 
-[The relationship of the Discount class with the Payment class]
+[The relationship of the Discount class with the Payment class](./additional.png)
 
 We have completed the class diagram of the restaurant management system according to the requirements. Now, let's design its sequence diagram in the next lesson.
 
