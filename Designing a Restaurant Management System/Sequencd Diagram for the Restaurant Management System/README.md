@@ -34,12 +34,12 @@ Here’re the steps in the order modification interaction:
 
 Based on the order above, the sequence diagram of modifying an order in a restaurant management system is given below:
 
-[The sequence diagram for modifying an order]
+[The sequence diagram for modifying an order](./seq1.png)
 
 ## Sequence challenge: The guest pays for the order
 
-[The sequence diagram for order payment]
+[The sequence diagram for order payment](./seq2.png)
 
-[Flow]
+[Flow](./flow.png)
 
-[Answer]
+[Answer](./answer.png)
