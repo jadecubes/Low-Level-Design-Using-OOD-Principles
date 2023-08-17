@@ -105,4 +105,4 @@ The “Send notification” use case also has an include relationship with the �
 
 ## Use case diagram
 
-[The use case diagram for Stack Overflow]
+[The use case diagram for Stack Overflow](./ucd.png)
