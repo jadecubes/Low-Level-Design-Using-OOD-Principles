@@ -73,7 +73,7 @@ R3: A product can have multiple reviews and ratings from multiple customers.
 ### Catalog
 The Catalog class will contain a list of products of different names or categories.
 
-[The class diagram of the Catalog class]
+[The class diagram of the Catalog class](./catalog.png)
 
 ```
 R2: An authenticated user should be able to buy, sell, and search the products via the product name or category. A guest is only able to search for products.
@@ -81,7 +81,7 @@ R2: An authenticated user should be able to buy, sell, and search the products v
 ### Search
 The Search class will be an interface that contains the functionalities relating to searching for products.
 
-[The class diagram of the Search interface]
+[The class diagram of the Search interface](./search.png)
 ```
 R2: An authenticated user should be able to buy, sell, and search the products via the product name or category. A guest is only able to search for products.
 ```
@@ -89,7 +89,7 @@ R2: An authenticated user should be able to buy, sell, and search the products v
 ### Cart item
 The CartItem class refers to the items present in the shopping cart. It will have the price and quantity attributes which can be modified using the updateQuantity() function.
 
-[The class diagram of the CartItem class]
+[The class diagram of the CartItem class](./cart.png)
 ```
 R4: An authenticated user should be able to add, remove, or modify product items in their shopping cart. The authenticated user can further check out and buy the items.
 ```
@@ -97,7 +97,7 @@ R4: An authenticated user should be able to add, remove, or modify product items
 ### Shopping cart
 The ShoppingCart class contains the list of cart items, upon which, actions such as adding items to the cart, removing items from the cart, and accessing all cart items can be performed.
 
-[The class diagram of the ShoppingCart class]
+[The class diagram of the ShoppingCart class](./shoppingcart.png)
 ```
 R4: An authenticated user should be able to add, remove, or modify product items in their shopping cart. The authenticated user can further check out and buy the items.
 ```
@@ -105,7 +105,7 @@ R4: An authenticated user should be able to add, remove, or modify product items
 ### Order
 The Order class refers to a particular order of a customer and will keep track of the order status along with the option of sending the order to shipment. It will also be used to make the payment and log the order details.
 
-[The class diagram of the Order class]
+[The class diagram of the Order class](./order.png)
 
 ```
 R7: An order can be canceled, only in the case that it hasn’t been shipped.
@@ -114,7 +114,7 @@ R7: An order can be canceled, only in the case that it hasn’t been shipped.
 ### Order log
 The OrderLog class keeps a log of the order through its creation date and order status.
 
-[The class diagram of the OrderLog class]
+[The class diagram of the OrderLog class](./orderlog.png)
 ```
 R7: An order can be canceled, only in the case that it hasn’t been shipped.
 ```
@@ -122,7 +122,7 @@ R7: An order can be canceled, only in the case that it hasn’t been shipped.
 ### Shipment
 The Shipment class keeps track of the date on which the order was shipped, its estimated arrival time, and the shipment method. It will also be used to log the shipment details.
 
-[The class diagram of the Shipment class]
+[The class diagram of the Shipment class](./shipment.png)
 
 ```
 R9: Shipment can be tracked to see the current status and the estimated time of arrival for the order.
@@ -130,7 +130,7 @@ R9: Shipment can be tracked to see the current status and the estimated time of 
 ### Shipment log
 The ShipmentLog class keeps a log of the shipment through its creation date and shipment status.
 
-[The class diagram of the ShipmentLog class]
+[The class diagram of the ShipmentLog class](./shipmentlog.png)
 
 ```
 R9: Shipment can be tracked to see the current status and the estimated time of arrival for the order.
@@ -139,7 +139,7 @@ R9: Shipment can be tracked to see the current status and the estimated time of 
 ### Payment
 The Payment class will have three child classes: CreditCard, ElectronicBankTransfer, and Cash since these are the three payment methods available to a customer on Amazon.
 
-[The class diagram of Payment and its child classes]
+[The class diagram of Payment and its child classes](./child.png)
 ```
 R6: Payment can be made through credit cards, electronic bank transfers, or through cash on delivery.
 ```
@@ -149,7 +149,7 @@ The Notification class is responsible for sending order and shipment notificatio
 ```
 Note: Since the Notification class can be extended by adding various other options, we will implement it as an abstract class.
 ```
-[The class diagram of Notification and its child classes]
+[The class diagram of Notification and its child classes](./notification.png)
 
 ```
 R8: Notifications are sent whenever there is a change in the order or shipping status.
@@ -166,12 +166,12 @@ OrderStatus: The order status describes the status of a particular order of a cu
 
 ShipmentStatus: The shipment status tells us about the status of an order’s shipment, whether it is in a pending state, shipped state, delivered state, or on hold.
 
-[Enums in Amazon]
+[Enums in Amazon](./enums.png)
 
 ### Custom data type
 We need to create a custom data type, Address, that will store the location of a customer.
 
-[The class diagram of the Address custom data type]
+[The class diagram of the Address custom data type](./address.png)
 
 ## Relationship between the classes
 Now, we’ll discuss the relationships between the classes we have defined in our Amazon shopping system above.
@@ -189,7 +189,7 @@ Now, we’ll discuss the relationships between the classes we have defined in ou
 
 - The Order class has a two-way association with CartItem and Payment and a one-way association with Shipment.
 
-[The association relationship between classes]
+[The association relationship between classes](./association.png)
 
 ### Composition
 - The class diagram has the following composition relationships:
@@ -202,21 +202,21 @@ Now, we’ll discuss the relationships between the classes we have defined in ou
 
 - The Customer class is composed of the ShoppingCart class.
 
-[The composition relationship between classes]
+[The composition relationship between classes](./composition.png)
 
 ### Aggregation
 The following classes show an aggregation relationship:
 
 - The Product class contains the Catalog class.
 
-[The aggregation relationship between classes]
+[The aggregation relationship between classes](./aggregation.png)
 
 ### Generalization
 The following classes show a generalization relationship:
 
 - The Catalog class implements the Search class.
 
-[The generalization relationship between classes]
+[The generalization relationship between classes](./generalization.png)
 
 ### Inheritance
 The following classes show an inheritance relationship:
