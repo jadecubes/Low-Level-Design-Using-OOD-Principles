@@ -20,12 +20,12 @@ Final state: There are two final states present in this activity diagram, shown 
 ### Actions
 The member clicks on the “Ask Question” button and fills in the required fields. The member is then asked if they want to add a tag. After the post is composed, the system checks if the terms of service are followed. The question is posted only if the terms of service are followed.
 
-[The activity diagram for a member posting a question]
+[The activity diagram for a member posting a question](./activity1.png)
 
 ## Activity challenge: A member closes a question
 
-[The activity diagram for a member closing a question]
+[The activity diagram for a member closing a question](./activity2.png)
 
-[flow]
+[Flow](./flow.png)
 
-[answer]
+[Answer](./answer.png)
