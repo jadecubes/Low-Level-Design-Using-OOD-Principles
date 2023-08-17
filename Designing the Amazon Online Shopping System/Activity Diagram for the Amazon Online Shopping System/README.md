@@ -16,12 +16,12 @@ Final state: The customer proceeds with checkout.
 ### Actions
 The customer opens the website. They either search or browse the website, select a product, and proceed to buy it.
 
-[The activity diagram for a customer buying a product]
+[The activity diagram for a customer buying a product](./activity1.png)
 
 ## Activity challenge: The customer receives their order
 
-[The activity diagram for a customer receiving their order]
+[The activity diagram for a customer receiving their order](./activity2.png)
 
-[challenge]
+[flow](./flow.png)
 
-[answer]
+[answer](./answer.png)
