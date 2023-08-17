@@ -3,7 +3,7 @@
 ## Problem definition
 Facebook is a social media platform for users to connect with people and engage with different types of media and content. Users can connect with other users by sending friend requests or using the direct messaging feature. Each user has a profile where they can create posts to share with their friends. Facebook also allows its users to create pages regarding a topic of interest and groups to form a community of similar people. Facebook generates a personalized feed for its users based on their friends, liked pages, groups, and the content they engage with to ensure the best experience.
 
-[The Facebook home page of a user]
+[The Facebook home page of a user](./fb.png)
 
 ## Expectations from the interviewee
 Facebook provides multiple functionalities to its users. It is important to narrow down what components you will include in your Facebook design. The section below provides an overview of some of the main expectations that the interviewer will want to hear you discuss in more detail during the interview.
