@@ -43,6 +43,6 @@ Based on the order above, the sequence diagram for closing a question in Stack O
 
 [The sequence diagram for creating a question](./seq2.png)
 
-[flow](./flow.png)
+[Flow](./flow.png)
 
 [Answer](./answer.png)
