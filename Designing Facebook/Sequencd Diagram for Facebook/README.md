@@ -37,4 +37,4 @@ Here’re the steps for the “send a friend request” interaction:
 
 Based on the order above, the sequence diagram for sending a friend request on Facebook is given below:
 
-[The sequence diagram for sending a friend request]
+[The sequence diagram for sending a friend request](./seq.png)
