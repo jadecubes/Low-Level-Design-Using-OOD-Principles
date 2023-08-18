@@ -7,7 +7,7 @@ The Account class identifies a Facebook user using their username and ID. Users 
 
 A representation of the class definition is provided below:
 
-[The class diagram of the Account class]
+[The class diagram of the Account class](./account.png)
 
 ```
 R1: Users should be able to set the privacy of their profile page. They should also be able to create their profile page and add information such as work experience, education, and place of living.
@@ -18,7 +18,7 @@ The Admin class comes into existence in a group or page created and is responsib
 
 The class diagram of this class is shown below:
 
-[The class diagram of the Admin class]
+[The class diagram of the Admin class](./admin.png)
 
 ```
 R10: Users should be able to create their own groups and pages. Users can later set privacy or delete the groups or pages they own.
@@ -32,7 +32,7 @@ The User class is the main class of Facebook and is responsible for making vario
 
 The class diagram of these two classes are provided below:
 
-[The class diagram of the Person and User classes]
+[The class diagram of the Person and User classes](./user.[ng)
 
 ```
 R4: Users should be able to send as well as respond to friend requests of other users. Users should also be able to unfriend or block other users.
@@ -47,7 +47,7 @@ The Profile class contains the personal information of a Facebook user, like the
 
 The visual representation of the Profile class is given below:
 
-[The class diagram of the Profile class]
+[The class diagram of the Profile class](./profile.png)
 
 ```
 R1: Users should be able to set the privacy of their profile page. They should also be able to create their profile page and add information such as work experience, education, and place of living.
@@ -58,7 +58,7 @@ The Work, Education, and Places classes are used to provide relevant information
 
 The class representation of these classes is given below:
 
-[The class diagram of the Work, Education, and Places classes]
+[The class diagram of the Work, Education, and Places classes](,/work.png)
 
 ```
 R1: Users should be able to set the privacy of their profile page. They should also be able to create their profile page and add information such as work experience, education, and place of living.
@@ -68,7 +68,7 @@ The Page class represents a particular page that exists on the Facebook platform
 
 The UML representation of the class is shown below:
 
-[The class diagram of the Page class]
+[The class diagram of the Page class](./page.png)
 
 ```
 R9: Users should be able to follow existing pages and join existing groups. They should also be able to unfollow or leave joined groups or followed pages.
@@ -79,7 +79,7 @@ The Group class represents a particular group that exists on the Facebook platfo
 
 The UML representation of the class is shown below:
 
-[The class diagram of the Group class]
+[The class diagram of the Group class](./group.png)
 
 ```
 R9: Users should be able to follow existing pages and join existing groups. They should also be able to unfollow or leave joined groups or followed pages.
@@ -87,14 +87,14 @@ R9: Users should be able to follow existing pages and join existing groups. They
 
 In the Facebook design problem, the Group class implements the GroupFunctions interface.
 
-[The GroupFunctions interface as a subscriber]
+[The GroupFunctions interface as a subscriber](./groupfunctions.png)
 
 ### Post
 The Post class indicates a post by any user that will contain its content, the number of likes and shares the post has, as well as the owner of the post. Each post will have a specific setting as to who can view the post.
 
 The class diagram of the Post class is shown below:
 
-[The class diagram of the Post class]
+[The class diagram of the Post class](./post.png)
 
 ```
 R3: Users should be able to write a new post and set its privacy.
@@ -105,7 +105,7 @@ The Comment class indicates a comment by any user on a post that will contain it
 
 The class diagram of the Comment class is shown below:
 
-[The class diagram of the Comment class]
+[The class diagram of the Comment class](./comment.png)
 
 ```
 R6: Users should be able to like, share and/or comment on a post, they should also be able to like or comment on an existing comment.
@@ -116,7 +116,7 @@ The FriendRequest class describes the details of a friend invitation. It will co
 
 The class diagram of the FriendRequest class is shown below:
 
-[The class diagram of the FriendRequest class]
+[The class diagram of the FriendRequest class](./friendrequest.png)
 
 ```
 R4: Users should be able to send as well as respond to the friend requests of other users. Users should also be able to unfriend or block other users.
@@ -127,7 +127,7 @@ The Message class represents the message sent by a user to other users and will,
 
 The class diagram for the Message class is shown below:
 
-[The class diagram of the Message class]
+[The class diagram of the Message class](./message.png)
 
 ```
 R8: A user should be able to send messages and receive messages from other users.
@@ -136,7 +136,7 @@ R8: A user should be able to send messages and receive messages from other users
 ### Profile privacy
 There will be a privacy class for the profile on Facebook. The following represents the class diagram:
 
-[The Class diagram of the ProfilePrivacy class]
+[The Class diagram of the ProfilePrivacy class](profileprivacy.png)
 
 ```
 R1: Users should be able to set the privacy of their profile page. They should also be able to create their profile page and add information such as work experience, education, and place of living.
@@ -157,7 +157,7 @@ A new post has been created either by a user or a page that another user is foll
 
 The UML representation of the class is shown below:
 
-[The class diagram of the Notification class]
+[The class diagram of the Notification class](./notification.png)
 
 ```
 R7: The system should send the user a notification whenever there has been an interaction with them, such as receiving a message, a friend request, or a comment on their post.
@@ -178,14 +178,14 @@ There will be several interfaces that will exist in the Facebook class, and each
 
 The UML representation of the interfaces is shown below:
 
-[The class diagram of interfaces to be implemented by users in Facebook]
+[The class diagram of interfaces to be implemented by users in Facebook](./interface.png)
 
 ### Search catalog
 SearchCatalog is the class where the search functionality is implemented. Each catalog will contain a list of users, groups, pages, and posts, and can add new users, groups, pages, and posts to the catalog.
 
 The class representation of the SearchCatalog class is shown below:
 
-[The class diagram of the SearchCatalog class]
+[The class diagram of the SearchCatalog class](./searchcatalog.png)
 
 ```
 R2: Users of our system should be able to search for groups, pages, and other users.
@@ -200,12 +200,12 @@ The enumerations required in the Facebook design are listed below:
 
 - PostPrivacySettings: The post-privacy settings enumeration outlines the audience that can view the posts.
 
-[Enums in the Facebook]
+[Enums in the Facebook](./enums.png)
 
 ### Custom data type
 We need to create a custom data type, Address, that will store the location of a Facebook user.
 
-[The class diagram of the custom Address data type]
+[The class diagram of the custom Address data type](./classdiagram.png)
 
 ## Relationship between the classes
 Now, we’ll discuss the relationships between the classes we have defined above in our Facebook social network system.
@@ -227,21 +227,21 @@ The User class has a one-way association with:
 
 - The Notification class has a one-way association with FriendRequest, Message, and Comment.
 
-[The association relationship between classes]
+[The association relationship between classes](./association.png)
 
 ### Composition
 The class diagram has the following composition relationships:
 
 - The Account class is composed of the User class which is composed of the Profile class.
 
-[The composition relationship between classes] 
+[The composition relationship between classes](./composition.png)
 
 ### Aggregation
 The following classes show an aggregation relationship:
 
 - The Profile class contains the Work, Education, and Places classes.
 
-[The aggregation relationship between classes]
+[The aggregation relationship between classes](./aggregation.png)
 
 ### Generalization
 The following classes show a generalization relationship:
@@ -252,7 +252,7 @@ The following classes show a generalization relationship:
 
 - The Group class implements the GroupFunctions interface
 
-[The generalization relationship between classes]
+[The generalization relationship between classes](./generalization.png)
 
 ### Inheritance
 The following classes show an inheritance relationship:
@@ -264,7 +264,7 @@ The following classes show an inheritance relationship:
 Note: We have already discussed the inheritance relationship between classes in the component section above one by one.
 ```
 ## Class diagram of Facebook
-[The class diagram of Facebook]
+[The class diagram of Facebook](./classdiagram.png)
 
 ## Design pattern
 We know that Facebook has a group feature that allows multiple users to join a group. By default, when a user joins a group, they get notified of any new posts in the group. To effectively map this behavior in our design, we can use the Observer design pattern.
@@ -276,7 +276,7 @@ The interviewer can introduce some additional requirements in the Facebook socia
 
 - Recommendations: Users can send recommendations of pages and groups to other users. The class diagram provided below shows the relationship of Recommendation with the other classes:
 
-[The class diagram of the Recommendation functionality]
+[The class diagram of the Recommendation functionality](./additional.png)
 
 We have completed the class diagram of Facebook according to the requirements. Now, let’s design the sequence diagram of Facebook in the next lesson.
 
