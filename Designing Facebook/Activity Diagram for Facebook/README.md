@@ -16,12 +16,12 @@ Final state: The post is published.
 ### Actions
 The user selects the new post option, selects the privacy option, adds any attachments, and publishes the post.
 
-[The activity diagram for a user creating a new post]
+[The activity diagram for a user creating a new post](./activity1.png)
 
 ## Activity challenge: A user joins a group
 
-[The activity diagram for a user joining the group]
+[The activity diagram for a user joining the group](./activity2.png)
 
-[Flow]
+[Flow](./flow.png)
 
-[Answer]
+[Answer](./answer.png)
