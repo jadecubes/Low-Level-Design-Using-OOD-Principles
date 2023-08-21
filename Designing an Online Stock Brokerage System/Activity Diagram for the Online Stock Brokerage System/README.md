@@ -18,6 +18,6 @@ The member selects the stock to buy, order type, stock quantity, time price limi
 
 Based on the order above, the activity diagram for buying a stock at the online stock brokerage system is provided below:
 
-[The activity diagram for buying a stock]
+[The activity diagram for buying a stock](./activity.png)
 
 We've looked at the activity diagram of our online stock brokerage system. In the next lesson, we will present the code for our designed classes in some of the most popular languages.
