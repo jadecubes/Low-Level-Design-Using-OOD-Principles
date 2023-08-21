@@ -31,4 +31,4 @@ Here are the steps involved in selling a stock:
 
 Based on the order above, the sequence diagram for selling a stock in an online stock brokerage system is provided below.
 
-[The sequence diagram for selling a stock]
+[The sequence diagram for selling a stock](./sequence.png)
