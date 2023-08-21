@@ -12,12 +12,12 @@ Member: They can search the stock, place an order to buy or sell stocks, create 
 
 Admin: They can block or unblock members, and cancel their membership.
 
-[The class diagram of Account and its derived classes]
+[The class diagram of Account and its derived classes](./account.png)
 
 ### Watchlist
 A list of stocks that an investor keeps an eye on to profit from price drops is called a watchlist. The visual representation of the Watchlist class is provided below.
 
-[The class diagram of the Watchlist class]
+[The class diagram of the Watchlist class](./watchlist.png)
 
 ```
 R2: Users are allowed to have numerous watchlists consisting of different stock quotes.
@@ -26,7 +26,7 @@ R2: Users are allowed to have numerous watchlists consisting of different stock 
 ### Stock
 A stock is also known as equity. It is a security that represents a portion of the issuing company's ownership. The Stock class will have a symbol, price, etc.
 
-[The class diagram of the Stock class]
+[The class diagram of the Stock class](./stock.png)
 
 ```
 R1: The system should allow the user to easily trade in stocks (buy or sell them).
@@ -35,17 +35,17 @@ R1: The system should allow the user to easily trade in stocks (buy or sell them
 ### Search and stock inventory
 The StockInventory class will retrieve and keep up with the most recent stock values from the StockExchange class (defined later). The StockInventory class implements the Search interface.
 
-[The class diagram of the Search interface and the StockInventory class]
+[The class diagram of the Search interface and the StockInventory class](./search.png)
 
 ### Stock position
 All the stocks that the user owns will be included in the StockPosition class.
 
-[The class diagram of the StockPosition class]
+[The class diagram of the StockPosition class](./stockposition.png)
 
 ### Stock lot
 A member may purchase various lots of the same stock at various dates. The StockLot class will represent these particular lots.
 
-[The class diagram of the StockLot class]
+[The class diagram of the StockLot class](./stocklot.png)
 
 ```
 R3: Users may own different lots of the same stock. This implies that the system should be able to distinguish between several lots of the same stock if a user has purchased the same stock more than once.
@@ -62,7 +62,7 @@ StopLossOrder: An order to purchase or sell whenever the stock hits a specific p
 
 StopLimitOrder: The StopLimitOrder becomes a limit order to purchase or sell at the limit price, or better, if the stop price is reached.
 
-[The class diagram of Order and its derived classes]
+[The class diagram of Order and its derived classes](./order.png)
 
 ```
 R5: The system should allow the user to order the stock trade of the types given below:
@@ -76,14 +76,14 @@ R5: The system should allow the user to order the stock trade of the types given
 ### Order part
 Multiple order parts might be used to complete an order. The OrderPart class contains the price, quantity, and execution date.
 
-[The class diagram of the OrderPart class]
+[The class diagram of the OrderPart class](./orderpart.png)
 
 ### Deposit and withdraw money
 The DepositMoney class represents a transfer of money from one party to another.
 
 The WithdrawMoney class represents removing money from an account.
 
-[The class diagram of the DepositMoney and WithdrawMoney classes]
+[The class diagram of the DepositMoney and WithdrawMoney classes](./deposit.png)
 
 ```
 R6: The system should allow the user to make deposits and withdrawals using checks, wire transfers, or electronic bank transfers.
@@ -92,7 +92,7 @@ R6: The system should allow the user to make deposits and withdrawals using chec
 ### Transfer money
 Users should be able to deposit and withdraw money either via check, wire, or electronic bank transfer.
 
-[The class diagram of TransferMoney and its derived classes]
+[The class diagram of TransferMoney and its derived classes](./transfer.png)
 
 ```
 R6: The system should allow the user to make deposits and withdrawals using checks, wire transfers, or electronic bank transfers.
@@ -103,7 +103,7 @@ Notification is an abstract class. This class is responsible for sending notific
 
 The SmsNotification class requires the phone number of the member to send a notification. The EmailNotification class needs the email address of the member to send a notification. The relationship diagram of these classes is shown here:
 
-[The class diagram of Notification and its derived classes]
+[The class diagram of Notification and its derived classes](./notification.png)
 
 ```
 R4: Every time a trade order is carried out, the system should be able to notify users.
@@ -112,27 +112,27 @@ R4: Every time a trade order is carried out, the system should be able to notify
 ### Stock exchange
 The stock brokerage system will get all stocks from the stock exchange and their current pricing. The StockExchange class is responsible for creating orders for trading stocks on the stock exchange.
 
-[The class diagram of the StockExchange class]
+[The class diagram of the StockExchange class](./stockexchange.png)
 
 ### Enumerations and custom data types
 The following provides an overview of the enumerations and custom data types used in this problem:
 
 - OrderStatus: We need to create an enumeration to keep track of the status of the order, whether it is open, filled, partially filled, or canceled.
 
-[The OrderStatus enumerations]
+[The OrderStatus enumerations](./orderstatus.png)
 
 - TimeEnforcementType: We need to create an enumeration for the time enforcement type, whether it is good till canceled, fill or kill, immediate or cancel, on the open, or on the close.
 
-[The TimeEnforcementType enumerations]
+[The TimeEnforcementType enumerations](./timeenforcementtype.png)
 
 - AccountStatus: We need to create an enumeration to keep track of the status of the account, whether it is active, canceled, closed, blacklisted, or none.
 
-[The AccountStatus enumerations]
+[The AccountStatus enumerations](./accountstatus.png)
 
 ### Address
 We also need to create a custom data type, Address, that will store the location of the user.
 
-[The class diagram of Address class]
+[The class diagram of Address class](./address.png)
 
 ## Relationship between the classes
 Now, we'll discuss the relationships between the classes we have defined above in our online stock brokerage system.
@@ -150,7 +150,7 @@ The class diagram has the following association relationships:
 
 - The StockPosition class has a one-way association with the Order class.
 
-[The one-way association relationship between classes]
+[The one-way association relationship between classes](./1way.png)
 
 #### Two-way association
 - The Notification class has a two-way association with the Order class.
@@ -166,7 +166,7 @@ The class diagram has the following composition relationships:
 
 - The StockPosition class is composed of StockLot.
 
-[The composition relationship between classes]
+[The composition relationship between classes](./composition.png)
 
 ### Inheritance
 The following classes show an inheritance relationship:
@@ -185,7 +185,7 @@ Note: We have already discussed the inheritance relationship between classes in 
 ```
 
 ## Class diagram of the online stock brokerage system
-[The class diagram of the online stock brokerage system]
+[The class diagram of the online stock brokerage system](./classdiagram.png)
 
 ## Design pattern
 In the online stock brokerage system, there is going to be only one instance of the stock exchange, which encloses all the information and relations relating to the stock exchange. Therefore, we use the Singleton design pattern to ensure that only one instance for the class is created and this instance has a global point of access.
