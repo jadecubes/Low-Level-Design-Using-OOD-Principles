@@ -1421,5 +1421,298 @@ class EmailNotification extends Notification {
 }
 ```
 ### Search and catalog
+The SearchCatalog class contains the flight instance information and implements the Search interface class to enable the search functionality based on the criteria. Both classes are defined below:
+
+```java
+public interface Search {
+  // Interface method (does not have a body)
+  public List<FlightInstance> searchFlight(Airport source, Airport dest, Date arrival, Date departure);
+}
+
+public class SearchCatalog implements Search {
+  private HashMap<Quartet<Airport, Airport, Date, Date>, List<FlightInstance>> flights;
+
+  public List<FlightInstance> searchFlight(Airport source, Airport dest, Date arrival, Date departure) {
+    // functionality
+  }
+}
+```
+
+```c#
+interface Search {
+  public List<FlightInstance> SearchFlight(Airport source, Airport dest, DateTime arrival, DateTime departure);
+}
+
+class SearchCatalog : Search {
+  private Dictionary<(Airport, Airport, DateTime, DateTime), List<FlightInstance>> flights;
+
+  public List<FlightInstance> SearchFlight(Airport source, Airport dest, DateTime arrival, DateTime departure) {
+    // functionality
+  }
+}
+
+```
+
+```python
+from abc import ABC, abstractmethod
+
+class Search(ABC):
+  def search_flight(self, source, dest, arrival, departure):
+    pass
+
+class SearchCatalog(Search):
+  def __init__(self):
+    self.__flights = {}
+
+  def search_flight(self, source, dest, arrival, departure):
+    # functionality
+    pass
+```
+
+```c++
+class Search {
+  public:
+    virtual vector<FlightInstance> searchFlight(Airport source, Airport dest, time_t arrival, time_t departure) = 0;
+};
+
+class SearchCatalog : public Search {
+  private:
+    map<tuple<Airport, Airport, time_t, time_t>, vector<FlightInstance>> flights;
+    
+  public:
+    vector<FlightInstance> searchFlight(Airport source, Airport dest, time_t arrival, time_t departure) {
+      // functionality
+    }
+};
+
+```
+
+```javascript
+class Search {
+  constructor() {
+    if (this.constructor === Search) {
+      throw new Error("Abstract classes can't be instantiated.");
+    }
+  }
+  searchFlight(source, dest, arrival, departure) {}
+}
+
+class SearchCatalog extends Search {
+  #flights;
+  constructor() {
+    this.#flights = new Map();
+  }
+  searchFlight(source, dest, arrival, departure) {
+    // functionality
+  }
+}
+```
+
+
 ### Airport, aircraft, and airline
+This section contains classes like Airport, Aircraft, and Airline that make up the infrastructure of our airline management system. Here, Airline is a Singleton class. The definition of these classes is given below:
+
+```java
+public class Airport {
+  private String name;
+  private String code;
+  private Address address;
+  private List<Flight> flights;
+}
+
+public class Aircraft {
+  private String name;
+  private String code;
+  private String model;
+  private int seatCapacity;
+  private List<Seat> seats;
+}
+
+public class Airline {
+  private String name;
+  private String code;
+  private List<Flight> flights;
+  private List<Aircraft> aircrafts;
+  private List<Crew> crew;
+  
+  // The Airline is a singleton class that ensures it will have only one active instance at a time
+  private static Airline airline = null;
+  
+  // Created a static method to access the singleton instance of Airline class
+  public static Airline getInstance() {
+    if (airline == null) {
+      airline = new Airline();
+    }
+    return airline;
+  }
+}
+```
+```c#
+class Airport {
+  private string name;
+  private string code;
+  private Address address;
+  private List<Flight> flights;
+}
+
+class Aircraft {
+  private string name;
+  private string code;
+  private string model;
+  private int seatCapacity;
+  private List<Seat> seats;
+}
+
+class Airline {
+  private string name;
+  private string code;
+  private List<Flight> flights;
+  private List<Aircraft> aircrafts;
+  private List<Crew> crew;
+  
+  // The Airline is a singleton class that ensures it will have only one active instance at a time
+  private static Airline airline = null;
+
+  // Created a static method to access the singleton instance of Airline
+  public static Airline GetInstance {
+    get {
+      if (airline == null) {
+        airline = new Airline();
+      }
+      return airline;
+    }
+  }
+  
+}
+
+```
+
+```python
+class Airport:
+  def __init__(self, name, code, address):
+    self.__name = name
+    self.__code = code
+    self.__address = address
+    self.__flights = [] # List of flights
+
+class Aircraft:
+  def __init__(self, name, code, model, seatCapacity, seats):
+    self.__name = name
+    self.__code = code
+    self.__models = model
+    self.__seatCapacity = seatCapacity
+    self.__seats = [] # List of seats
+
+# The Airline is a singleton class that ensures it will have only one active instance at a time
+class __Airline(object):
+  __instances = None
+  
+  def __new__(cls):
+    if cls.__instances is None:
+        cls.__instances = super(__Airline, cls).__new__(cls)
+    return cls.__instances
+
+class Airline(metaclass = __Airline):
+  def __init__(self, name, code):
+    self.__name = name
+    self.__code = code
+    self.__flights = [] # List of flights
+    self.__aircrafts = [] # List of aircrafts
+    self.__crew = [] # List of crew
+```
+
+```c++
+class Airport {
+  private: 
+    string name;
+    string code;
+    Address address;
+    vector<Flight> flights;
+};
+
+class Aircraft {
+  private:
+    string name;
+    string code;
+    string model;
+    int seatCapacity;
+    vector<Seat> seats;
+};
+
+class Airline {
+  private:
+    string name;
+    string code;
+    vector<Flight> flights;
+    vector<Aircraft> aircrafts;
+    vector<Crew> crew;
+    // The Airline is a singleton class that ensures it will have only one active instance at a time
+    static Airline airline = NULL;
+
+  public:
+    // Created a static method to access the singleton instance of Airline
+    static Airline getInstance() {
+      if (airline == NULL) {
+        airline = new Airline();
+      }
+      return airline;
+    }
+};
+
+```
+
+```javascript
+class Airport {
+  #name; 
+  #code;
+  #address;
+  #flights;
+  constructor(name, code, address) {
+    this.#name = name;
+    this.#code = code;
+    this.#address = zipaddressCode; 
+    this.#flights = new Array(); // List of flights
+  }
+}
+
+class Aircraft {
+  #name; 
+  #code;
+  #model;
+  #seatCapacity;
+  #seats;
+  constructor(name, code, model, seatCapacity, seats) {
+    this.#name = name;
+    this.#code = code;
+    this.#model = model; 
+    this.#seatCapacity = seatCapacity; 
+    this.#seats = seats; // List of seats
+  }
+}
+
+class Airline {
+  #name; 
+  #code;
+  #flights;
+  #aircrafts;
+  #crew;
+  constructor(name, code) {
+    this.#name = name;
+    this.#code = code;
+    this.#flights = new Array(); // List of flights
+    this.#crew = new Array();
+    this.#aircrafts = new Array(); // List of aircrafts
+    // The Airline is a singleton class that ensures it will have only one active instance at a time
+    var airline = null;
+  }
+  // Created a static method to access the singleton instance of Airline
+    getInstance() {
+        if (airline == null) {
+            airline = new Airline;
+        }
+        return airline;
+    }
+}
+```
 ## Wrapping up
+We've explored the complete design of the airline management system in this chapter. We've looked at how a basic airline management system can be visualized using various UML diagrams and designed using object-oriented principles and design patterns.
