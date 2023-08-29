@@ -326,7 +326,124 @@ const PlayingPosition = Object.freeze({
 ### Admin, player, coach, and umpire
 The definitions of the Admin, Player, Coach and Umpire classes are as follows:
 
+```java
+public class Admin {
+  public boolean addPlayer(Player player);
+  public boolean addTeam(Team team);
+  public boolean addMatch(Match match);
+  public boolean addTournament(Tournament tournament);
+  public boolean addStats(Stat stats);
+  public boolean addNews(News news);
+}
 
+public class Player {
+  private String name;
+  private int age;
+  private int country;
+  private PlayerPosition position;
+  private List<Team> teams;
+  private PlayerStat stat;
+}
+
+public class Coach {
+  private String name;
+  private int age;
+  private int country;
+  private List<Team> teams;
+}
+
+public class Umpire {
+  private String name;
+  private int age;
+  private int country;
+
+  public boolean assignMatch(Match match);
+}
+```
+
+```c#
+class Admin {
+  public bool addPlayer(Player player);
+  public bool AddTeam(Team team);
+  public bool AddMatch(Match match);
+  public bool AddTournament(Tournament tournament);
+  public bool AddStats(Stat stats);
+  public bool AddNews(News news);
+}
+class Player {
+  private string name;
+  private int age;
+  private int country;
+  private PlayerPosition position;
+  private List<Team> teams;
+  private PlayerStat stat;
+}
+
+class Coach {
+  private string name;
+  private int age;
+  private int country;
+  private List<Team> teams;
+}
+
+class Umpire {
+  private string name;
+  private int age;
+  private int country;
+
+  public bool AssignMatch(Match match);
+}
+```
+
+```python
+class Admin:
+  def __init__(self):
+    None
+  def add_player(self, player):
+    None  
+  def add_team(self, team):
+    None
+  def add_match(self, match):
+    None 
+  def add_tournament(self, tournament):
+    None
+  def add_stats(self, stats):
+    None 
+  def add_news(self, news):
+    None
+
+class Player:
+  def __init__(self, name, age, country, position, teams, stat):
+    self.__namer = name
+    self.__age = age
+    self.__country = country
+    self.__position = position
+    self.__teams = teams
+    self.__stat = stat
+
+class Coach:
+  def __init__(self, name, age, country, teams):
+    self.__namer = name
+    self.__age = age
+    self.__country = country
+    self.__teams = teams
+
+class Umpire:
+  def __init__(self, name, age, country):
+    self.__namer = name
+    self.__age = age
+    self.__country = country
+
+  def assign_match(match):
+    None
+
+```
+
+```c++
+```
+
+```javascript
+```
 
 ### Run, ball, wicket, over, and innings
 ### Match
