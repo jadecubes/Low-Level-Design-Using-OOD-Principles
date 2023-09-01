@@ -1036,18 +1036,175 @@ class ODI extends Match {
 The definitions of the AdminTeam, TournamentSquad, and Playing11 classes are as follows:
 
 ```java
+public class Team {
+  private String name;
+  private List<Player> players;
+  private Coach coach;
+  private List<News> news;
+  private TeamStat stats;
+
+  public boolean addSquad(TournamentSquad squad);
+  public boolean addPlayer(Player player);
+  public boolean addNews(News news);
+}
+
+public class TournamentSquad {
+  private List<Player> players;
+  private Tournament tournament;
+  private List<TournamentStat> stats;
+
+  public boolean addPlayer(Player player);
+}
+
+public class Playing11 {
+  private List<Player> players;
+
+  public boolean addPlayer(Player player);
+}
+
 ```
 
 ```c#
+class Team {
+  private string name;
+  private List<Player> players;
+  private Coach coach;
+  private List<News> news;
+  private TeamStat stats;
+
+  public bool AddSquad(TournamentSquad squad);
+  public bool AddPlayer(Player player);
+  public bool AddNews(News news);
+}
+
+class TournamentSquad {
+  private List<Player> players;
+  private Tournament tournament;
+  private List<TournamentStat> stats;
+
+  public bool AddPlayer(Player player);
+}
+
+class Playing11 {
+  private List<Player> players;
+
+  public bool AddPlayer(Player player);
+}
+
 ```
 
 ```python
+class Team:
+  def __init__(self, name, players, coach, news, stats):
+    self.__name = name
+    self.__players = players
+    self.__coach = coach
+    self.__news = news
+    self.__stats = stats
+
+  def add_squad(squad):
+    None
+  def add_player(player):
+    None
+  def add_news(news):
+    None
+
+  public boolean addSquad(TournamentSquad squad);
+  public boolean addPlayer(Player player);
+  public boolean addNews(News news);
+}
+
+class TournamentSquad:
+  def __init__(self, players, tournament, stats):
+    self.__players = players
+    self.__tournament = tournament
+    self.__stats = stats
+
+  def add_player(player):
+    None
+
+class Playing11:
+  def __init__(self, players):
+    self.__players = players
+
+  def add_player(player):
+    None
 ```
 
 ```c++
+class Team {
+  private: 
+    string name;
+    vector<Player> players;
+    Coach coach;
+    vector<News> news;
+    TeamStat stats;
+
+  public: 
+    bool addSquad(TournamentSquad squad);
+    bool addPlayer(Player player);
+    bool addNews(News news);
+};
+
+class TournamentSquad {
+  private: 
+    vector<Player> players;
+    Tournament tournament;
+    vector<TournamentStat> stats;
+
+  public:
+    bool addPlayer(Player player);
+};
+
+class Playing11 {
+  private: 
+    vector<Player> players;
+
+  public: 
+    bool addPlayer(Player player);
+};
+
 ```
 
 ```javascript
+class Team {
+  #name;
+  #players;
+  #coach;
+  #news;
+  #stats;
+  constructor(name, players, coach, stats) {
+    this.#name = name;
+    this.#players = players;
+    this.#coach = coach;
+    this.#news = new Array();
+    this.#stats = stats;
+  }
+  addSquad(squad);
+  addPlayer(player);
+  addNews(news);
+}
+
+class TournamentSquad {
+  #players;
+  #tournament;
+  #stats;
+  constructor(players, tournament, stats) {
+    this.#players = players;
+    this.#tournament = tournament;
+    this.#stats = stats;
+  }
+  addPlayer(player);
+}
+
+class Playing11 {
+  #players;
+  constructor(players) {
+    this.#players = players;
+  }
+  addPlayer(player);
+}
+
 ```
 ### Tournament, points table, and stadium
 ```java
