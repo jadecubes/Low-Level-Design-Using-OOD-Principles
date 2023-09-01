@@ -537,18 +537,286 @@ class Umpire {
 In cricket, the mandatory concepts can be of five types: run, ball, wicket, over, and innings. To store information about these identities, we defined the Run, Ball, Wicket, Over, and Innings classes as shown below:
 
 ```java
+public class Run {
+  private int totalRuns;
+  private RunType type;
+  private Player scoredBy;
+}
+
+public class Ball {
+  private Player balledBy;
+  private Player playedBy;
+  private BallType type;
+  private List<Run> runs;
+  private Wicket wicket;
+
+  public boolean addCommentary(Commentary commentary);
+}
+
+public class Wicket {
+  private WicketType type;
+  private Player playerOut;
+  private Player balledBy;
+  private Player caughtBy;
+  private Player runoutBy;
+  private Player stumpedBy;
+}
+
+public class Over {
+  private int number;
+  private Player bowler;
+  private int totalScore;
+  private List<Ball> balls;
+
+  public boolean addBall(Ball ball);
+}
+
+public class Innings {
+  private Playing11 bowling;
+  private Playing11 batting;
+  private Date startTime;
+   private Date endTime;
+  private int totalScores;
+  private int totalWickets;
+  private List<Over> overs;
+
+  public boolean addOver(Over over);
+}
 ```
 
 ```c#
+class Run {
+  private int totalRuns;
+  private RunType type;
+  private Player scoredBy;
+}
+
+class Ball {
+  private Player balledBy;
+  private Player playedBy;
+  private BallType type;
+  private List<Run> runs;
+  private Wicket wicket;
+
+  public bool AddCommentary(Commentary commentary);
+}
+
+class Wicket {
+  private WicketType type;
+  private Player playerOut;
+  private Player balledBy;
+  private Player caughtBy;
+  private Player runoutBy;
+  private Player stumpedBy;
+}
+
+class Over {
+  private int number;
+  private Player bowler;
+  private int totalScore;
+  private List<Ball> balls;
+
+  public bool AddBall(Ball ball);
+}
+
+class Innings {
+  private Playing11 bowling;
+  private Playing11 batting;
+  private DateTime startTime;
+  private DateTime endTime;
+  private int totalScores;
+  private int totalWickets;
+  private List<Over> overs;
+
+  public bool AddOver(Over over);
+}
 ```
 
 ```python
+class Run:
+  def __init__(self, total_runs, _type, scored_by):
+    self.__total_runs = total_runs
+    self.___type = _type
+    self.__scored_by = scored_by
+
+class Ball:
+  def __init__(self, balled_by, played_by, _type, runs, wicket):
+    self.__balled_by = balled_by
+    self.__played_by = played_by
+    self.___type = _type
+    self.__runs = runs
+    self.__wicket = wicket
+    
+  def add_commentary(commentary):
+    None
+
+class Wicket:
+  def __init__(self, _type, player_out, balled_by, caught_by, runout_by, stumped_by):
+    self.___type = _type
+    self.__player_out = player_out
+    self.__balled_by = balled_by
+    self.__caught_by = caught_by
+    self.__runout_by = runout_by
+    self.__stumped_by = stumped_by
+
+class Over:
+  def __init__(self, number, bowler, total_score, overs):
+    self.__number = number
+    self.__bowler = bowler
+    self.__total_score = total_score
+    self.__overs = overs
+    
+  def add_ball(ball):
+    None
+
+class Innings:
+  def __init__(self, bowling, address, start_time, end_time, total_scores, total_wickets, overs):
+    self.__bowling = bowling
+    self.__address = address
+    self.__start_time = start_time
+    self.__end_time = end_time
+    self.__total_scores = total_scores
+    self.__total_wickets = total_wickets
+    self.__overs = overs
+    
+  def add_over(over):
+    None
+
 ```
 
 ```c++
+class Run {
+  private: 
+    int totalRuns;
+    RunType type;
+    Player scoredBy;
+};
+
+class Ball {
+  private:
+    Player balledBy;
+    Player playedBy;
+    BallType type;
+    vector<Run> runs;
+    Wicket wicket;
+  public: 
+    boolean addCommentary(Commentary commentary);
+};
+
+class Wicket {
+  private: 
+    WicketType type;
+    Player playerOut;
+    Player balledBy;
+    Player caughtBy;
+    Player runoutBy;
+    Player stumpedBy;
+};
+
+class Over {
+  private:
+    int number;
+    Player bowler;
+    int totalScore;
+    vector<Ball> balls;
+  public: 
+    bool addBall(Ball ball);
+};
+
+class Innings {
+  private: 
+    Playing11 bowling;
+    Playing11 batting;
+    time_t startTime;
+    time_t endTime;
+    int totalScores;
+    int totalWickets;
+    List<Over> overs;
+  public: 
+    bool addOver(Over over);
+};
+
 ```
 
 ```javascript
+class Run {
+  #totalRuns;
+  #type;
+  #scoredBy;
+  constructor(totalRuns, address, scoredBy) {
+    this.#totalRuns = totalRuns;
+    this.#type = type;
+    this.#scoredBy = scoredBy;
+  }
+}
+
+class Ball {
+  #balledBy;
+  #playedBy;
+  #type;
+  #runs;
+  #wicket;
+  constructor(balledBy, playedBy, type, runs, wicket) {
+    this.#balledBy = balledBy;
+    this.#playedBy = playedBy;
+    this.#type = type;
+    this.#runs = runs;
+    this.#wicket = wicket;
+  }
+  addCommentary(commentary);
+}
+
+class Wicket {
+  #type;
+  #playerOut;
+  #balledBy;
+  #caughtBy;
+  #runoutBy;
+  #stumpedBy;
+  constructor(type, playerOut, balledBy, caughtBy, runoutBy, stumpedBy) {
+    this.#type = type;
+    this.#playerOut = playerOut;
+    this.#balledBy = balledBy;
+    this.#caughtBy = caughtBy;
+    this.#runoutBy = runoutBy;
+    this.#stumpedBy = stumpedBy;
+  }
+}
+
+class Over {
+  #number;
+  #bowler;
+  #totalScore;
+  #balls;
+  constructor(number, bowler, totalScore, balls) {
+    this.#number = number;
+    this.#bowler = bowler;
+    this.#totalScore = totalScore;
+    this.#balls = balls;
+  }
+  addBall(ball);
+}
+
+class Innings {
+  #bowling;
+  #batting;
+  #startTime;
+  #endTime;
+  #totalScores;
+  #totalWickets;
+  #overs;
+  constructor(bowling, batting, startTime, endTime, totalScores, totalWickets, overs) {
+    this.#bowling = bowling;
+    this.#batting = batting;
+    this.#startTime = startTime;
+    this.#endTime = endTime;
+    this.#totalScores = totalScores;
+    this.#totalWickets = totalWickets;
+    this.#overs = overs;
+  }
+  addOver(over);
+}
+
 ```
 
 ### Match
