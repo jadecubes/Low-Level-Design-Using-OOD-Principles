@@ -1208,18 +1208,154 @@ class Playing11 {
 ```
 ### Tournament, points table, and stadium
 ```java
+public class Tournament {
+  private Date startDate;
+  private List<TournamentSquad> teams;
+  private List<Match> matches;
+  private PointsTable points;
+
+  public boolean addTeam(TournamentSquad team);
+  public boolean addMatch(Match match);
+}
+
+public class PointsTable {
+  private HashMap<String, float> teamPoints;
+  private HashMap<Team, MatchResult> matchResults;
+  private Tournament tournament;
+  private Date lastUpdated;
+}
+
+public class Stadium {
+  private String name;
+  private Address location;
+  private int maxCapacity;
+}
 ```
 
 ```c#
+class Tournament {
+  private DateTime startDate;
+  private List<TournamentSquad> teams;
+  private List<Match> matches;
+  private PointsTable points;
+
+  public bool AddTeam(TournamentSquad team);
+  public bool AddMatch(Match match);
+}
+
+class PointsTable {
+  private Dictionary<string, float> teamPoints;
+  private Dictionary<Team, MatchResult> matchResults;
+  private Tournament tournament;
+  private DateTime lastUpdated;
+}
+
+class Stadium {
+  private string name;
+  private Address location;
+  private int maxCapacity;
+}
+
 ```
 
 ```python
+class Tournament:
+  def __init__(self, start_date, teams, matches, points):
+    self.__start_date = start_date
+    self.__teams = teams
+    self.__matches = matches
+    self.__points = points
+
+  def add_team(team):
+    None
+  def add_match(match):
+    None
+
+class PointsTable:
+  def __init__(self, team_points, match_results, tournament, last_updated):
+    self.__team_points = team_points
+    self.__match_results = match_results
+    self.__tournament = tournament
+    self.__last_updated = last_updated
+
+class Stadium:
+  def __init__(self, name, location, max_capacity):
+    self.__name = name
+    self.__location = location
+    self.__max_capacity = max_capacity
+
 ```
 
 ```c++
+class Tournament {
+  private: 
+    time_t startDate;
+    vector<TournamentSquad> teams;
+    vector<Match> matches;
+    PointsTable points;
+
+  public: 
+    bool addTeam(TournamentSquad team);
+    bool addMatch(Match match);
+};
+
+class PointsTable {
+  private: 
+    map<string, float> teamPoints;
+    map<Team, MatchResult> matchResults;
+    Tournament tournament;
+    time_t lastUpdated;
+};
+
+class Stadium {
+  private: 
+    string name;
+    Address location;
+    int maxCapacity;
+};
+
 ```
 
 ```javascript
+class Tournament {
+  #startDate;
+  #teams;
+  #matches;
+  #points;
+  constructor(startDate, teams, matches, points) {
+    this.#startDate = startDate;
+    this.#teams = teams;
+    this.#matches = matches;
+    this.#points = points;
+  }
+  addTeam(team);
+  addMatch(match);
+}
+
+class PointsTable {
+  #teamPoints;
+  #matchResults;
+  #tournament;
+  #lastUpdated;
+  constructor(teamPoints, matchResults, tournament, lastUpdated) {
+    this.#teamPoints = teamPoints;
+    this.#matchResults = matchResults;
+    this.#tournament = tournament;
+    this.#lastUpdated = lastUpdated;
+  }
+}
+
+class Stadium {
+  #name;
+  #location;
+  #maxCapacity;
+  constructor(name, location, maxCapacity) {
+    this.#name = name;
+    this.#location = location;
+    this.#maxCapacity = maxCapacity;
+  }
+}
+
 ```
 ### Commentator, commentary, and news
 ```java
