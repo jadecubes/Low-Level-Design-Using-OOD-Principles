@@ -440,9 +440,97 @@ class Umpire:
 ```
 
 ```c++
+class Admin {
+  public: 
+    bool addPlayer(Player player);
+    bool addTeam(Team team);
+    bool addMatch(Match match);
+    bool addTournament(Tournament tournament);
+    bool addStats(Stat stats);
+    bool addNews(News news);
+};
+
+class Player {
+  private: 
+    string name;
+    int age;
+    int country;
+    PlayerPosition position;
+    vector<Team> teams;
+    PlayerStat stat;
+};
+
+class Coach {
+  private: 
+    string name;
+    int age;
+    int country;
+    vector<Team> teams;
+};
+
+class Umpire {
+  private: 
+    string name;
+    int age;
+    int country;
+
+  public:
+    bool assignMatch(Match match);
+};
 ```
 
 ```javascript
+class Admin {
+  addPlayer(player);
+  addTeam(team);
+  addMatch(match);
+  addTournament(tournament);
+  addStats(stats);
+  addNews(news);
+}
+
+class Player {
+  #name;
+  #age;
+  #country;
+  #position;
+  #teams;
+  #stat;
+  constructor(name, age, country, position, teams, stat) {
+    this.#name = name;
+    this.#age = age;
+    this.#country = country;
+    this.#position = position;
+    this.#teams = teams;
+    this.#stat = stat;
+  }
+}
+
+class Coach {
+  #name;
+  #age;
+  #country;
+  #teams;
+  constructor(name, age, country, teams) {
+    this.#name = name;
+    this.#age = age;
+    this.#country = country;
+    this.#teams = teams;
+  }
+}
+
+class Umpire {
+  #name;
+  #age;
+  #country;
+  constructor(name, age, country) {
+    this.#name = name;
+    this.#age = age;
+    this.#country = country;
+  }
+  aiignMatch(match);
+}
+
 ```
 
 ### Run, ball, wicket, over, and innings
