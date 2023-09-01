@@ -1033,6 +1033,8 @@ class ODI extends Match {
 
 ```
 ### Team, tournament squad, and playing11
+The definitions of the AdminTeam, TournamentSquad, and Playing11 classes are as follows:
+
 ```java
 ```
 
