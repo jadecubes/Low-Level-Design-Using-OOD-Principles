@@ -534,9 +534,96 @@ class Umpire {
 ```
 
 ### Run, ball, wicket, over, and innings
+In cricket, the mandatory concepts can be of five types: run, ball, wicket, over, and innings. To store information about these identities, we defined the Run, Ball, Wicket, Over, and Innings classes as shown below:
+
+```java
+```
+
+```c#
+```
+
+```python
+```
+
+```c++
+```
+
+```javascript
+```
+
 ### Match
+```java
+```
+
+```c#
+```
+
+```python
+```
+
+```c++
+```
+
+```javascript
+```
 ### Team, tournament squad, and playing11
+```java
+```
+
+```c#
+```
+
+```python
+```
+
+```c++
+```
+
+```javascript
+```
 ### Tournament, points table, and stadium
+```java
+```
+
+```c#
+```
+
+```python
+```
+
+```c++
+```
+
+```javascript
+```
 ### Commentator, commentary, and news
+```java
+```
+
+```c#
+```
+
+```python
+```
+
+```c++
+```
+
+```javascript
+```
 ### Statistics
+```java
+```
+
+```c#
+```
+
+```python
+```
+
+```c++
+```
+
+```javascript
+```
 ## Wrapping up
