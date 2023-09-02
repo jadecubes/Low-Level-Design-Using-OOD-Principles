@@ -1383,30 +1383,310 @@ public class News {
 ```
 
 ```c#
+class Commentator {
+  private string name;
+
+  public bool AssignMatch(Match match);
+}
+
+class Commentary {
+  private string text;
+  private DateTime createdAt;
+  private Commentator commentator;
+}
+
+class News {
+  private DateTime date;
+  private string text;
+  private List<byte> image;
+  private Team team;
+}
+
 ```
 
 ```python
+class Commentator:
+  def __init__(self, name):
+    self.__name = name
+
+  def assign_match(match):
+    None
+
+class Commentary:
+  def __init__(self, text, created_at, commentator):
+    self.__text = text
+    self.__created_at = created_at
+    self.__commentator = commentator
+
+class News:
+  def __init__(self, date, text, image, team):
+    self.__date = date
+    self.__text = text
+    self.__image = image
+    self.__team = team
 ```
 
 ```c++
+class Commentator {
+  private: 
+    string name;
+
+  public: 
+    bool assignMatch(Match match);
+};
+
+class Commentary {
+  private: 
+    string text;
+    time_t createdAt;
+    Commentator commentator;
+};
+
+class News {
+  private: 
+    time_t date;
+    string text;
+    vector<signed char> image;
+    Team team;
+};
+
 ```
 
 ```javascript
+class Commentator {
+  #name;
+  constructor(name) {
+    this.#name = name;
+  }
+  assignMatch(match);
+}
+
+class Commentary {
+  #text;
+  #createdAt;
+  #commentator;
+  constructor(text, createdAt, commentator) {
+    this.#text = text;
+    this.#createdAt = createdAt;
+    this.#commentator = commentator;
+  }
+}
+
+class News {
+  #date;
+  #text;
+  #image;
+  #team;
+  constructor(date, text, image, team) {
+    this.#date = date;
+    this.#address = text;
+    this.#image = image;
+    this.#team = team;
+  }
+}
+
 ```
 ### Statistics
 ```java
+public abstract class Stat {
+  public abstract boolean updateStats();
+}
+
+public class PlayerStat extends Stat {
+  private int ranking;
+  private int bestScore;
+  private int bestWicketCount;
+  private int totalMatchesPlayed;
+  private int total100s;
+  private int totalHattricks;
+
+  public boolean updateStats();
+}
+
+public class MatchStat extends Stat {
+  private double winPercentage;
+  private Player topBatsman;
+  private Player topBowler;
+
+  public boolean updateStats();
+}
+
+public class TeamStat extends Stat {
+  private int totalSixes;
+  private int totalFours;
+  private int totalReviews; 
+
+  public boolean updateStats();
+}
 ```
 
 ```c#
+public abstract class Stat {
+  public abstract bool UpdateStats();
+}
+
+class PlayerStat : Stat {
+  private int ranking;
+  private int bestScore;
+  private int bestWicketCount;
+  private int totalMatchesPlayed;
+  private int total100s;
+  private int totalHattricks;
+
+  public override bool UpdateStats();
+}
+
+class MatchStat : Stat {
+  private double winPercentage;
+  private Player topBatsman;
+  private Player topBowler;
+
+  public override bool UpdateStats();
+}
+
+class TeamStat : Stat {
+  private int totalSixes;
+  private int totalFours;
+  private int totalReviews; 
+
+  public override bool UpdateStats();
+}
 ```
 
 ```python
+from abc import ABC, abstractmethod
+class Stat(ABC):
+  def __init__(self):
+    None
+
+  @abstractmethod
+  def update_stats(self):
+    None
+
+class PlayerStat(Stat):
+  def __init__(self, ranking, best_score, best_wicket_count, total_matches_played, total100s, total_hattricks):
+    self.__ranking = ranking
+    self.__best_score = best_score
+    self.__best_wicket_count = best_wicket_count
+    self.__total_matches_played = total_matches_played
+    self.__total100s = total100s
+    self.__total_hattricks = total_hattricks
+
+  def update_stats(self):
+    None
+
+class MatchStat(Stat):
+  def __init__(self, win_percentage, top_batsman, top_bowler):
+    self.__win_percentage = win_percentage
+    self.__top_batsman = top_batsman
+    self.__top_bowler = top_bowler
+  
+  def update_stats(self):
+    None
+
+class TeamStat(Stat):
+  def __init__(self, total_sixes, total_fours, total_reviews):
+    self.__total_sixes = total_sixes
+    self.__total_fours = total_fours
+    self.__total_reviews = total_reviews
+  
+  def update_stats(self):
+    None
+
 ```
 
 ```c++
+class Stat {
+  public:
+    virtual bool updateStats() = 0;
+};
+
+class PlayerStat : public Stat {
+  private:
+    int ranking;
+    int bestScore;
+    int bestWicketCount;
+    int totalMatchesPlayed;
+    int total100s;
+    int totalHattricks;
+
+  public:
+     bool updateStats();
+};
+
+class MatchStat : public Stat {
+  private:
+    double winPercentage;
+    Player topBatsman;
+    Player topBowler;
+
+  public:
+     bool updateStats();
+};
+
+class TeamStat : public Stat {
+  private:
+    int totalSixes;
+    int totalFours;
+    int totalReviews; 
+
+  public:
+     bool updateStats();
+};
 ```
 
 ```javascript
+class Stat {
+  constructor() {
+    if (this.constructor == Stat) {
+      throw new Error("Abstract classes can't be instantiated.");
+    }
+  }
+  updateStats();
+}
+
+class PlayerStat extends Stat {
+  #ranking;
+  #bestScore;
+  #bestWicketCount;
+  #totalMatchesPlayed;
+  #total100s;
+  #totalHattricks;
+  constructor(ranking, bestScore, bestWicketCount, totalMatchesPlayed, total100s, totalHattricks){
+    this.#ranking = ranking;
+    this.#bestScore = bestScore;
+    this.#bestWicketCount = bestWicketCount;
+    this.#totalMatchesPlayed = totalMatchesPlayed;
+    this.#total100s = total100s;
+    this.#totalHattricks = totalHattricks;
+  }
+  updateStats();
+}
+
+class MatchStat extends Stat {
+  #winPercentage;
+  #topBatsman;
+  #topBowler;
+  constructor(winPercentage, topBatsman, topBowler){
+    this.#winPercentage = winPercentage;
+    this.#topBatsman = topBatsman;
+    this.#topBowler = topBowler;
+  }
+  updateStats();
+}
+
+class TeamStat extends Stat {
+  #totalSixes;
+  #totalFours;
+  #totalReviews;
+  constructor(totalSixes, totalFours, totalReviews){
+    this.#totalSixes = totalSixes;
+    this.#totalFours = totalFours;
+    this.#totalReviews = totalReviews;
+  }
+  updateStats();
+}
+
 ```
 ## Wrapping up
 We've explored the complete design of Cricinfo in this chapter. We've looked at how Cricinfo can be visualized using various UML diagrams and designed using object-oriented principles and design patterns.
