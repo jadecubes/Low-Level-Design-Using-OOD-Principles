@@ -34,4 +34,5 @@ Here are the steps for the send a connection invitation interaction:
 I. User A receives a "user not found" error.
 
 Based on the order above, the sequence diagram for sending a connection invitation on LinkedIn is given below:
+
 [The sequence diagram for sending a connection invitation]
