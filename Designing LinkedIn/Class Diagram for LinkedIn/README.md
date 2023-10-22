@@ -9,14 +9,14 @@ The Account class identifies a LinkedIn user through their username and ID. User
 
 The class definition is represented below:
 
-[The Account class]
+[The Account class](./account.png)
 
 ### Education, experience, and skill
 The Education, Experience, and Skill classes provide relevant information and make up the Profile class.
 
 These classes are represented below:
 
-[The Education, Experience, and Skill classes]
+[The Education, Experience, and Skill classes](./experience.education.skill.png)
 
 ```
 R1: Users should be able to add information to their profile including education, experiences, achievements, and skills.
@@ -26,7 +26,7 @@ The Recommendation, Achievement, and Analytics classes are used to provide relev
 
 These classes are represented below:
 
-[The Recommendation, Achievement, and Analytics classes]
+[The Recommendation, Achievement, and Analytics classes](./recommendation.achievement.analytics.png)
 
 ```
 R1: Users should be able to add information to their profile including education, experiences, achievements, and skills.
@@ -41,7 +41,7 @@ The Profile class contains the personal information of a LinkedIn user—their p
 
 The visual representation of the Profile class is given below:
 
-[The Profile class]
+[The Profile class](./profile.png)
 
 ```
 R1: Users should be able to add information to their profile including education, experiences, achievements, and skills.
@@ -56,7 +56,7 @@ The Group class represents a particular group that exists on the LinkedIn platfo
 
 The representation of these classes is given below:
 
-[The CompanyPage, Job, and Group classes]
+[The CompanyPage, Job, and Group classes](companyPage.job.png)
 
 ```
 R11: Users should be able to create company pages. Users should be able to follow other company pages.
@@ -75,7 +75,7 @@ The Message class represents the message sent by a user to other users. Therefor
 
 The representation of the classes is shown below:
 
-[The Post, Comment, and Message classes]
+[The Post, Comment, and Message classes](post.comment.message.png)
 
 ```
 R7: Users should be able to write a new post.
@@ -90,7 +90,7 @@ The ConnectionInvitation class describes the details of a connection invitation.
 
 The class diagram of the ConnectionInvitation class is shown below:
 
-[The ConnectionInvitation class]
+[The ConnectionInvitation class](./connectionInvitation.png)
 
 ```
 R3: Users should be able to send and cancel connection requests. They should also be able to respond to the connection requests of other users by either accepting or ignoring them.
@@ -109,7 +109,7 @@ The User class is the main class of LinkedIn. It is responsible for making vario
 
 These three classes are represented below:
 
-[The Person and its derived classes]
+[The Person and its derived classes](./person.user.admin.png)
 
 ### Notification
 The Notification class sends a notification using the built-in notification option. It is mainly responsible for sending notifications whenever any of the following conditions are met:
@@ -124,7 +124,7 @@ The Notification class sends a notification using the built-in notification opti
 
 The UML representation of the class is shown below:
 
-[The Notification class]
+[The Notification class](./notification.png)
 
 ```
 R10: The system should send a notification to the user to inform them about messages, connection requests, or comments on their post.
@@ -136,7 +136,7 @@ The search functionality is implemented using the SearchCatalog class. The catal
 
 The representation of the SearchCatalog class and the Search interface is given below:
 
-[The SearchCatalog class and the Search interface]
+[The SearchCatalog class and the Search interface](./search.png)
 
 ```
 R2: Users should be able to search for as well as view, pages, groups, and other users.
@@ -151,12 +151,12 @@ The enumerations required in the LinkedIn design are provided below:
 
 - JobStatus: The job status describes the current status of a job posting—whether it is open, on hold, or closed.
 
-[Enums in LinkedIn]
+[Enums in LinkedIn](./enum.png)
 
 ### Custom data type
 We need to create a custom data type, Address, which stores the location of a LinkedIn user.
 
-[The Address custom data type]
+[The Address custom data type](./address.png)
 
 ## Relationship between the classes
 Now, we’ll discuss the relationships between the classes we have defined above in our LinkedIn system.
@@ -174,7 +174,7 @@ The class diagram has the following association relationships:
 
 - The Notification class has a one-way association with the Message, Post, Comment, ConnectionInvitation, and Recommendation classes.
 
-[The association relationship between classes]
+[The association relationship between classes](./interfaces.png)
 
 ### Composition
 The class diagram has the following composition relationships:
@@ -189,7 +189,7 @@ The class diagram has the following composition relationships:
 
 - The CompanyPage class is composed of the Job class.
 
-[The composition relationship between classes]
+[The composition relationship between classes](./inheritance.png)
 ### Inheritance
 The following classes demonstrate an inheritance relationship:
 
@@ -200,7 +200,7 @@ Note: We have already discussed the inheritance relationship between classes in 
 ## Class diagram of LinkedIn
 Here’s the complete class diagram for LinkedIn:
 
-[The class diagram of LinkedIn]
+[The class diagram of LinkedIn](./map.png)
 
 ## Design pattern
 We know that LinkedIn allows its users to follow company pages and join a group. By default, when a user follows or joins a page or group, they get notified of any new posts. To effectively map this behavior in our design, we can use the Observer design pattern.
