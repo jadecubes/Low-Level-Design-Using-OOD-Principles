@@ -6,7 +6,7 @@ In this section, we’ll define the classes for an airline management system. As
 
 ### Account
 The Account class identifies the username and ID of an airline management system user. . The class definition is represented below:
-[The Account class]
+[The Account class](./account.png)
 
 ### Person
 Person is an abstract class used to store information related to a person like a name, email, phone number, etc. In this class, the Address object type specifies the person’s address. There can be four types of accounts in the system:
@@ -21,7 +21,7 @@ Person is an abstract class used to store information related to a person like a
 
 The relationship diagram for these classes is shown below:
 
-[Person and its derived classes]
+[Person and its derived classes](./staffs.png)
 
 ```
 R4: The system should allow the customer to check flight details, such as available seats, flight schedules, and departure/arrival times.
@@ -42,7 +42,7 @@ Airlines own or hire aircraft to carry out their flights. The Aircraft class has
 
 Here’s a visual representation of these classes:
 
-[The Airline, Airport, and Aircraft classes]
+[The Airline, Airport, and Aircraft classes](./airline.airport.aircraft.png)
 
 ```
 R6: An airline should be able to own multiple aircrafts. The admin should be able to add these aircrafts to the system.
@@ -55,14 +55,14 @@ The Seat class represents a physical seat in the aircraft. It contains basic inf
 
 The relationship diagram for these classes is shown below:
 
-[Seat and its derived class]
+[Seat and its derived class](./seat.flightSeat.png)
 
 ### Flight and flight instance
 The Flight class contains information about a particular flight, including the flight number, departure and arrival airports, and the duration of the flight. The FlightInstance class represents a single occurrence of a flight, since a flight can fly multiple days in a week.
 
 These classes are represented below:
 
-[The Flight and FlightInstance classes]
+[The Flight and FlightInstance classes](./flight.png)
 
 ```
 R1: A customer should be able to search for flights by date, departure, and destination airport.
@@ -76,7 +76,7 @@ The FlightReservation class manages the reservations made by the customer agains
 
 The UML diagram for this class is given below:
 
-[The FlightReservation class]
+[The FlightReservation class](./reservation.png)
 
 ```
 R2: A customer should be able to reserve tickets for available flights. Customers should also be able to book multiple flights at once.
@@ -89,7 +89,7 @@ The Passenger class keeps a record of all individuals with the reservation. It a
 
 Here’s the class diagram for these classes:
 
-[The Itinerary and Passenger classes]
+[The Itinerary and Passenger classes](./itinerary.png)
 
 ```
 R2: A customer should be able to reserve tickets for available flights. Customers should also be able to book multiple flights at once.
@@ -104,7 +104,7 @@ The Search interface allows the customers to search for any flight using the fol
 
 The SearchCatalog implements the search functionality and contains a list of all flights of the airline. The two classes are shown below:
 
-[The Search interface and the SearchCatalog class]
+[The Search interface and the SearchCatalog class](./search.png)
 
 ```
 R1: A customer should be able to search for flights by the date, departure, and destination airport.
@@ -115,7 +115,7 @@ The Payment class will be an abstract class and will have two child classes: Cre
 
 The visual representation of these classes is as follows:
 
-[The Payment and its derived classes]
+[The Payment and its derived classes](./payment.png)
 
 ```
 R9: The customer should be able to make payments against their flight reservations.
@@ -126,7 +126,7 @@ Notification is an abstract class, since it can send a notification via email or
 
 The UML representation of the class is shown below:
 
-[Notification and its derived classes]
+[Notification and its derived classes](./notification.png)
 
 ```
 R13: The system should send the customer a notification whenever a reservation has been made or canceled or when there is an update for their flight.
@@ -149,13 +149,13 @@ ReservationStatus: The reservation status tells us about the status of the reser
 
 PaymentStatus: The payment status tells us about the status of the payment—whether it is pending, completed, canceled, failed, declined, or refunded.
 
-[Enums in the airline management system]
+[Enums in the airline management system](./enum.png)
 
 
 ### Custom data type
 We need to create a custom data type, Address, that will store the physical location of any place.
 
-[The Address custom data type]
+[The Address custom data type](./address.png)
 
 ## Relationship between classes
 Now, we’ll discuss the relationships between the classes we have defined above in our airline management system.
@@ -179,14 +179,14 @@ Both the Aircraft and Crew classes have a two-way association with the FlightIns
 
 The Airline class has a two-way association with the Crew class.
 
-[Association relationship between classes]
+[Association relationship between classes](./flow.png)
 
 ### Aggregation
 The class diagram has the following aggregation relationship:
 
 The Itinerary class contains the Passenger class.
 
-[The aggregation relationship between classes]
+[The aggregation relationship between classes](./itinerary.passenger.png)
 
 ### Composition
 The class diagram has the following composition relationships:
@@ -203,7 +203,7 @@ The FlightInstance class is composed of the FlightSeat class.
 
 The Itinerary class is composed of the FlightReservaion class.
 
-[The composition relationship between classes]
+[The composition relationship between classes](./inheritance.png)
 
 ### Inheritance
 The following classes show an inheritance relationship:
@@ -219,7 +219,7 @@ The EmailNotification and SmsNotification classes extend the Notification class.
 Note: We have already discussed the inheritance relationship between classes in the component section above one by one.
 ```
 ## Class diagram of the airline management system
-[The class diagram of the airline management system]
+[The class diagram of the airline management system](./map.png)
 
 ## Design pattern
 The Airline class follows the Singleton design pattern because there will only be a single instance of the Airline class as it is the main organizational class.
