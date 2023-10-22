@@ -60,12 +60,12 @@ Note: We assume that the customer performs a valid search that will result in a 
 ```
 Based on the order above, the sequence diagram for reserving a flight in the airline management system is given below.
 
-[The sequence diagram for the reserve a flight interaction]
+[The sequence diagram for the reserve a flight interaction](./reserve.png)
 
 ## Sequence challenge: Cancel a reservation
 
-[challenge]
+[challenge](./challenge.png)
 
-[flow]
+[flow](./cancelreservationflow.png)
 
-[answer]
+[answer](./cancelreservation.png)
