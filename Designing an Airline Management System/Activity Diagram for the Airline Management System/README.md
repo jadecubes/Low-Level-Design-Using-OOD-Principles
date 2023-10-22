@@ -16,12 +16,12 @@ Final state: A customer books their ticket.
 ### Actions
 The customer selects an option to create an itinerary online themselves or through the front desk officer. The customer then selects their flights. Finally, the customer books their ticket.
 
-[The activity diagram to create an itinerary]
+[The activity diagram to create an itinerary](./diagram.png)
 
 ## Activity challenge: The user receives confirmation notification after payment
 
-[challenge]
+[challenge](./challenge.png)
 
-[flow]
+[flow](./flow.png)
 
-[answer]
+[answer](./answer.png)
