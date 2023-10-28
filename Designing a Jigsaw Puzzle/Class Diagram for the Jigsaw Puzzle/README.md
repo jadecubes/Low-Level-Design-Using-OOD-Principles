@@ -7,7 +7,7 @@ As mentioned earlier, we should design the jigsaw puzzle using a bottom-up appro
 ### Side
 The Side class represents the shape of our jigsaw piece and whether it contains an indentation, extrusion, or flat edge. The UML representation of the class is shown below:
 
-[The class diagram of the Side class]
+[The class diagram of the Side class](./side.png)
 
 ```
 R2: All pieces will have four sides that can either have an indentation, an extrusion, or a flat edge.
@@ -16,7 +16,7 @@ R2: All pieces will have four sides that can either have an indentation, an extr
 ### Piece
 The Piece class contains an array of sides of size four. It will also be used to identify middle pieces, corner pieces, and edge pieces. The class representation of the Piece class is provided below:
 
-[The class diagram of the Piece class]
+[The class diagram of the Piece class](./piece.png)
 
 ```
 R2: All pieces will have four sides that can either have an indentation, an extrusion, or a flat edge.
@@ -31,7 +31,7 @@ Note: Since the puzzle board does not have the functionality of rotating pieces 
 ```
 This class is represented below:
 
-[The class diagram of the Puzzle class]
+[The class diagram of the Puzzle class](./puzzle.png)
 
 ```
 R1: Our board will be in the shape of a rectangle.
@@ -42,7 +42,7 @@ R4: All pieces will be unique, so only one piece will fit with only one other pi
 ### Puzzle solver
 The PuzzleSolver class is responsible for solving an unsolved jigsaw puzzle board using its matchPieces() function. The visual representation of this class is given below:
 
-[The class diagram of the PuzzleSolver class]
+[The class diagram of the PuzzleSolver class](./puzzleSolver.png)
 
 ```
 R5: Two pieces fit together by the curvature of the indentation on one piece matching up to the curvature of the extrusion on another.
@@ -50,7 +50,7 @@ R5: Two pieces fit together by the curvature of the indentation on one piece mat
 ### Edge enumeration
 The Edge enum describes the various edges present in a jigsaw puzzle piece. It is represented using the class diagram given below:
 
-[The class diagram of the Edge enum]
+[The class diagram of the Edge enum](./edge.png)
 
 ## Relationship between the classes
 Now, we’ll discuss the relationships between the classes we have defined above in our jigsaw puzzle.
@@ -60,19 +60,19 @@ The class diagram has the following association relationships:
 
 - The Puzzle has a one-way association with PuzzleSolver.
 
-[The association relationship between classes]
+[The association relationship between classes](./puzzle.puzzleSolver.png)
 
 ### Composition
 The class diagram has the following composition relationships:
 
 - The Puzzle class is composed of the Piece class, which is composed of the Side class.
 
-[The composition relationship between classes]
+[The composition relationship between classes](./piece.puzzle.side.png)
 
 ## Class diagram for the jigsaw puzzle
 Here’s the complete class diagram for our jigsaw puzzle:
 
-[The class diagram of the jigsaw puzzle]
+[The class diagram of the jigsaw puzzle](./puzzleSolver.puzzle.piece.side.png)
 
 ## Design pattern
 In the jigsaw puzzle, there is only one instance of the puzzle board. Therefore, we use the Singleton design pattern to ensure that only one instance for the board is created using a special creation method, and this instance has a global point of access.
@@ -82,6 +82,6 @@ The interviewer can introduce some additional requirements in the jigsaw puzzle,
 
 Rotate piece: Pieces can be rotated to fit on the puzzle. The class diagram provided below shows the added functionality of rotation in the Piece class:
 
-[The class diagram of the rotation functionality in the Piece class]
+[The class diagram of the rotation functionality in the Piece class](./piece.rotation.png)
 
 We have completed the class diagram of the jigsaw puzzle according to the requirements. Now, let’s write the code for our designed classes in some of the most popular languages.
