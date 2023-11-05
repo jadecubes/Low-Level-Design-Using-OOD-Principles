@@ -161,7 +161,7 @@ The class diagram has the following aggregation relationships:
 
 - The Tournament class contains the TournamentSquad class.
 
-[The aggregation relationship between classes](./aggregation.png)
+[The aggregation relationship between classes](./aggregassion.png)
 
 ### Composition
 The class diagram has the following composition relationships:
