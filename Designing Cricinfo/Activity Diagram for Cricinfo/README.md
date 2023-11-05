@@ -12,4 +12,4 @@ Final state: The ball record is saved.
 ### Actions
 The system adds a ball to the over. The system chooses the ball type that was bowled. The system determines if the batter got out. If they did not, it adds the score that was made. Finally, the commentary is added to the ball, and the ball record is saved.
 
-[The activity diagram for making a record of a ball]
+[The activity diagram for making a record of a ball](./activity.png)
