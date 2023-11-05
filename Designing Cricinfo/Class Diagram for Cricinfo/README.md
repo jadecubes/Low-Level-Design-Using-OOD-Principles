@@ -154,14 +154,14 @@ The Commentary class is associated with the Commentator class.
 
 The Match class is associated with the Umpire, Commentator, and Stadium classes.
 
-[The association relationships between classes]  
+[The association relationships between classes](./2way.png)
 
 ### Aggregation
 The class diagram has the following aggregation relationships:
 
 - The Tournament class contains the TournamentSquad class.
 
-[The aggregation relationship between classes]
+[The aggregation relationship between classes](./aggregation.png)
 
 ### Composition
 The class diagram has the following composition relationships:
@@ -178,7 +178,7 @@ The Innings class is composed of the Over class.
 
 The Over class is composed of the Ball class.
 
-[The composition relationships between classes]
+[The composition relationships between classes](./composition.png)
 
 ### Inheritance
 The class diagram has the following inheritance relationships:
