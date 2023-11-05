@@ -94,4 +94,4 @@ Add/update stats
 While adding/modifying the ball, either a run, wicket, or both are added/modified. Therefore, the “Add/modify ball” use case has an extend relationship with the “Add/modify run” and “Add/modify wicket” use cases.
 
 ## Use case diagram
-[The use case diagram of Cricinfo]
+[The use case diagram of Cricinfo](./crickinfo.png)
