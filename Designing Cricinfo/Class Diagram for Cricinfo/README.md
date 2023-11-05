@@ -7,7 +7,7 @@ As mentioned earlier, we will design the Cricinfo system using a bottom-up appro
 ### Admin
 The Admin class is responsible for managing the system as well as adding and modifying updates. The representation of the class is shown below:
 
-[The Admin class]
+[The Admin class](./admin.png)
 
 ```
 R8: The admin of the system should be able to add tournaments, matches, teams, players, and news to the system.
@@ -18,7 +18,7 @@ The Run class records the number and type of runs scored on a ball. The Ball cla
 
 The mentioned classes are shown below:
 
-[The Run, Ball, and Wicket classes]
+[The Run, Ball, and Wicket classes](./run.ball.wicket.png)
 
 ```
 R2: The system should be able to track all scores or wickets that occurred for each ball. The system should also provide a live commentary for every ball.
@@ -26,7 +26,7 @@ R2: The system should be able to track all scores or wickets that occurred for e
 ### Over and innings
 The Over class represents all the details of an over of the innings. The Innings class represents the details of a match innings. The two classes are shown below:
 
-[The Over and Innings classes]
+[The Over and Innings classes](./over.innings.png)
 
 ### Match
 The Match class is an abstract class that has three child classes that represent the types of matches that can take place.
@@ -39,7 +39,7 @@ The Match class is an abstract class that has three child classes that represent
 
 The class diagram is shown below:
 
-[The Match and its derived classes]
+[The Match and its derived classes](./match.png)
 
 ```
 R3: The system should be able to keep track of all matches—Test, T20, and ODI matches.
@@ -48,12 +48,12 @@ R3: The system should be able to keep track of all matches—Test, T20, and ODI 
 ### Stadium
 The Stadium class represents the information about a stadium, including its name, address, and capacity. The UML representation of this class is given below:
 
-[The Stadium class]
+[The Stadium class](./statium.png)
 
 ### Player, coach, and umpire
 The Player class includes the information of a player and their statistics. The Coach class contains the information of a coach. The Umpire class contains the information of an umpire. The three classes are shown below:
 
-[The Player, Coach, and Umpire classes]
+[The Player, Coach, and Umpire classes](./player.coach.umpire.png)
 
 ```
 R1: The system should be able to track the stats of all players, teams, and matches.
@@ -66,7 +66,7 @@ The TournamentSquad class represents the team members participating in a tournam
 
 The class diagram for these classes is given below:
 
-[The Team, TournamentSquad, and Playing11 classes]
+[The Team, TournamentSquad, and Playing11 classes](./team.tornamentsquad.png)
 
 ```
 R6: All teams should be able to select some players that will participate in the tournament.
@@ -77,7 +77,7 @@ R7: For every match, the teams must select 11 players to play on the field, know
 ### Tournament and points table
 The Tournament class contains information about a cricket tournament. The PointsTable class shows the accumulated points and match results of the teams that play in the tournament. These classes are shown below:
 
-[The Tournament and PointsTable classes]
+[The Tournament and PointsTable classes](./tornament.pointstable.png)
 
 ```
 R4: The system should be able to keep track of ongoing and previous tournaments. The system should also be able to show a points table for all teams participating in a tournament.
@@ -85,7 +85,7 @@ R4: The system should be able to keep track of ongoing and previous tournaments.
 ### Stats
 The Stat class is an abstract class that extends to PlayerStat, TeamStat, and MatchStat classes. These classes contain important statistics. The UML representation is shown below:
 
-[Stat and its derived classes]
+[Stat and its derived classes](./stat.png)
 
 ```
 R1: The system should be able to track the stats of all players, teams, and matches.
@@ -97,7 +97,7 @@ R5: The system should be able to show the result of all previous televised match
 ### Commentator and commentary
 The Commentator class records the information about the commentator. The Commentary class contains information about the commentary for every ball of an over. The two classes are shown below:
 
-[The Commentator and Commentary classes]
+[The Commentator and Commentary classes](./commentator.commentary.png)
 
 ```
 R2: The system should be able to track all scores or wickets that occurred for each ball. The system should also provide a live commentary for every ball.
@@ -106,7 +106,7 @@ R2: The system should be able to track all scores or wickets that occurred for e
 ### News
 The News class holds the news updates of a team. The definition of this class is given below:
 
-[The News class]
+[The News class](./news.png)
 
 ### Enumerations
 The enumerations required in the Cricinfo system are listed below:
@@ -123,12 +123,12 @@ The enumerations required in the Cricinfo system are listed below:
 
 - PlayingPosition: This records the playing position of a player—batsman, bowler, and all-rounder.
 
-[Enums in Cricinfo]
+[Enums in Cricinfo](./enums.png)
 
 ### Custom data type
 We need to create a custom data type, Address, that will store the physical location of any place.
 
-[The Address custom data type]
+[The Address custom data type](./address.png)
 
 ## Relationship between classes
 Now, we will discuss the relationships between the classes we have defined above in our Cricinfo system.
@@ -154,7 +154,7 @@ The Commentary class is associated with the Commentator class.
 
 The Match class is associated with the Umpire, Commentator, and Stadium classes.
 
-[The association relationships between classes]
+[The association relationships between classes]  
 
 ### Aggregation
 The class diagram has the following aggregation relationships:
