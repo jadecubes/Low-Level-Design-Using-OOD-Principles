@@ -191,7 +191,7 @@ Note: We have already discussed the inheritance relationship between classes in 
 ```
 ## Class diagram of Cricinfo
 
-[The class diagram of Cricinfo]
+[The class diagram of Cricinfo](./details.png)
 
 ## Design pattern
 In the Cricinfo system, we need to create different types of matches, tournaments, and squads at runtime. To do this, we can use the Factory design pattern. This pattern provides a way to create objects without specifying the exact class of object that will be created.
