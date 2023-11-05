@@ -24,4 +24,4 @@ The steps involved in adding a match are listed below:
 
 Based on the order above, the sequence diagram for adding a match in the Cricinfo system is provided below:
 
-[The sequence diagram for adding a match]
+[The sequence diagram for adding a match](./sequence.png)
