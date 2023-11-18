@@ -16,8 +16,8 @@ Final state: The post is published.
 ### Actions
 The user selects the new post option, selects the privacy option, adds any attachments, and publishes the post.
 
-[The activity diagram for a user creating a new post]
+[The activity diagram for a user creating a new post](./activity.png)
 ## Activity challenge: A user creates a page
 You’ll help us create an activity diagram of a user creating a page. A skeleton of the activity diagram is given below:
 
-[The activity diagram for a user creating a page]
+[The activity diagram for a user creating a page](./answer.png)
